@@ -1,0 +1,347 @@
+\documentclass[a4paper]{article}
+\usepackage{multicol}
+\usepackage[utf8]{vietnam}
+\usepackage{fancyhdr}
+\usepackage[left=3.5cm, right=2cm, top=2.5cm, bottom=2.5cm, includefoot, includehead]{geometry}
+\usepackage{booktabs}
+\usepackage{scrextend}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[tocflat]{tocstyle}
+\usepackage[tocflat]{tocstyle}
+\usetocstyle{standard}
+\changefontsizes{12pt}
+\fontfamily{\ttdefault}  
+\selectfont
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand*{\thesection}{\Alph{section}.}
+\renewcommand*{\thesubsection}{\hspace{0.75cm}\Roman{subsection}.}
+\renewcommand*{\thesubsubsection}{\hspace{1cm}\alph{subsubsection}.}
+\renewcommand*\contentsname{Summary}
+\graphicspath{{E:/K22 Nhiet Lanh/LVTN/Files Latex LVTN/Pic/}}
+
+
+\begin{document}
+\lhead{MỤC LỤC}
+\rhead{Trang \thepage}
+\cfoot{IOT HVAC}
+\tableofcontents %đây là lệnh tạo mục lục
+\newpage 
+
+\setlength{\parindent}{1cm}
+
+\lhead{TỔNG QUÁT VỀ CÔNG TRÌNH}
+\rhead{Trang \thepage}
+\cfoot{CHƯƠNG 1}
+	\section{TỔNG QUAN VỀ VỀ CÔNG TRÌNH}
+	\hspace{1cm}- Nằm toạ lạc trên đường Trần Duy Hưng (\emph{địa chỉ cụ thể là: \textbf{117 Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội}}) và có vị trí chiến lược trong việc phát triển Hà Nội, nằm gần khu dân cư và trung tâm trọng yếu như Khu đô thị Trung Hoà - Nhân Chính, trung tâm Hội nghị Quốc gia, trung tâm Triển lãm Quốc gia,...
+	
+	- Với diện tích khu đất 19 689m$^{2}$, diện tích xây dựng là 7 799m$^{2}$, do Tập đoàn Charm Vit, Hàn Quốc phát triển với mức phát triển với mức đầu tư trên 120 triệu USD, bao gồm một toà tháp văn phòng hạng A 27 tầng, một toà tháp khách sạn 5 sao 27 tầng và một khu trung tâm thương mại cao cấp 5 tầng.
+
+	- Khách sạn có quy mô 27 tầng và 2 tầng hầm, chiều cao trên 100m với tổng diện tích đất 19 689m$^{2}$, diện tích sàn xây dựng là 150 000m$^{2}$.
+	
+	- Tầng 1 đến tầng 4 dùng vào các hoạt động dịch vụ như: trung tâm thương mại, siêu thị và nhà hàng ăn uống Âu và Á,...
+	
+	- Ngoài ra, Grand Plaza còn có hệ thống 1 phòng họp có chứa được khoảng 800 người, có sân golf tập, bể bơi trong nhà và ngoài trời và một số dịch vụ công cộng...
+		
+	- Từ tầng 5 đến tầng 27 với diện tích 101 104m$^{2}$ và được làm văn phòng cho thuê với diện tích 53 443m$^{2}$ (riêng tầng 26 và tầng 27 được dùng làm nhà hàng).	
+		
+	- Khu mua sắm 5 tầng này có diện tích lên tới 15 000m$^{2}$, sẽ là trung tâm thương mại cao cấp đầu tiên trong khu vực.
+	
+	\subsection{Tóm tắt các tầng như sau:}
+	\begin{itemize}
+	\setlength\itemsep{1mm}
+		\item \emph{Tầng 1}: Là không gian sang trọng với đồ trang sức cao cấp, mỹ phẩm, nước hoa và đồng hồ.
+	
+		\item \emph{Tầng M}: Là nơi tập trung các gian hàng thời trang, phụ kiện thời trang, đồ da thương hiệu quốc tế cho cả nam lẫn nữ.
+	
+		\item \emph{Tầng 2}: Là các gian hàng thời trang công sở, trang phục hàng ngày thương hiệu mạnh Việt Nam, đồ lưu niệm, trang phục và dụng cụ thể thao.
+	
+		\item \emph{Tầng 3}: Là khu mua sắm cho mẹ và bé, đồ trang trí nội thất, đồ gia dụng, chăn nệm, đồ điện tử cao cấp.
+	
+		\item \emph{Tầng 4}: Là khu ẩm thực với 17 quầy food court đa dạng, 2 quán cà phê và một nhà hàng rộng 400m$^{2}$.
+	\end{itemize}
+	
+	- \textbf{Đặc biệt}, tại tầng M sẽ là một siêu thị mini rộng gần 400m$^{2}$, tầng 2 là khu vui chơi giải trí dành cho các bé và các máy trò chơi cho thanh thiếu niên, tầng sẽ là một showroom trang trí nội thất sang trọng.
+	\newpage
+	\subsection{Khí hậu}
+	\hspace{1cm}- Hà Nội là khí hậu nhiệt đới gió mùa ẩm, mùa hè nóng, mưa nhiều và mùa đông lạnh, ít mưa. Thời tiết tại đây được chia làm 2 mùa: \textbf{mùa mưa} (\emph{từ tháng 4 đến tháng 10}) và \textbf{mùa khô} (\emph{từ tháng 11 đến tháng 3}).
+	
+	- Mùa nóng bắt đầu từ tháng 5 đến tháng 8, khí hậu nóng ẩm vào đầu mùa và cuối mùa mưa nhiều, khô ráo vào tháng 9 và tháng 10, mùa lạnh bắt đầu từ tháng 11 đến tháng 3 năm sau.
+	
+	- Từ cuối tháng 11 đến nửa đầu tháng 2 rét và hành khô, từ nửa cuối tháng 2 đến hết tháng 3 lạnh và mưa phùn kéo dài từng đợt, trong khoảng tháng 9 đến giữa tháng 11, Hà Nội có những ngày thu với tiết trời mát mẻ.
+	
+	- Nhiệt độ trung bình mùa đông là 16.4$^{\circ}$C, trung bình mùa hạ 29.2$^{\circ}$C (lúc cao nhất lên tới 42.8$^{\circ}$C). Nhiệt độ trung bình cả năm 23.6$^{\circ}$C, lượng mưa trung bình hàng năm vào mức 1800mm đến 2000mm, do chịu ảnh hưởng của hiệu ứng đô thị và là vùng khí hậu có độ ẩm cao nên những đợt nắng nóng, nhiệt độ cảm nhận thực tế luôn cao hơn mức đo đạc, có thể lên tới 50$^{\circ}$C.
+	
+	\section{CẤP ĐIỆN - NĂNG LƯỢNG}
+	
+	\section{HỆ THỐNG GIAO THÔNG}
+	\hspace{1cm}- Từ toà nhà tới trung tâm mua sắm AEON Long Biên mất \textbf{28 phút đi xe ô tô}.
+	
+	- Từ toà nhà tới trung tâm VINCOM - ROYAL CITY mất \textbf{9 phút đi bằng ô tô}.
+	
+	- Từ toà nhà tới trung tâm VINCOM - BÀ TRIỆU mất \textbf{22 phút đi bằng ô tô}.
+\newpage
+\lhead{SƠ LƯỢC VỀ HỆ THỐNG CƠ ĐIỆN}
+\rhead{Trang \thepage}
+\cfoot{CHƯƠNG 2}
+
+	\section{KỸ THUẬT LẠNH ỨNG DỤNG - ĐIỀU HOÀ KHÔNG KHÍ}
+	\subsection{Giới thiệu về kỹ thuật lạnh}
+	\hspace{1cm}Kỹ thuật lạnh đã ra đời từ rất lâu và được sử dụng trong rất nhiều ngành nghề kỹ thuật khác nhau: trong công nghiệp chế biến \& bảo quản thực phẩm, công nghiệp hoá chất, công nghiệp rượu bia, kỹ thuật sấy nhiệt độ thấp, công nghiệp dầu mỏ, chế tạo vật liệu, dụng cụ, xử lý hạt giống, v.v...
+	
+	\subsection{Điều Hoà Không Khí}
+	\subsubsection{Giới thiệu về Hệ Thống Điều Hoà Không Khí}
+	\hspace{1cm}Hệ thống điều hòa không khí hiện đại đầu tiên được phát triển vào năm 1902 bởi một kỹ sư trẻ tên là \textbf{Willis Haviland Carrier}. Ban đầu hệ thống được thiết kế để làm giảm độ ẩm của không khí trong xưởng in của một công ty xuất bằng cách thổi nó qua ống ướp lạnh. Không khí được làm mát khi nó đi qua các đường ống lạnh và trở lên khô hơn. Quá trình làm giảm độ ẩm trong nhà máy đã tạo ra một lợi ích phụ là giảm nhiệt độ không khí và một công nghệ mới đã được sinh ra. Đó là công nghệ điều hòa không khí.
+	
+	Khi một chất lỏng chuyển thành khí (trong một quá trình được gọi là \emph{chuyển đổi pha}), nó hấp thụ nhiệt của môi trường xung quanh. Điều hòa không khí khai thác tính năng này của giai đoạn chuyển đổi bằng cách buộc các hợp chất hóa học đặc biệt để bay hơi và ngưng tụ hơn và hơn nữa trong một hệ thống khép kín của cuộn dây.
+		
+	
+	\section{HỆ THỐNG CẤP THOÁT NƯỚC VÀ CHỮA CHÁY}
+	\subsection{Giới thiệu về hệ thống cấp thoát nước:}
+	\hspace{1cm}Nước thì không thể thiếu với cuộc sống mọi người. Việc xây dựng hệ thống cáp thoát nước đòi hỏi tính kỹ thuật cao và luôn đảm bảo mọi người có đủ nước sinh hoạt tại mọi thời điểm.
+	
+	\subsubsection{\emph{Hệ thống cấp nước:}}
+	\hspace{1cm}Hầu hết hệ thống cấp nước của các tòa nhà chung cư sử dụng tích hợp của ba loại hệ thống: hệ thống cấp nước trực tiếp, hệ thống cấp nước gián tiếp và hệ thống bơm nước thải.
+		
+	+ Đối với hệ thống cấp nước trực tiếp, nước sạch được cấp trực tiếp từ đường ống nước công cộng đến các hộ gia đình ở các tầng thấp bằng áp suất thủy lực bên trong đường ống chính;
+	
+	+ Đối với hệ thống cấp nước gián tiếp, sử dụng máy bơm nước để lấy nước từ các bể chứa ở tầng trệt của tòa nhà, và hút nước sạch vào bể trên mái nhà, sau đó dẫn nước đến từng hộ gia đình thông qua mạng lưới đường ống phụ;
+		
+	* Đối với hệ thống bơm nước thải, nước được truyền kết thúc nhận được bằng cách lắp máy bơm áp lực để cấp nước: đường ống cứu hỏa cũng có chức năng tương tự;
+	
+	Hệ thống cấp nước bao gồm: \emph{máy bơm nước, đường ống đứng, bể chứa, thiết bị phao tự ngắt} và \emph{các đường ống phụ}. Tất cả các phần cố định của hệ thống cấp nước phải được thường xuyên kiểm tra và duy trì hoạt động đúng cách và tất cả các bể nước phải được làm sạch theo định kỳ để kiểm soát chất lượng tốt nhất.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[scale=0.45]{so-luoc-he-thong-cap-thoat-nuoc-nha-cao-tang_2.jpg}	
+		\caption{Sơ đồ hệ thống cấp nước toà nhà}
+	\end{figure}
+	
+	\subsubsection{\emph{Hệ thống thoát nước:}}
+	\hspace{1cm}Hệ thống thoát nước có thể được chia thành \emph{hệ thống đường ống thoát nước mưa} và \emph{hệ thống đường ống nước thải}. Các phần cố định của hệ thống thoát nước bao gồm các đường ống nước thải, xi phông, hố ga. Các đường ống nước thải phải nối sao cho phù hợp nhất, chẳng hạn như nước thải từ bồn rửa không được xả ra theo đường ống nước mưa. Ngoài ra, phải đảm bảo đầu thoát nước thải không bị rác chặn hoặc phải có lưới để ngăn  rác khỏi tắc đường ống.
+	
+	Tất cả các đường ống nước thải bao gồm đường ống chôn dưới đất, ống dẫn chất thải, ống thông gió và ống cống ngầm phải luôn ở trong tình trạng hoạt động tốt. Cần phải kiểm tra định kỳ tất cả các đường ống trên; nếu phát hiện rò rỉ, tắc nghẽn hoặc hư hỏng, cần tiến hành sửa chữa ngay.
+	
+	Để ngăn chặn khí thải và côn trùng trong đường ống xâm nhập vào khu dân cư, các thiết bị vệ sinh bao gồm bồn rửa tay, chậu rửa, bồn tắm và vòi sen, nhà vệ sinh và nắp thoát nước ở sàn phải được gắn với ống xi phông (ống xi phông hình chữ U, ống xi phông hình chai hoặc loại chống chảy ngược).
+	
+	Cần kiểm tra các cửa cống  thường xuyên, nếu phát hiện tắc nghẽn thì phải xử lý ngay. Các cửa cống phải được bố trí sao cho việc bảo trì  được thực hiện dễ dàng và thường xuyên. Không nên để các vật cản như đồ đạc hay cây cảnh ở khu vực này. Có thể ngăn chặn khí thải do rò rỉ từ các hố ga bằng cách sử dụng loại nắp cống hai lớp, hoặc sửa chữa ở các cạnh của lỗ cống hoặc các vết nứt ở các miệng cống.
+	
+	Trách nhiệm sửa chữa và bảo trì hệ thống thoát nước được xác định dựa trên hư hỏng của đường ống công cộng hoặc đường ống của từng căn hộ. Ví dụ, nếu như xảy ra nổ đường ống thoát nước mưa, hoặc tất cả các chủ sở hữu phải chịu trách nhiệm sửa chữa. Tuy nhiên, một nhánh của đường ống được nối đến một căn hộ bị hư hỏng, chủ sở hữu hoặc người cư trú trong đó căn hộ phải có trách nhiệm sửa chữa.
+	
+	\subsection{Tổng quan về hệ thống cấp nước của toà nhà đang tính toán:}
+	\hspace{1cm}- Toà nhà được thiết kế với 27 tầng. Số lượng nhà vệ sinh được thống kê trong bảng bên dưới sau đây:
+	
+\begin{table}[htbp]
+		\vspace{-0.5cm}
+		\centering
+		\textbf{\caption{Số lượng nhà vệ sinh theo từng tầng}}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			Tầng  & 1     & 2     & 3     & 4     & 5     & 6-27 \\
+			\hline
+			Số lượng nhà vệ sinh & 2     & 2     & 2     & 2     & 2     & 44 \\
+			\hline
+		\end{tabular}
+		\label{tab:soluongnvs}
+\end{table}
+	
+	$\Rightarrow$ Như vậy thì theo bảng thống kê, có tổng cộng \textbf{54 nhà vệ sinh}.  
+	\newpage
+	- Trong đó, mỗi nhà vệ sinh có đúng số lượng thiết bị sau:
+	
+\begin{table}[htbp]
+	\vspace{-0.25cm}
+	\centering
+	\begin{minipage}[t]{.5\textwidth}
+		\centering
+		\caption{Nhà vệ sinh nam} 
+		\begin{tabular}{|c|c|c|}
+    	\hline
+    	\multicolumn{1}{|c|}{\textbf{STT}} & \multicolumn{1}{c|}{\textbf{Tên thiết bị}} & \multicolumn{1}{c|}{\textbf{Số lượng}} \\
+    	\hline
+    	1     & Bồn tiểu nam & 4 \\
+    	\hline
+    	2     & Chậu rửa mặt & 2 \\
+    	\hline
+    	3     & Bồn cầu & 4 \\
+    	\hline
+    	\end{tabular} 	
+  		\label{tab:tb_nvs_nam}
+	\end{minipage}
+	\hspace{-0.5cm}
+	\begin{minipage}[t]{.5\textwidth}
+		\centering
+		\caption{Nhà vệ sinh nữ}
+		\begin{tabular}{|c|c|c|}
+    	\hline
+    	\multicolumn{1}{|c|}{\textbf{STT}} & \multicolumn{1}{c|}{\textbf{Tên thiết bị}} & \multicolumn{1}{c|}{\textbf{Số lượng}} \\
+    	\hline
+    	1     & Chậu rửa mặt & 3 \\
+    	\hline
+    	2     & Bồn cầu & 4 \\
+    	\hline
+    	\end{tabular}
+  		\label{tab:tb_nvs_nữ}	
+	\end{minipage}		
+\end{table}
+	
+\begin{table}[htbp]
+		\vspace{-0.5cm}
+  		\centering
+  		\caption{Tổng thiết bị có trong \textbf{54 nhà vệ sinh}}
+    	\begin{tabular}{|c|c|c|}
+    	\hline
+    	\multicolumn{1}{|c|}{\textbf{STT}} & \multicolumn{1}{c|}{\textbf{Tên thiết bị}} & \multicolumn{1}{c|}{\textbf{Số lượng}} \\
+    	\hline
+    	1     & Bồn tiểu nam & 4 \\
+    	\hline
+    	2     & Chậu rửa mặt & 5 \\
+    	\hline
+    	3     & Bồn cầu & 8 \\
+   	 	\hline
+    	\end{tabular}%
+  		\label{tab:total_equipment_toilet}
+\end{table}
+
+		- Đối với công trình, hệ thống cấp nước sẽ được cung cấp gián tiếp từ nhà máy vì dù đây là building lớn, nằm ngay trung tâm thành phố Hà Nội - Rất ít xảy ra hiện tượng cúp nước. Nhưng không thể sử dụng áp lực từ chính đường ống nước để đẩy nước lên các tầng cao hơn được. Đồng thời, nếu xảy ra tình huống cúp nước thì toà nhà vẫn đảm bảo được một lượng nước để vận hành trong khoảng thời gian chờ khắc phục sự cố.
+		
+	\subsection{Tổng quan về hệ thống thoát nước của toà nhà đang tính toán:}
+	\hspace{1cm}- Đối với hệ thống thoát nước, ngoại trừ việc phải tính toán thoát nước cho các nhà vệ sinh thì còn phải tính tới cả thoát nước mưa, nước ngưng.
+	
+	- Hệ thống thoát nước phải đảm bảo được các nguyên tắc sau đây:
+	\begin{itemize}
+		\setlength\itemsep{1mm}
+		\item Hệ thống thoát nước phân và hệ thống thoát nước sàn riêng biệt. 
+		\item Hệ thống ống đứng thoát nước mưa được bố trí trong các hộp gen thông tầng.
+		\item Hệ thống đảm bảo thoát nước tốt. 
+		\item Có tổng chiều dài ngắn nhất. 
+		\item Dể dàng kiểm tra sữa chửa thay thế. 
+		\item Tránh đi qua phòng khách, phòng ngủ. 
+		\item Dễ phân biệt khi sửa chữa. 
+		\item Thuận tiện trong quá trình thi công. 
+	\end{itemize}
+	\subsubsection{Hệ thống thoát nước nhà vệ sinh:}	
+	\hspace{1cm}- Hệ thống thoát nước đầu tiên và dễ thấy nhất trong toà nhà đó chính là hệ thống thoát nước cho các nhà vệ sinh, sinh hoạt chung khác.
+	
+\begin{table}[H]
+		\vspace{-0.5cm}
+  		\centering
+  		\caption{Tổng thiết bị có trong \textbf{54 nhà vệ sinh}}
+    	\begin{tabular}{|c|c|c|}
+    	\hline
+    	\multicolumn{1}{|c|}{\textbf{STT}} & \multicolumn{1}{c|}{\textbf{Tên thiết bị}} & \multicolumn{1}{c|}{\textbf{Số lượng}} \\
+    	\hline
+    	1     & Bồn tiểu nam & 4 \\
+    	\hline
+    	2     & Chậu rửa mặt & 5 \\
+    	\hline
+    	3     & Bồn cầu & 8 \\
+   	 	\hline
+    	\end{tabular}%
+  		\label{tab:tong_thoat_nvs}
+\end{table}
+	 
+	\subsubsection{Vai trò của hệ thống thoát nước mưa:}
+	\begin{itemize}
+		\vspace{-2mm}
+		\setlength\itemsep{1mm}
+		\item Hệ thống thoát nước mưa trên mái sẽ làm cho nước mưa không tồn đọng lại trên mái và không bị thấm ngược vào trong nhà.
+		\item Nếu thoát nước không tốt thì nước mưa sẽ thấm vào mái sẽ gây ra ẩm mốc làm ảnh hưởng kết cấu công trình cũng như thẩm mỹ công trình.
+		\item Trong trường hợp không có hệ thống thoát nước mưa thì rác sẽ bị ùn ứ, đọng lâu ngày sinh ra mất vệ sinh làm cho các sinh vật sinh sôi như muỗi, ruồi, các loại vi khuẩn, nấm mốc gây bệnh.
+	\end{itemize}
+	
+	$\ast$ Tuỳ từng loại mái của toà nhà mà sẽ có các hệ thống thoát nước mưa khác nhau, nhưng 2 loại mái thường gặp nhất là \emph{mái dốc} và \emph{mái bằng}.
+	
+	\subsubsection{Tại sao phải có hệ thống thoát nước ngưng:}
+	\hspace{1cm}- Trong quá trình làm lạnh khí (ở dàn lạnh của điều hòa), hơi nước ngưng tụ và hoá lỏng, vì vậy phải có đường thoát nước từ dàn lạnh ra. Nhiều người không chú ý, thậm chí không biết đến vấn đề này nên khi lắp đặt điều hoà, không biết thoát nước đi đâu – nhất là khi dàn lạnh ở phía tường trong, không tiếp cận với hệ thống thoát nước nào hoặc đi ra ngoài mặt thoáng rất xa. Vì vậy các gia đình nên chú ý khi lắp điều hòa phải lắp đặt thêm ống thoát nước điều hòa.
+
+- Ống thoát nước điều hòa là một phần quan trọng nằm trong các loại vật tư khi lắp điều hòa, khi điều hòa hoạt động đặc biệt là mùa đông chạy chiều nóng, lượng nước thải trong một ngày đêm trung bình từ 6-12 lít tùy thuộc từng dòng và công suất điều hòa. Nước chảy qua ống thoát có độ lạnh khoảng 10-15 độ C do đó cần có các bộ phận dẫn hướng nước tránh rò rỉ, thoát ra sàn nhà, trần nhà.
+	
+	\vspace{0.5cm}$\pmb{\Rightarrow}$ Vì vậy hệ thống thoát nước toà nhà cũng là một yếu tố vô cùng quan trọng trong tính toán cấp thoát nước.
+	\newpage
+	\subsubsection{Tiêu chuẩn và quy chuẩn sẽ áp dụng cho hệ thống:}
+	\hspace{1cm}- Hệ thống sẽ được tính toán dựa theo những \emph{tiêu chuẩn} và \emph{quy chuẩn} sau:
+	\begin{itemize}
+		\setlength{\itemindent}{2cm}
+		\item[\textbf{1.}]Quy chuẩn QCVN 07-2:2016/BXD
+		\item[\textbf{2.}]Tiêu chuẩn TCVN 4519 : 1988
+		\item[\textbf{3.}]Tiêu chuẩn TCVN 5576 : 1991
+	\end{itemize}
+	\subsection{Tổng quan về hệ thống chữa cháy:}	
+	\hspace{1cm}- Hệ thống chữa cháy là tổng hợp các thiết bị kỹ thuật chuyên dùng, đường ống dẫn và các chất chữa cháy dùng để dập tắt đám cháy.
+	
+	- Hệ thống chữa cháy vách tường là hệ thống chữa cháy được lắp đặt ở trên tường bên trong các công trình.
+	
+	- Thiết bị chủ yếu trong hệ thống chữa cháy vách tường gồm: \emph{máy bơm nước chữa cháy}, \emph{đường ống cấp nước chữa cháy} và các phương tiện khác như \emph{van}, \emph{lăng phun nước}, \emph{cuộn vòi dẫn nước}…
+	
+	\subsubsection{Hệ thống chữa cháy tự động Sprinkler đường ống ướt:}
+	\hspace{1cm}- Toà nhà sẽ sử dụng hệ thống chữa cháy tự động Sprinkler đường ống ướt. Hệ thống đường ống ướt là hệ thống sprinkler tiêu chuẩn thường xuyên nạp đầy nước có áp lực ở cả phía trên và phía dưới van báo động đường ống ướt.
+	\subsubsection{Tiêu chuẩn và quy chuẩn sẽ áp dụng cho hệ thống:}
+	\hspace{1cm}- Hệ thống sẽ được tính toán dựa theo những \emph{tiêu chuẩn} và \emph{quy chuẩn} sau:
+	\begin{itemize}
+		\setlength{\itemindent}{2cm}
+		\item[\textbf{1.}]Tiêu chuẩn TCVN 6305 
+		\item[\textbf{2.}]Tiêu chuẩn TCVN 7735 – 2003
+		\item[\textbf{3.}]Tiêu chuẩn TCVN 5040 – 1990
+		\item[\textbf{4.}]Tiêu chuẩn TCVN 5760 – 1993
+	\end{itemize}
+	
+	\section{HỆ THỐNG ĐIỆN TRONG CÔNG TRÌNH}
+	\subsection{Giới thiệu về hệ thống chiếu sáng:}	
+	\hspace{1cm}- Thiết kế hệ thống chiếu sáng trong toà nhà đòi hỏi sự hiểu biết về kỹ thuật điện, nguồn sáng và tầm nhìn, đồng thời cũng nhạy cảm với các vấn đề về kiến trúc và thẩm mỹ. Thiết kế cuối cùng cần đáp ứng nhu cầu trực quan cho mắt người thực hiện vô số công việc trong khi vẫn đáp ứng đc các hình dạng kiến trúc và môi trường ngay lập tức.
+	
+	- Hệ thống chiếu sáng do đó cũng có thể xem là một trong những hệ thống thuộc diện ``sống còn'' của toà nhà mà đòi hỏi rất gắt gao ở việc thiết kế cũng như tính thẩm mỹ.
+	
+	- Các nhà thiết kế về ánh sáng hiểu rằng hầu hết những người ở trong tòa nhà không nhất thiết muốn có đèn LED hoặc một chủng loại đèn bất kỳ nào - họ muốn thoải mái nhìn thấy những gì họ đang làm. Làm thế nào để cung cấp cho họ tầm nhìn này là vai trò của nhà thiết kế ánh sáng. Làm thế nào để cung cấp cho điều này trong khi vẫn thiết kế hài hòa với kiến trúc, tích hợp với ánh sáng ban ngày sẵn có, giảm thiểu việc sử dụng năng lượng xây dựng, phù hợp với quá trình xây dựng tổng thể và ngân sách là tất cả những việc phải làm của nhà thiết kế ánh sáng trong toàn bộ quá trình thiết kế tòa nhà.
+	
+	- Một hệ thống chiếu sáng đủ tiêu chuẩn phải đáp ứng đc các tiêu chí sau:
+	\begin{itemize}
+		\item Độ rọi chiếu sáng.
+		\item Thiết kế không gian.
+		\item Nhiệt độ màu.
+		\item Điều kiện tiện nghi.
+		\item Hệ thống điều khiển hợp lý có thể sử dụng điều khiển từ xa để tránh gây lãng phí điện năng và dể quản lý khâu bật tắt.
+		\item Tính thẩm mỹ cao tôn lên vẻ đẹp không gian, sang trọng, hiện đại, phù hợp thời đại công nghệ mới.
+	\end{itemize}
+	\subsubsection{Tiêu chuẩn và quy chuẩn sẽ áp dụng cho hệ thống:}		
+	\hspace{1cm}- Hệ thống sẽ được tính toán dựa theo những \emph{tiêu chuẩn} và \emph{quy chuẩn} sau:
+	\begin{itemize}
+		\setlength{\itemindent}{2cm}
+		\item[\textbf{1.}]Tiêu chuẩn TCVN 7114 : 2008 
+		\item[\textbf{2.}]Quy chuẩn QCXDVN 09 : 2005
+	\end{itemize}	
+	
+	\section{HỆ THỐNG TỰ ĐỘNG HOÁ TRONG CÔNG TRÌNH:}
+	\hspace{1cm}- Sự phát triển bền vững của kinh tế, chính trị ở mỗi quốc gia trên thế giới làm cho nhu cầu đòi hỏi về vật chất, sự sang trọng tiện nghi và đảm bảo an ninh,an toàn trong cả nơi làm việc cũng như nhà ở ngày càng có nhu cầu cao hơn.
+
+	- Sự ra đời của các toà nhà, khách sạn, các trung tâm thương mại, các cao ốc văn phòng… với mức độ tự động hóa và bảo mật cao ngày càng nhiều hơn. Nhu cầu về nhân lực cũng như thiết bị vật tư, các giải pháp thiết kế và thi công cao. Đó là lĩnh vực có thể nghiên cứu đầu tư kinh doanh khả thi trong tương lai không xa.
+	
+	- Trong toà nhà thông minh, đồ dùng trong nhà từ các phòng chức năng, các căn phòng làm việc, phòng ngủ, phòng khách đến toilet đều gắn các bộ điều khiển điện tử có thể kết nối với mạng Internet và điện thoại di động, cho phép chủ nhân có thể điều khiển tại chỗ, điều khiển vật dụng từ xa hoặc lập trình cho thiết bị ở nhà hoạt động tự động theo lịch với chương trình có sẵn.
+	
+	$\pmb{\Rightarrow}$ Như vậy, toà nhà thông minh là một toà nhà có một hệ thống kỹ thuật hoàn hảo, được lập trình tối ưu hóa cho việc điều khiển, giám sát, vận hành thiết bị,vật dụng trong toà nhà.	
+	\subsection{Giới thiệu về hệ thống BMS cho toà nhà:}
+	\hspace{1cm}- Hệ thống BMS (Building Management System) là hệ thống đồng bộ cho phép điều khiển và quản lý mọi hệ thống kỹ thuật trong tòa nhà như \emph{hệ thống điện, hệ thống cung cấp nước sinh hoạt, điều hòa thông gió, cảnh báo môi trường, an ninh, báo cháy – chữa cháy,}… đảm bảo cho việc vận hành các thiết bị trong tòa nhà được chính xác, kịp thời, hiệu quả, tiết kiệm năng lượng và tiết kiệm chi phí vận hành. Hệ thống BMS là hệ thống đồng bộ mang tính thời gian thực, trực tuyến, đa phương tiện, nhiều người dung, hệ thống vi xử lý bao gồm các bộ vi xử lý trung tâm với tất cả các phần mềm và phần cứng máy tính, các thiết bị vào/ra, các bộ vi xử lý khu vực, các bộ cảm biến và điều khiển qua các ma trận điểm.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{hao_phuong_so_do_he_thong_bms.jpg}	
+		\caption{Sơ đồ hệ thống BMS}
+	\end{figure}
+	\subsection{IoT và những tác động của nó lên BMS}
+	\subsubsection{IoT là gì?}
+	\hspace{1cm}- Internet of Things, hay IoT, internet vạn vật là đề cập đến hàng tỷ thiết bị vật lý trên khắp thế giới hiện được kết nối với internet, thu thập và chia sẻ dữ liệu. Nhờ bộ xử lý giá rẻ và mạng không dây, có thể biến mọi thứ, từ viên thuốc sang máy bay, thành một phần của IoT. Điều này bổ sung sự “thông minh kỹ thuật số” cho các thiết bị, cho phép chúng giao tiếp mà không cần có con người tham gia và hợp nhất thế giới kỹ thuật số và vật lý.
+
+	- Một bóng đèn có thể được bật bằng ứng dụng điện thoại thông minh là một thiết bị IoT, như một cảm biến chuyển động hoặc một bộ điều chỉnh nhiệt thông minh trong văn phòng của bạn hoặc đèn đường được kết nối. Một thiết bị IoT có thể đơn giản như đồ chơi của trẻ em hoặc nghiêm trọng như một chiếc xe tải không người lái, hoặc phức tạp như một động cơ phản lực hiện chứa hàng ngàn cảm biến thu thập và truyền dữ liệu trở lại để đảm bảo nó hoạt động hiệu quả. Ở quy mô lớn hơn, các dự án thành phố thông minh đang được lấp đầy bằng các cảm biến để giúp chúng ta hiểu và kiểm soát môi trường.
+
+	- Thuật ngữ IoT chủ yếu được sử dụng cho các thiết bị thường không được mong đợi có kết nối internet và có thể giao tiếp với mạng độc lập với hành động của con người. Vì lý do này, PC thường không được coi là thiết bị IoT và cũng không phải là điện thoại thông minh – mặc dù thiết bị này được nhồi nhét bằng cảm biến. Tuy nhiên, một chiếc smartwatch hoặc một fitness band hoặc thiết bị đeo khác có thể được tính là một thiết bị IoT.
+	\subsubsection{IoT thay đổi cách mà BMS vận hành thế nào?}
+	\hspace{1cm}- Kết nối chính là điểm mạnh của IoT. Với IoT, các nhà sản xuất khác nhau đều có thể có mặt trong hệ thống BMS được nhờ vào các tiêu chuẩn giao thức như \emph{Ethernet/IP, XML, KNX, BACnet, Modbus và LonWorks}. 
+
+	- Khả năng kết nối được đó sẽ giúp hệ thống tiến đến thứ gọi là ``Đám mây''. Với các ``đám mây'' này thì việc điều khiển từ xa và khả năng tiên đoán lỗi hệ thống và giám sát có thể thực hiện từ khắp mọi nơi hoặc hơn nữa là xử lý và hiệu chỉnh tạm thời bằng các thuật toán trước khi nhân viên kỹ thuật xuống sửa chữa. Điều này làm tăng khả năng vận hành lâu dài của hệ thống.
+	
+	- IoT cũng sẽ thay đổi mức giá của hệ thống BMS bởi các thành phần linh kiện của hệ thống giờ đây sẽ không còn độc quyền từ một hãng nữa mà sẽ là mức giá cạnh tranh tới từ nhiều hãng. 
+	
+\end{document}
