@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+\usepackage{multicol}
+\usepackage[utf8]{vietnam}
+\usepackage{fancyhdr}
+\usepackage[left=3.5cm, right=2cm, top=2.5cm, bottom=2.5cm, includefoot, includehead]{geometry}
+\usepackage{booktabs}
+\usepackage{scrextend}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[tocflat]{tocstyle}
+\usetocstyle{standard}
+\usepackage{float}
+\changefontsizes{12pt}
+\fontfamily{\ttdefault}  
+\selectfont
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand*{\thesection}{\Alph{section}.}
+\renewcommand*{\thesubsection}{\hspace{0.75cm}\Roman{subsection}.}
+\renewcommand*{\thesubsubsection}{\hspace{1cm}\alph{subsubsection}.}
+\graphicspath{{E:/K22 Nhiet Lanh/LVTN/Files Latex LVTN/Pic/}}
+
+%This is main file of LVTN
+\input{LVTN_Mucluc}
+\input{lvtn_chap1&2}
+\input{LVTN_Chap3}
