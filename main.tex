@@ -18,6 +18,7 @@
 \cftsetindents{section}{1cm}{1cm}
 \cftsetindents{subsection}{1.5cm}{1.5cm}
 
+\usepackage[hidelinks]{hyperref} %dùng để làm toc có thể click được
 
 \usepackage{float} %dung de tao, di chuyen cac object nhu table, image...
 
@@ -27,6 +28,10 @@
 
 \usepackage{scrextend} %dung de dieu chinh size font chu
 \changefontsizes{12pt}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+\renewcommand{\baselinestretch}{1.5}
 
 \usepackage[Conny]{fncychap} %dùng để tạo style chapter
 
@@ -53,3 +58,4 @@
 \input{LVTN_Mucluc}
 \input{LVTN_chap1&2}
 \input{LVTN_Chap3}
+\input{main_end}
