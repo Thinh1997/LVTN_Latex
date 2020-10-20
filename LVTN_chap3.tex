@@ -1,3 +1,4 @@
+\addtocontents{toc}{\protect\newpage} %dùng để kéo tiêu đề của chương 3 sang trang mới trong TOC - CHỈ DÙNG KHI MỤC LỤC CỦA CHƯƠNG ĐÓ BỊ HƯ
 \newpage
 \cfoot{CHƯƠNG 3}
 \lhead{TÍNH TOÁN PHỤ TẢI LẠNH CHO ĐHKK}
@@ -9,15 +10,15 @@
 
 %Phần nội dung
 \section{XÂY DỰNG MÔ HÌNH 3D BẰNG \emph{REVIT}}
-\hspace{1cm}$ \clubsuit $ Nhân làm phần này. Sẽ add vào sau. $ \clubsuit $
+$ \clubsuit $ Nhân làm phần này. Sẽ add vào sau. $ \clubsuit $
 
 +++++++++++++++++++++++++++++++++++++++++
 
 \section{PHƯƠNG PHÁP TRUYỀN THỐNG}
 \subsection{ĐẠI CƯƠNG}
-\hspace{1cm}Các bước chủ yếu để tính toán cân bằng nhiệt ẩm truyền thống gồm \textbf{7 bước} để tính toán như sau:
+Các bước chủ yếu để tính toán cân bằng nhiệt ẩm truyền thống gồm \textbf{7 bước} để tính toán như sau:
 \subsubsection{Xác định các nguồn nhiệt toả ra}
-\hspace{1cm}- Các nguồn nhiệt này có thể xuất phát từ nhiều nguồn khác nhau, điển hình như: Do người, do máy móc, chiếu sáng, rò rỉ không khí, bức xạ mặt trời, thẩm thấu qua kết cấu,...
+- Các nguồn nhiệt này có thể xuất phát từ nhiều nguồn khác nhau, điển hình như: Do người, do máy móc, chiếu sáng, rò rỉ không khí, bức xạ mặt trời, thẩm thấu qua kết cấu,...
 
 - Phương trình cân bằng nhiệt tổng quát có dạng:
 
@@ -97,10 +98,10 @@
 \end{center}
 
 \subsubsection{Xác định sơ đồ điều hoà không khí}
-\hspace{1cm}- Trong bước này, chúng ta cần phải xác định được sơ đồ điều hoà không khí với các thông số trạng thái không khí trong nhà T, ngoài nhà N, hoà trộn H và thổi vào V ví dụ như entanpi I$_{T}$, I$_{N}$, I$_{H}$, I$_{V}$, nhiệt độ t$_{T}$, t$_{N}$, t$_{H}$, t$_{V}$, lưu lượng không khí G$_{T}$, G$_{N}$, G$_{H}$, G$_{V}$ (\textit{kg/s}), L$_{T}$, L$_{N}$, L$_{H}$, L$_{V}$ (\textit{$m^3/s$}), khối lượng riêng không khí $\rho_{T}$, $\rho_{N}$, $\rho_{H}$, $\rho_{V}$, ẩm dung của không khí d$_{T}$, d$_{N}$, d$_{H}$, d$_{V}$...
+- Trong bước này, chúng ta cần phải xác định được sơ đồ điều hoà không khí với các thông số trạng thái không khí trong nhà T, ngoài nhà N, hoà trộn H và thổi vào V ví dụ như entanpi I$_{T}$, I$_{N}$, I$_{H}$, I$_{V}$, nhiệt độ t$_{T}$, t$_{N}$, t$_{H}$, t$_{V}$, lưu lượng không khí G$_{T}$, G$_{N}$, G$_{H}$, G$_{V}$ (\textit{kg/s}), L$_{T}$, L$_{N}$, L$_{H}$, L$_{V}$ (\textit{$m^3/s$}), khối lượng riêng không khí $\rho_{T}$, $\rho_{N}$, $\rho_{H}$, $\rho_{V}$, ẩm dung của không khí d$_{T}$, d$_{N}$, d$_{H}$, d$_{V}$...
 
 \subsubsection{Xác định năng suất gió của hệ thống}
-\hspace{1cm}- Để có thể tải được hết nhiệt thừa ra khỏi phòng điều hoà cần một lượng gió G$_{t}$ là:
+- Để có thể tải được hết nhiệt thừa ra khỏi phòng điều hoà cần một lượng gió G$_{t}$ là:
 
 \begin{center}
 	$ G_{t} = \dfrac{Q_{t}}{I_{T} - I_{V}} $, \textit{kg/s}
@@ -133,7 +134,7 @@ rút ra:
 {\Large $\varepsilon_{t}$} chính là hệ số góc tia quá trình.
 
 \subsubsection{Tính năng suất lạnh}
-\hspace{1cm}- Năng suất lạnh của hệ thống điều hoà không khí Q$ _{0} $ có thể được tính như sau:
+- Năng suất lạnh của hệ thống điều hoà không khí Q$ _{0} $ có thể được tính như sau:
 
 \begin{center}
 	$Q _{0} = G_{V}(I_{H} - I_{V})$, \textit{kW}
@@ -147,13 +148,14 @@ rút ra:
 	$W = G_{V}(d_{H}-d_{V})$, \textit{kg/s}
 \end{center}
 
-\subsection{TÍNH TOÁN NHIỆT ẨM CHO TOÀ NHÀ}
+\subsection{ÁP DỤNG TÍNH TOÁN NHIỆT ẨM CHO TOÀ NHÀ}
+- Sử dụng những công thức trên để ứng dụng tính toán lượng nhiệt ẩm như sau: 
 
 
 
 
 \section{PHƯƠNG PHÁP CARRIER}
-\hspace{1cm}- 
+- 
 
 \section{TÍNH TẢI LẠNH BẰNG \emph{REVIT MEP}}
-\hspace{1cm}- 
+- 

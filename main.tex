@@ -6,7 +6,7 @@
 
 \usepackage{fancyhdr} %dung de tao ra cac style kho giay
 
-\usepackage[left=3.5cm, right=2cm, top=2.5cm, bottom=2.5cm, includefoot, includehead]{geometry} %dung de dinh dang kho giay
+\usepackage[left=3cm, right=2cm, top=2.5cm, bottom=2cm, includefoot, includehead]{geometry} %dung de dinh dang kho giay
 
 \usepackage{booktabs} %dung de chuyen excel sang table Latex
 
@@ -24,25 +24,26 @@
 
 \usepackage{adjustbox} %dung de dieu chinh scale nhung table qua to
 
+\usepackage{subcaption} %dùng để tạo subfigure
+
 \usepackage{lscape} %dung de xoay ngang to giay
 
 \usepackage{scrextend} %dung de dieu chinh size font chu
 \changefontsizes{12pt}
 
-\usepackage{indentfirst}
+\usepackage{indentfirst} %dùng để sau khi section thì dòng đầu tiên thục vào n cm
 \setlength{\parindent}{1cm}
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.5} %dùng để giãn dòng 1.5
 
 \usepackage[Conny]{fncychap} %dùng để tạo style chapter
 
 \usepackage{wrapfig} %dùng để wrap các text xung quanh table hoặc figure(image)
 
-\usepackage{enumitem} % dùng để thiết kế lại các định dạng khi sử dụng list hoặc item, enumerate
+\usepackage{enumitem} %dùng để thiết kế lại các định dạng khi sử dụng list hoặc item, enumerate
 
 %\usepackage{tgbonum} %dùng để điều chỉnh font chữ
 %\fontfamily{\sfdefault}
 %\selectfont
-
 
 %Phan nay la su dung package fancyhdr
 \pagestyle{fancy}
@@ -58,4 +59,5 @@
 \input{LVTN_Mucluc}
 \input{LVTN_chap1&2}
 \input{LVTN_Chap3}
+
 \input{main_end}
