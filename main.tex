@@ -12,11 +12,17 @@
 
 \usepackage{amsmath} %dung de tao ra cac phuong trinh toan hoc
 
-\usepackage{graphicx} %dung de su dung khi insert image 
+\usepackage{fontawesome5} %package dùng để sử dụng icon để trang trí này nọ cho đẹp
 
-\usepackage{tocloft} %Dùng để chỉnh mục lục - khoảng cách tiêu đề các thể loại
+\usepackage{wasysym} %dùng để sử dụng icon wasysysm
+
+\usepackage{graphicx} %dung de su dung khi insert image 
+\graphicspath{{E:/K22 Nhiet Lanh/LVTN/Files Latex LVTN/Pic/}}
+
+\usepackage[titles]{tocloft} %Dùng để chỉnh mục lục - khoảng cách tiêu đề các thể loại
 \cftsetindents{section}{1cm}{1cm}
 \cftsetindents{subsection}{1.5cm}{1.5cm}
+\addtocontents{toc}{~\hfill\textbf{Trang}\par}
 
 \usepackage[hidelinks]{hyperref} %dùng để làm toc có thể click được
 
@@ -35,15 +41,11 @@
 \setlength{\parindent}{1cm}
 \renewcommand{\baselinestretch}{1.5} %dùng để giãn dòng 1.5
 
-\usepackage[Conny]{fncychap} %dùng để tạo style chapter
+\usepackage[Rejne]{fncychap} %dùng để tạo style cho page
 
 \usepackage{wrapfig} %dùng để wrap các text xung quanh table hoặc figure(image)
 
 \usepackage{enumitem} %dùng để thiết kế lại các định dạng khi sử dụng list hoặc item, enumerate
-
-%\usepackage{tgbonum} %dùng để điều chỉnh font chữ
-%\fontfamily{\sfdefault}
-%\selectfont
 
 %Phan nay la su dung package fancyhdr
 \pagestyle{fancy}
@@ -52,7 +54,21 @@
 \renewcommand*{\thesection}{\Alph{section}.}
 \renewcommand*{\thesubsection}{\hspace{0.75cm}\Roman{subsection}.}
 \renewcommand*{\thesubsubsection}{\hspace{1cm}\arabic{subsubsection}.}
-\graphicspath{{E:/K22 Nhiet Lanh/LVTN/Files Latex LVTN/Pic/}}
+
+% Đầu trang có số trang, số chương & chân trang có tên đề tài
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{Trang \thepage}
+\fancyfoot[C]{IoT HVAC}
+
+%Tạo 1 lệnh để tạo chương mới
+\newcommand{\chapmoi}[1]{
+	\chapter{\textbf{#1}}
+	\begin{center} %cái này là tạo biểu tượng dưới cái chương
+		{\Huge \APLminus}
+		{\Huge \faBookOpen}
+		{\Huge \APLminus}
+	\end{center}
+	\newpage}
 
 %Phan nay la input cac file vao de compile, build ra pdf.
 %This is main file of LVTN
