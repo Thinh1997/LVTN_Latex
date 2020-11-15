@@ -66,7 +66,7 @@
 \fancyhead[R]{Trang \thepage}
 \fancyfoot[C]{IoT HVAC}
 
-%Tạo 1 lệnh để tạo chương mới
+%Tạo 1 lệnh để tạo chương mới, trình độ này thượng thừa vl ra
 \newcommand{\chapmoi}[1]{
 	\chapter{\textbf{#1}}
 	\begin{center} %cái này là tạo biểu tượng dưới cái chương
@@ -76,10 +76,11 @@
 	\end{center}
 	\newpage}
 
-%Phan nay la input cac file vao de compile, build ra pdf.
-%This is main file of LVTN
-\input{LVTN_Mucluc}
-\input{LVTN_chap1&2}
-\input{LVTN_Chap3}
-
-\input{main_end}
+%Đây chính là phần soạn thảo Latex, add các file vào để compile
+%Khi compile thì compile file chính là đủ.
+\begin{document}
+	\include{LVTN_Mucluc}
+	\include{LVTN_chap1&2}
+	\include{LVTN_Chap3}
+	\include{main_end}
+\end{document}
