@@ -1,14 +1,15 @@
 \documentclass[a4paper]{report}
 
 \usepackage{multicol} %dung de su dung khi dung excel sang table Latex
+\setlength{\columnsep}{1cm}
+
+\usepackage{multirow} 
 
 \usepackage[utf8]{vietnam} %dung de viet tieng Viet
 
 \usepackage{fancyhdr} %dung de tao ra cac style kho giay
 
 \usepackage[left=3cm, right=2cm, top=2.5cm, bottom=2cm, includefoot, includehead]{geometry} %dung de dinh dang kho giay
-
-\usepackage{booktabs} %dung de chuyen excel sang table Latex
 
 \usepackage{amsmath} %dung de tao ra cac phuong trinh toan hoc
 
@@ -46,6 +47,11 @@
 \usepackage{wrapfig} %dùng để wrap các text xung quanh table hoặc figure(image)
 
 \usepackage{enumitem} %dùng để thiết kế lại các định dạng khi sử dụng list hoặc item, enumerate
+
+\usepackage{booktabs} %dùng cho excel2latex
+
+\usepackage[backend=bibtex]{biblatex} %dùng để tạo "TÀI LIỆU THAM KHẢO"
+\addbibresource{thamkhao.bib}
 
 %Phan nay la su dung package fancyhdr
 \pagestyle{fancy}
