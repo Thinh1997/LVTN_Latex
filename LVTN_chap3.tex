@@ -1,274 +1,935 @@
 %Trang bìa
-\chapmoi{TÍNH TOÁN PHỤ TẢI LẠNH CHO ĐHKK}
+\chapmoi{TÍNH TẢI LẠNH BẰNG PHƯƠNG PHÁP \textit{CARRIER}}
 
 %Phần nội dung
-\section{XÂY DỰNG MÔ HÌNH 3D BẰNG \emph{REVIT}}
-$ \clubsuit $ Nhân làm phần này. Sẽ add vào sau. $ \clubsuit $
+\section{THÔNG SỐ THIẾT KẾ}
+\subsection{NHIỆT ĐỘ BÊN NGOÀI}
+-- Các thông số bên ngoài toà nhà được thể hiện trong bảng dưới đây:
+\begin{table}[H]
+	\vspace{-0.3cm}
+	\centering
+	\caption{Thông số ngoài trời}
+	\begin{tabular}{|l|r|}
+		\hline
+		Nhiệt độ bên ngoài -- t{\scriptsize N} & \textcolor[rgb]{ 1,  0,  0}{\textbf{32} $ ^{\circ} $C} \bigstrut\\
+		\hline
+		Độ ẩm tương đối -- $\varphi$ & \textcolor[rgb]{ 1,  0,  0}{\textbf{75}\%} \bigstrut\\
+		\hline
+		Nhiệt độ bầu ướt -- t{\scriptsize ư} & \textcolor[rgb]{ 1,  0,  0}{\textbf{18.76} $ ^{\circ} $C} \bigstrut\\
+		\hline
+	\end{tabular}
+	\label{b:tsnt}
+\end{table}
 
-+++++++++++++++++++++++++++++++++++++++++
+\subsection{NHIỆT ĐỘ BÊN TRONG}
+-- Các thông số yêu cầu bên trong toà nhà được thể hiện trong bảng dưới đây:
+\begin{table}[H]
+	\vspace{-0.3cm}
+	\centering
+	\caption{Thông số trong nhà}
+	\begin{tabular}{|l|r|}
+		\hline
+		Nhiệt độ trong nhà -- t{\scriptsize N} & \textcolor[rgb]{ 1,  0,  0}{\textbf{25} $ ^{\circ} $C} \bigstrut\\
+		\hline
+		Độ ẩm tương đối -- $\varphi$ & \textcolor[rgb]{ 1,  0,  0}{\textbf{55}\%} \bigstrut\\
+		\hline
+	\end{tabular}
+	\label{b:tstn}
+\end{table}
 
-\section{PHƯƠNG PHÁP TRUYỀN THỐNG}
-\subsection{ĐẠI CƯƠNG}
-Các bước chủ yếu để tính toán cân bằng nhiệt ẩm truyền thống gồm \textbf{7 bước} để tính toán như sau:
-\subsubsection{Xác định các nguồn nhiệt toả ra}
-- Các nguồn nhiệt này có thể xuất phát từ nhiều nguồn khác nhau, điển hình như: Do người, do máy móc, chiếu sáng, rò rỉ không khí, bức xạ mặt trời, thẩm thấu qua kết cấu,...
+\section{TÍNH TOÁN TẢI LẠNH}
+\subsection{NHIỆT HIỆN BỨC XẠ QUA KÍNH --- Q{\scriptsize 1}}
+\subsubsection{Xác định Q$_{1}$}
+Với điều kiện nhiệt độ và độ ẩm của không khí bên ngoài như đã chọn để thiết kế điều hoà không khí cho tòa nhà: t$_{T}$ = 32$^{\circ}$C; {\large $\varphi$}$_{N}$ = 75\%.
 
-- Phương trình cân bằng nhiệt tổng quát có dạng:
+Tra đồ thị t – d ta được nhiệt độ đọng sương: {\large t}{\scriptsize đs} = 28.2619$^{\circ}$C.
 
-\begin{equation}
-	Q_{t} = Q_{t1} + Q_{t2}
-\end{equation}
-
-\begin{itemize}[leftmargin = 3cm, label = $\star$]
-	\item $Q_{t}$ - nhiệt thừa trong phòng, \textit{W};
-	\item $Q_{t1}$ - nhiệt toả ra trong phòng, \textit{W};
-	\item $Q_{t2}$ - nhiệt thẩm thấu từ ngoài vào qua kết cấu bao che do chênh lệch nhiệt độ, \textit{W};
-\end{itemize}
-
-
-- Trong đó, nhiệt lượng $ Q_{t1} $ có thể được phân thành \textit{8 phần nhiệt} như sau:
-
-\begin{equation}
-		Q_{t1} = Q_{1} + Q_{2} + Q_{3} + Q_{4} + Q_{5} + Q_{6} + Q_{7} + Q_{8}
-\end{equation}
-
-\begin{itemize}[leftmargin = 3cm, label = $\ast$]
-	\item $Q_{1}$ - Nhiệt toả từ máy móc;
-	\item $Q_{2}$ - Nhiệt toả từ đèn chiếu;
-	\item $Q_{3}$ - Nhiệt toả từ người;
-	\item $Q_{4}$ - Nhiệt toả từ bán thành phẩm;
-	\item $Q_{5}$ - Nhiệt toả từ bề mặt thiết bị trao đổi nhiệt;
-	\item $Q_{6}$ - Nhiệt toả do bức xạ mặt trời qua cửa kính;
-	\item $Q_{7}$ - Nhiệt toả do bức xạ mặt trời qua bao che;
-	\item $Q_{8}$ - Nhiệt toả do lò rọt không khí qua cửa;
-\end{itemize}
-
-- Lượng nhiệt từ $ Q_{t2} $ có thể phân được phân thành 4 lượng nhiệt sau:
-\begin{equation}
-	Q_{t2} = Q_{9} + Q_{10} + Q_{11} + Q_{bs}, \textit{W}
-\end{equation}
-
-\begin{itemize}[leftmargin = 3cm, label = $\ast$]
-	\item $ Q_{9} $ - Nhiệt thẩm thấu qua vách;
-	\item $ Q_{10} $ - Nhiệt thẩm thấu qua trần (mái);
-	\item $ Q_{11} $ - Nhiệt thẩm thấu qua nền;
-	\item $ Q_{bs} $ - Nhiệt tổn thất bổ sung do gió và hướng vách;
-\end{itemize}
-
-
-\subsubsection{Xác định nguồn ẩm thừa trong phòng điều hoà W$ _{t} $:}
-\begin{equation}
-	W_{t} = W_{1} + W_{2} + W_{3} + W_{4}, kg/s
-\end{equation}
-
-\begin{itemize}[leftmargin = 3cm, label = $\ast$]
-	\item $ W_{1} $ - Lượng ẩm do người toả vào phòng, \textit{kg/s};
-	\item $ W_{2} $ - Lượng ẩm bay hơi từ bán thành phẩm, \textit{kg/s};
-	\item $ W_{3} $ - Lượng ẩm do bay hơi từ sàn ẩm, \textit{kg/s};
-	\item $ W_{4} $ - Lượng ẩm do hơi nước nóng toả vào phòng, \textit{kg/s};	
-\end{itemize}
+Từ đó ta xác định được:
+\begin{itemize}[leftmargin=2.2cm]
+	\item {\Large $\varepsilon$}{\scriptsize đs} $= 1 -\dfrac{t_{s} - 20}{10}\times0.13 = 1 -\dfrac{28.2619 - 20}{10}\times0.13 = 0.909$
 	
-\subsubsection{Xác định tia quá trình {\Large $\varepsilon$} (còn gọi là hệ số góc tia quá trình)}
-\begin{equation}
-	{\Large \varepsilon_{t}} =  \dfrac{Q_{t}}{W_{t}}, \textit{kJ/kg}
-\end{equation}
+	\item {\Large $\varepsilon$}{\scriptsize c} $= 1$ (do Tp.Hà Nội có độ cao gần mực nước biển).
+	
+	\item {\Large $\varepsilon$}{\scriptsize mm} $= 1$ (tính vào lúc bức xạ mặt trời lớn nhất).
+	
+	\item {\Large $\varepsilon$}{\scriptsize kh} $= 1.17$ (khung kính kim loại).
+	
+	\item {\Large $\varepsilon$}{\scriptsize m} $= 0.7$ (dùng kính Calorex màu xanh).
+	
+	\item {\Large $\varepsilon$}{\scriptsize r} $= 0.56$ (hệ số mặt trời kể đến ảnh hưởng của kính khác kính cơ bản khi có màn che bên trong).
+\end{itemize}
 
-\subsubsection{Xác định sơ đồ điều hoà không khí}
-- Trong bước này, chúng ta cần phải xác định được sơ đồ điều hoà không khí với các thông số trạng thái không khí trong nhà T, ngoài nhà N, hoà trộn H và thổi vào V ví dụ như entanpi I$_{T}$, I$_{N}$, I$_{H}$, I$_{V}$, nhiệt độ t$_{T}$, t$_{N}$, t$_{H}$, t$_{V}$, lưu lượng không khí G$_{T}$, G$_{N}$, G$_{H}$, G$_{V}$ (\textit{kg/s}), L$_{T}$, L$_{N}$, L$_{H}$, L$_{V}$ (\textit{$m^3/s$}), khối lượng riêng không khí $\rho_{T}$, $\rho_{N}$, $\rho_{H}$, $\rho_{V}$, ẩm dung của không khí d$_{T}$, d$_{N}$, d$_{H}$, d$_{V}$...
+Toàn bộ tòa nhà sử dụng loại kính Calorex, màu xanh, dày 6 mm và có sử dụng màn che màu sáng.
+\begin{table}[H]
+	\vspace{-0.3cm}
+	\centering
+	\caption{Các hệ số kính và màn che}
+	\begin{adjustbox}{width=\textwidth}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			& \textbf{Hệ số hấp thụ} & \textbf{Hệ số phản xạ} & \textbf{Hệ số xuyên qua} & \textbf{Hệ số kính} & \textbf{Hệ số mặt trời} \bigstrut\\
+			\hline
+			\multirow{2}[2]{*}{Kính Carolex màu xanh} & \multirow{2}[2]{*}{{\large $\alpha$}$_{K}$ = 0.75} & \multirow{2}[2]{*}{{\large $\beta$}$_{K}$ = 0.05} & \multirow{2}[2]{*}{{\large $\tau$}$_{K}$ = 0.20} & \multirow{2}[2]{*}{{\large $\varepsilon$}$_{m}$ = 0.57} & \multirow{2}[2]{*}{} \bigstrut[t]\\
+			&       &       &       &       &  \bigstrut[b]\\
+			\hline
+			\multirow{2}[2]{*}{Màn che màu sáng} & \multirow{2}[2]{*}{{\large $\alpha$}$_{m}$ = 0.37} & \multirow{2}[2]{*}{{\large $\beta$}$_{m}$ = 0.51} & \multirow{2}[2]{*}{{\large $\tau$}$_{m}$ = 0.12} & \multirow{2}[2]{*}{} & \multirow{2}[2]{*}{{\large $\varepsilon$}$_{r}$ = 0.56} \bigstrut[t]\\
+			&       &       &       &       &  \bigstrut[b]\\
+			\hline
+		\end{tabular}%
+		\label{tab:adadlabel}%
+	\end{adjustbox}
+\end{table}%
 
-\subsubsection{Xác định năng suất gió của hệ thống}
-- Để có thể tải được hết nhiệt thừa ra khỏi phòng điều hoà cần một lượng gió G$_{t}$ là:
+Nhiệt bức xạ mặt trời qua cửa kính khác kính cơ bản vào phòng theo các hướng của các phòng trong tòa nhà:
+\begin{equation*}
+	\begin{split}
+		R_{K} &= [0.4\alpha_{K} + \tau_{K}(\alpha_{m} + \tau_{m} + \rho_{K}\rho_{m} + 0.4\alpha_{K}\alpha_{m})]R_{N} \\
+		&= [0.4\alpha_{K} + \tau_{K}(\alpha_{m} + \tau_{m} + \rho_{K}\rho_{m} + 0.4\alpha_{K}\alpha_{m})]\dfrac{R}{0.88} \\
+		&= [0.4\times0.75 + 0.2\times(0.37 + 0.12 + 0.05\times0.51 + 0.4\times0.75\times0.37)]\dfrac{R}{0.88} \\
+		&= 0.4833\times R
+	\end{split}
+\end{equation*}
+\begin{table}[H]
+	\vspace{-0.3cm}
+	\centering
+	\caption{Bức xạ Mặt Trời qua kính lớn nhất theo hướng}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Hướng kính} & \textbf{RTmax ( W/m2 )} & \textbf{Rk ( W/m2 )} \bigstrut\\
+		\hline
+		Đông  & 520   & 251.32 \bigstrut\\
+		\hline
+		Tây   & 520   & 251.32 \bigstrut\\
+		\hline
+		Nam   & 470   & 227.15 \bigstrut\\
+		\hline
+		Bắc   & 82    & 39.63 \bigstrut\\
+		\hline
+	\end{tabular}
+	\label{b:bxmtln}
+\end{table}
+Vậy: $Q_{1} = n_{t}\times F_{1}\times R_{K}\times $
 
-\begin{equation}
-	G_{t} = \dfrac{Q_{t}}{I_{T} - I_{V}} , \textit{kg/s}
-\end{equation}
+\subsubsection{Hệ số tác dụng tức thời n{\scriptsize t}}
+Để xác định hệ số tác dụng tức thời, ta phải xác định tổng khối lượng của các bề mặt tạo nên không gian điều hoà tính trên 1m$^2$:
 
-- Để có thể tải được hết ẩm thừa ra khỏi phòng điều hoà cần một lượng gió G$_{W}$ là:
+\begin{center}
+	G $= \rho \times \delta \times F$
+\end{center}
 
-\begin{equation}
-	 G_{W} = \dfrac{W_{t}}{d_{T} - d_{V}} , \textit{kg/s}
-\end{equation}
+Trong đó:
+\begin{itemize}[leftmargin = 2.2cm]
+	\item $F$ là diện tích tường, đơn vị m$^2$.
+	\item $\rho$ là khối lượng riêng của vật liệu, đơn vị kg/m$^3$.
+	\item $\delta$ là bề dày của vật liệu khảo sát, đơn vị m.
+\end{itemize}
 
-Năng suất gió của hệ thống G phải bằng G$_{t}$ và G$_{M}$ do đó:
+Cấu trúc kết cấu bao che như bảng dưới đây:
 
-\begin{equation}
-	G = G_{t} = G_{M}
-\end{equation}
+\begin{wraptable}[13]{l}{0.4\textwidth}
+	\caption{Kết cấu bao che}
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tường dày 200mm}} \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{g}$}} & 180 mm & {\large $\rho_{g}$} & 1800 kg/m$^3$ \bigstrut\\
+		\hline
+		{\large $\delta_{v}$} & 10 mm & \textbf{{\large $\rho_{v}$}} & 1800 kg/m$^3$ \bigstrut\\
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Sàn}} \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{bt}$}} & 250 mm & {\large $\rho_{bt}$} & 2400 kg/m$^3$ \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{v}$}} & 50 mm & \textbf{{\large $\rho_{v}$}} & 1800 kg/m$^3$ \bigstrut\\
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Trần}} \bigstrut\\
+		\hline
+		\textbf{{\large $\delta$}} & 50 mm & \textbf{{\large $\rho$}} & 1000 kg/m$^3$ \bigstrut\\
+		\hline
+	\end{tabular}
+	\label{b:kcbc}%
+\end{wraptable}%
 
-hay:
+\vspace{0.5cm}
+Khối lượng bình quân của kết cấu bao che được xác định như sau:
+\begin{equation*}
+	g_{s} = \dfrac{G^{'}+0.5G^{''}}{F_{s}}, kg/m^2 
+\end{equation*}
 
-\begin{equation}
-	 \dfrac{Q_{t}}{I_{T} - I_{V}}  = \dfrac{W_{t}}{d_{T} - d_{V}} 
-\end{equation}
+Trong đó:
+\begin{itemize}
+	\item $G^{'}$ -- khối lượng tường có mặt ngoài tiếp xúc với bức xạ mặt trời và của sàn nằm trên mặt đất, đơn vị là kg.
+	\item $G^{''}$ -- khối lượng tường có mặt ngoài không tiếp xúc với bức xạ mặt trời và của sàn không nằm trên mặt đất, đơn vị là kg.
+	\item $F_{s}$ -- diện tích sàn, đơn vị là m$^2$.
+\end{itemize}
 
-rút ra:
-
-\begin{equation}
-	 \dfrac{Q_{t}}{W_{t}}  =  \dfrac{I_{T} - I_{V}}{d_{T} - d_{V}}  = {\LARGE \varepsilon_{t}}
-\end{equation}
-
-{\Large $\varepsilon_{t}$} chính là hệ số góc tia quá trình.
-
-\subsubsection{Tính năng suất lạnh}
-- Năng suất lạnh của hệ thống điều hoà không khí Q$ _{0} $ có thể được tính như sau:
-\begin{equation}
-	Q _{0} = G_{V}(I_{H} - I_{V}), \textit{kW}
-\end{equation}
-\begin{equation}
-	 Q _{0} = Q_{t}\times\dfrac{I_{H} - I_{V}}{I_{T} - I_{V}}, \textit{kW}
-\end{equation}
-
-
-\subsubsection{Lượng ẩm ngưng tụ trên dàn bay hơi W}
-\begin{equation}
-	W = G_{V}(d_{H}-d_{V}), \textit{kg/s}
-\end{equation}
-
-\subsection{ÁP DỤNG TÍNH TOÁN NHIỆT ẨM CHO TOÀ NHÀ}
-\subsubsection{Các thông số đầu vào}
-- Những thông số đầu vào để áp dụng cho tính toán nhiệt ẩm bao gồm các thông số sau:
-
-\begin{enumerate}[leftmargin=2.2cm]
-	\item Thông số từng tầng \& từng phòng.
-	\item Cấu trúc kết cấu bao che.
-	\item Nhiệt độ bên ngoài \& nhiệt độ yêu cầu của toà nhà.
-	\item Hệ số kính; hướng kính \& diện tích kính của toà nhà.
-	\item Hệ số thông gió.
-\end{enumerate}
-
-- Như đã nói ở trong phần giới thiệu, toà nhà được chia làm \textbf{27 tầng + 1 tầng lửng}. Dưới đây sẽ là bảng kích thước cụ thể cũng như từng tầng cũng như công năng từng phòng trong mỗi tầng.
+Bảng ở trang sau đây thể hiện khối lượng bình quân của kết cấu bao che:
+\begin{landscape}
+\begin{table}[H]
+	\vspace{0.5cm}
+	\centering
+	\begin{tabular}{|l|l|r|r|r|r|r|r|r|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{ TẦNG}} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{F{\scriptsize kính}}} & \multicolumn{1}{c|}{\textbf{F{\scriptsize ng} (m$^2$)}} & \multicolumn{1}{c|}{\textbf{F{\scriptsize tr} (m$^2$)}} & \multicolumn{1}{c|}{\textbf{G'}} & \multicolumn{1}{c|}{\textbf{G''}} & \multicolumn{1}{c|}{\textbf{g$_{s}$}} \bigstrut\\
+		\hline
+		\textbf{Tầng 1} & sảnh văn phòng & 509.579 & 86    & 0     & 310.149 & 0     & 457680.5 & 449.0771 \bigstrut\\
+		\hline
+		& coffe & 717.5506 & 123   & 0     & 138.672 & 0     & 542535.7 & 378.047 \bigstrut\\
+		\hline
+		& phòng máy & 57.9477 & 0     & 37.71 & 99.945 & 12896.82 & 74165.1 & 862.491 \bigstrut\\
+		\hline
+		& phòng cấp cứu & 57.9477 & 0     & 37.71 & 99.945 & 12896.82 & 74165.1 & 862.491 \bigstrut\\
+		\hline
+		\textbf{Tầng M} & phòng điều khiển 1 & 266.8014 & 0     & 152.6895 & 31.1175 & 52219.81 & 194735.1 & 560.6694 \bigstrut\\
+		\hline
+		& phòng điều khiển 2 & 662.885 & 0     & 256.05 & 96.9795 & 87569.1 & 490557.6 & 502.1202 \bigstrut\\
+		\hline
+		\textbf{Tầng 2 - 3} & cửa hàng 1 & 218.2908 & 119.6478 & 0     & 226.0494 & 0     & 227929.5 & 522.0778 \bigstrut\\
+		\hline
+		& cửa hàng 2 & 167.484 & 91.8  & 0     & 198.2016 & 0     & 183348.9 & 547.3625 \bigstrut\\
+		\hline
+		& cửa hàng 3 & 166.2525 & 144.3258 & 0     & 144.3258 & 0     & 164073.6 & 493.4472 \bigstrut\\
+		\hline
+		& cửa hàng 4 & 166.2525 & 144.3258 & 0     & 144.3258 & 0     & 164073.6 & 493.4472 \bigstrut\\
+		\hline
+		& cửa hàng 5 & 167.484 & 91.8  & 0     & 198.2016 & 0     & 183348.9 & 547.3625 \bigstrut\\
+		\hline
+		& cửa hàng 6 & 218.2908 & 119.6478 & 0     & 226.0494 & 0     & 227929.5 & 522.0778 \bigstrut\\
+		\hline
+		\textbf{Tầng 4} & khối văn phòng 1 & 724.812 & 416   & 0     & 374.544 & 0     & 628214.3 & 433.3636 \bigstrut\\
+		\hline
+		& khối văn phòng 2 & 724.812 & 416   & 0     & 374.544 & 0     & 628214.3 & 433.3636 \bigstrut\\
+		\hline
+		\textbf{Tầng 5 - 27} & khối văn phòng & 2040.78 & 783.2 & 0     & 271.2 & 0     & 1500889 & 367.7243 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Khối lượng bình quân của kết cấu bao che}
+	\label{b:klkcbc}%
+\end{table}%
+\end{landscape}
 
 
 \begin{table}[H]
 	\centering
-	\caption{BẢNG KÍCH THƯỚC PHÒNG}
+	\caption{Nhiệt do bức xạ Mặt Trời}
 	\begin{adjustbox}{width=\textwidth}
-	\begin{tabular}{|c|l|r|r|r|r|r|r|}
-		\toprule
-		\textbf{Tầng} & \multicolumn{1}{c|}{\textbf{Tên phòng}} & \multicolumn{1}{p{4.715em}|}{\textbf{Dài - X\newline{}(mm)}} & \multicolumn{1}{p{4.57em}|}{\textbf{Rộng - Y\newline{}(mm) }} & \multicolumn{1}{p{4.855em}|}{\textbf{Cao - Z\newline{}(mm) }} & \multicolumn{1}{p{5.5em}|}{\textbf{S sàn + trần\newline{}(m$ ^{2} $)}} & \multicolumn{1}{p{4.93em}|}{\textbf{S tường 13\newline{}(m$ ^{2} $)}} & \multicolumn{1}{p{6.43em}|}{\textbf{S tường 24\newline{} (m$ ^{2} $)}} \\
-		\midrule
-		\multicolumn{1}{|c|}{\multirow{4}[8]{*}{\textbf{Tầng 1}}} & Sảnh văn phòng & 47438 & 10742 & 4500  & 510   & 213   & 48 \\
-		\cmidrule{2-8}          & Cafeteria & 23285 & 30816 & 4500  & 718   & 105   & 139 \\
-		\cmidrule{2-8}          & Phòng máy & 8380  & 6915  & 4500  & 58    & 38    & 31 \\
-		\cmidrule{2-8}          & Phòng cấp cứu & 8380  & 6915  & 4500  & 58    & 38    & 31 \\
-		\midrule
-		\multirow{2}[4]{*}{\textbf{Tầng M}} & Phòng điều khiển 1 & 12380 & 21551 & 4500  & 267   & 56    & 97 \\
-		\cmidrule{2-8}          & Phòng điều khiển 2 & 56900 & 11650 & 4500  & 663   & 256   & 52 \\
-		\midrule
-		\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & Cửa hàng 1 & 22157 & 9852  & 5400  & 218   & 120   & 53 \\
-		\cmidrule{2-8}          & Cửa hàng 2 & 17000 & 9852  & 5400  & 167   & 92    & 53 \\
-		\cmidrule{2-8}          & Cửa hàng 3 & 16875 & 9852  & 5400  & 166   & 91    & 53 \\
-		\cmidrule{2-8}          & Cửa hàng 4 & 16875 & 9852  & 5400  & 166   & 91    & 53 \\
-		\cmidrule{2-8}          & Cửa hàng 5 & 17000 & 9852  & 5400  & 167   & 92    & 53 \\
-		\cmidrule{2-8}          & Cửa hàng 6 & 22157 & 9852  & 5400  & 218   & 120   & 53 \\
-		\midrule
-		\multirow{2}[4]{*}{\textbf{Tầng 4}} & Khối văn phòng 1 & 69360 & 10450 & 5400  & 725   & 375   & 56 \\
-		\cmidrule{2-8}          & Khối văn phòng 2 & 69360 & 10450 & 5400  & 725   & 375   & 56 \\
-		\midrule
-		\textbf{Tầng 5 - 27} & Khối văn phòng & 67800 & 30100 & 4000  & 2041  & 271   & 120 \\
-		\bottomrule
+	\begin{tabular}{|c|r|r|l|r|r|r|r|}
+		\hline
+		\textbf{TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{HƯỚNG}} & \multicolumn{1}{c|}{\textbf{gs}} & \multicolumn{1}{c|}{\textbf{Rk}} & \multicolumn{1}{c|}{\textbf{nt}} & \multicolumn{1}{c|}{\textbf{Q1}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 1}} & \multicolumn{1}{l|}{sảnh văn phòng} & 86    & B     & 449.0771 & 39.6306 & 0.91  & 1052.837 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{coffe} & 123   & Đ     & 378.047 & 251.316 & 0.8   & 8394.713 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{phòng máy} & 0     & N     & 862.491 & 227.151 & 0.67  & 0 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{phòng cấp cứu} & 0     & N     & 862.491 & 227.151 & 0.67  & 0 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng M}} & \multicolumn{1}{l|}{phòng điều khiển 1} & 0     & Đ     & 560.6694 & 251.316 & 0.65  & 0 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{phòng điều khiển 2} & 0     & N     & 502.1202 & 227.151 & 0.71  & 0 \bigstrut\\
+		\hline
+		\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & \multicolumn{1}{l|}{cửa hàng 1} & 119.6478 & N     & 522.0778 & 227.151 & 0.71  & 6550.408 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{cửa hàng 2} & 91.8  & N     & 547.3625 & 227.151 & 0.71  & 5025.813 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{cửa hàng 3} & 144.3258 & N     & 493.4472 & 227.151 & 0.71  & 7901.464 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{cửa hàng 4} & 144.3258 & B     & 493.4472 & 39.6306 & 0.91  & 1766.878 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{cửa hàng 5} & 91.8  & B     & 547.3625 & 39.6306 & 0.91  & 1123.842 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{cửa hàng 6} & 119.6478 & B     & 522.0778 & 39.6306 & 0.91  & 1464.763 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng 4}} & \multicolumn{1}{l|}{khối văn phòng 1} & 416   & B     & 433.3636 & 39.6306 & 0.91  & 5092.793 \bigstrut\\
+		\cline{2-8}          & \multicolumn{1}{l|}{khối văn phòng 2} & 416   & N     & 433.3636 & 227.151 & 0.71  & 22774.92 \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 5 - 27}} & \multicolumn{1}{c|}{\multirow{4}[8]{*}{khối văn phòng}} & 120.4 & Đ     & 367.7243 & 251.316 & 0.8   & 188997.1 \bigstrut\\
+		\cline{3-8}          &       & 120.4 & T     & 367.7243 & 251.316 & 0.85  & 200809.4 \bigstrut\\
+		\cline{3-8}          &       & 271.2 & N     & 367.7243 & 227.151 & 0.88  & 423258.3 \bigstrut\\
+		\cline{3-8}          &       & 271.2 & B     & 367.7243 & 39.6306 & 0.99  & 83075.69 \bigstrut\\
+		\hline
+		\textbf{Mái} &       & 2040.78 & Ngang &       & 382.7736 & 1     & 265172.7 \bigstrut\\
+		\hline
+	\end{tabular}%
+\end{adjustbox}
+	\label{b:ndbxmt}%
+\end{table}%
+
+\textbf{Vậy tổng nhiệt do bức xạ:} $Q_{1} = 1222.462(KW)$.
+
+\subsection{NHIỆT TRUYỀN KẾT CẤU BAO CHE -- Q{\scriptsize 2}}
+Nhiệt truyền qua vách Q2 gồm hai thành phần:
+
+-- Nhiệt do bức xạ vào tường được bỏ qua trong quá trình tính toán.
+
+-- Nhiệt do chênh nhiệt độ giữa không khí trong phòng và ngoài nhà.
+\begin{equation*}
+	\Delta t = t_{n} - t_{T}
+\end{equation*}
+
+Vậy: $Q_{2} = Q_{21} + Q_{22} + Q_{23} + Q_{24} + Q_{25}$, W 
+
+Nhiệt truyền qua kết cấu bao che được xác định bằng công thức:
+\begin{equation*}
+	Q_{2X} = k_{2X}\times F_{2X}\times\Delta t
+\end{equation*}
+
+Trong đó:
+\begin{itemize}[leftmargin = 2.2cm]
+	\item $k_{2X}$ : Hệ số truyền nhiệt qua kế cấu bao che W/(m$^2$.K).
+	\item $F_{2X}$ : Diện tích kết cấu bao che (m²).
+	\item $\Delta t$ : Độ chênh lệch nhiệt độ với không gian không diều hòa ($^{\circ}C$).
+\end{itemize}
+
+\subsubsection{Nhiệt truyền qua tường -- Q{\scriptsize 21}}
+
+Xác định hệ số tryền nhiệt qua vách tường:
+
+-- Đối với tường ngoài dày 200 mm:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tường ngoài dày 200mm}} \bigstrut\\
+		\hline
+		{\large $\delta_{v}$} & 10 mm & \textbf{{\large $\lambda_{v}$}} & 0.93 W/mK \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{g}$}} & 180 mm & {\large $\lambda_{g}$} & 0.81 W/mK \bigstrut\\
+		\hline
+		{\large $\delta_{v}$} & 10 mm & \textbf{{\large $\lambda_{v}$}} & 0.93 W/mK \bigstrut\\
+		\hline
 	\end{tabular}
-	\label{B:tsphong}
+\end{table}
+\vspace{-0.5cm}
+{\Large \begin{equation*}
+	\begin{split}
+	k_{21} &= \dfrac{1}{\frac{1}{\alpha_{N}} + \frac{\delta_{g}}{\lambda_{g}} + 2\times\frac{\delta_{v}}{\lambda_{v}} + \frac{1}{\alpha_{T}}}\\
+	&=\dfrac{1}{\frac{1}{20} + \frac{0.18}{0.81} + 2\times\frac{0.01}{0.93} + \frac{1}{10}}\\
+	&={\scriptstyle 2.54, W/m^2 K}
+	\end{split}
+\end{equation*}}
+
+-- Đối với tường trong dày 200 mm:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tường trong dày 200mm}} \bigstrut\\
+		\hline
+		{\large $\delta_{v}$} & 10 mm & \textbf{{\large $\lambda_{v}$}} & 0.93 W/mK \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{g}$}} & 180 mm & {\large $\lambda_{g}$} & 0.81 W/mK \bigstrut\\
+		\hline
+		{\large $\delta_{v}$} & 10 mm & \textbf{{\large $\lambda_{v}$}} & 0.93 W/mK \bigstrut\\
+		\hline
+	\end{tabular}
+\end{table}
+\vspace{-0.5cm}
+{\Large \begin{equation*}
+	\begin{split}
+		k_{21} &= \dfrac{1}{\frac{1}{\alpha_{T}} + \frac{\delta_{g}}{\lambda_{g}} + 2\times\frac{\delta_{v}}{\lambda_{v}} + \frac{1}{\alpha_{T}}}\\
+		&=\dfrac{1}{\frac{1}{10} + \frac{0.18}{0.81} + 2\times\frac{0.01}{0.93} + \frac{1}{10}}\\
+		&={\scriptstyle 2.25,  W/m^2 K}
+	\end{split}
+\end{equation*}}
+
+\begin{table}[H]
+	\vspace{-1cm}
+	\centering
+	\caption{Nhiệt truyền qua tường}
+	\begin{adjustbox}{width=\textwidth}
+	\begin{tabular}{|c|l|r|r|r|r|r|}
+		\hline
+		\textbf{ TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{K kính}} & \multicolumn{1}{p{6.145em}|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{t$_{N}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{t$_{N}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{Q$_{21}$(W)}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 2.57  & 86    & 32    & 25    & 1547.14 \bigstrut\\
+		\cline{2-7}          & coffe & 2.57  & 123   & 32    & 25    & 2212.77 \bigstrut\\
+		\cline{2-7}          & phòng máy & 2.57  & 0     & 32    & 25    & 0 \bigstrut\\
+		\cline{2-7}          & phòng cấp cứu & 2.57  & 0     & 32    & 25    & 0 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng M}} & phòng điều khiển 1 & 2.57  & 0     & 32    & 25    & 0 \bigstrut\\
+		\cline{2-7}          & phòng điều khiển 2 & 2.57  & 0     & 32    & 25    & 0 \bigstrut\\
+		\hline
+		\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & cửa hàng 1 & 2.57  & 120   & 32    & 25    & 2152.464 \bigstrut\\
+		\cline{2-7}          & cửa hàng 2 & 2.57  & 92    & 32    & 25    & 1651.482 \bigstrut\\
+		\cline{2-7}          & cửa hàng 3 & 2.57  & 144   & 32    & 25    & 2596.421 \bigstrut\\
+		\cline{2-7}          & cửa hàng 4 & 2.57  & 144   & 32    & 25    & 2596.421 \bigstrut\\
+		\cline{2-7}          & cửa hàng 5 & 2.57  & 92    & 32    & 25    & 1651.482 \bigstrut\\
+		\cline{2-7}          & cửa hàng 6 & 2.57  & 120   & 32    & 25    & 2152.464 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng 4}} & khối văn phòng 1 & 2.57  & 416   & 32    & 25    & 7483.84 \bigstrut\\
+		\cline{2-7}          & khối văn phòng 2 & 2.57  & 416   & 32    & 25    & 7483.84 \bigstrut\\
+		\hline
+		\textbf{Tầng 5 - 27} & khối văn phòng & 2.57  & 783   & 32    & 25    & 14089.77 \bigstrut\\
+		\hline
+	\end{tabular}%
 	\end{adjustbox}
+	\label{b:ntqvt}%
+\end{table}%
+
+\textbf{Vậy tổng nhiệt lượng truyền qua vách tường:} Q$_{21} = 45618.09(W)$
+
+\subsubsection{Nhiệt truyền qua cửa ra vào -- Q{\scriptsize 22}}
+
+Vì các phòng trong tòa nhà có sử dụng cửa gỗ (dày 40mm). Tra hệ số truyền nhiệt theo bảng 4.12\footnote{Theo sách Thiết kế hệ thống điều hoà không khí - Nguyễn Đức Lợi}.
+
+Ta có được:
+\begin{equation*}
+	K_{22} = 2.23, W/m^2K
+\end{equation*}
+\newpage
+\begin{table}[H]
+	\centering
+	\caption{Nhiệt lượng truyền qua cửa ra vào}
+	\begin{adjustbox}{width=\textwidth}
+	\begin{tabular}{|c|l|r|r|r|r|r|}
+		\hline
+		\textbf{ TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{K kính}} & \multicolumn{1}{p{6.145em}|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{t$_{N}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{t$_{N}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{Q$_{22}$(W)}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\cline{2-7}          & coffe & 2.57  & 11.88 & 32    & 25    & 213.7212 \bigstrut\\
+		\cline{2-7}          & phòng máy & 2.57  & 3.96  & 32    & 25    & 71.2404 \bigstrut\\
+		\cline{2-7}          & phòng cấp cứu & 2.57  & 3.96  & 32    & 25    & 71.2404 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng M}} & phòng điều khiển 1 & 2.57  & 3.96  & 32    & 25    & 71.2404 \bigstrut\\
+		\cline{2-7}          & phòng điều khiển 2 & 2.57  & 3.96  & 32    & 25    & 71.2404 \bigstrut\\
+		\hline
+		\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & cửa hàng 1 & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\cline{2-7}          & cửa hàng 2 & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\cline{2-7}          & cửa hàng 3 & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\cline{2-7}          & cửa hàng 4 & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\cline{2-7}          & cửa hàng 5 & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\cline{2-7}          & cửa hàng 6 & 2.57  & 7.92  & 32    & 25    & 142.4808 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng 4}} & khối văn phòng 1 & 2.57  & 15.84 & 32    & 25    & 284.9616 \bigstrut\\
+		\cline{2-7}          & khối văn phòng 2 & 2.57  & 15.84 & 32    & 25    & 284.9616 \bigstrut\\
+		\hline
+		\textbf{Tầng 5 - 27} & khối văn phòng & 2.57  & 31.68 & 32    & 25    & 13108.23 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\end{adjustbox}
+	\label{b:ntqcrv}%
+\end{table}%
+
+\textbf{Vậy tổng nhiệt lượng truyền qua vách tường:} Q$_{22} = 15174.21(W)$
+
+\subsubsection{Nhiệt truyền qua cửa chiếu sáng -- Q{\scriptsize 23}}
+
+Vì công trình không có cửa chiếu sáng nên lượng nhiệt truyền qua cửa chiếu sáng có thể xem như bằng 0.
+
+\subsubsection{Nhiệt truyền qua nền sàn -- Q{\scriptsize 24}}
+
+Với kết cấu sàn tầng 1 (tiếp xúc với không gian không điều hòa) như sau:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Sàn}} \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{g}$}} & 250 mm & {\large $\lambda_{g}$} & 0.81 kg/mK \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{v}$}} & 50 mm & \textbf{{\large $\lambda_{v}$}} & 0.93 W/mK \bigstrut\\	
+		\hline
+	\end{tabular}
+	\label{b:kcs}
 \end{table}
 
+{\Large \begin{equation*}
+	\begin{split}
+		k_{24} &= \dfrac{1}{\frac{1}{\alpha_{N}} + \frac{\delta_{g}}{\lambda_{g}} + 2\times\frac{\delta_{v}}{\lambda_{v}} + \frac{1}{\alpha_{T}}}\\
+		&= \dfrac{1}{\frac{1}{20} + \frac{0.18}{0.81} + 2\times\frac{0.01}{0.93} + \frac{1}{10}}\\
+		&={\scriptstyle 2.54, W/m^2 K}
+	\end{split}
+\end{equation*}}
 
+Do các phòng ở tầng hầm 1 và tầng 1 có sàn tiếp xúc với tầng (Có không gian không điều hòa) nên ta phải tính toán giá trị Q24, còn các phòng từ tầng 2 đến tầng 27 có sàn tiếp xúc với phòng có điều hòa nên giá trị Q$ _{24} $ = 0.
 
-
-
-\begin{minipage}[H]{.5\linewidth}
+\begin{table}[H]
 	\centering
-	\includegraphics[width=\textwidth]{Wall_section.png}
-	\captionof{figure}{Mặt cắt tường}
-	\label{H:tstuong}
-\end{minipage}
-\begin{minipage}[H]{.5\linewidth}
+	\caption{Nhiệt truyền qua sàn}
+	\begin{tabular}{|c|l|r|r|r|r|r|}
+		\hline
+		\textbf{ TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{K$ _{24} $}} & \multicolumn{1}{p{6.145em}|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{t$_{N}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{t$_{T}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{Q$ _{24} $(W)}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 2.54  & 510   & 32    & 25    & 9059.698 \bigstrut\\
+		\cline{2-7}          & coffe & 2.54  & 718   & 32    & 25    & 12757.18 \bigstrut\\
+		\cline{2-7}          & phòng máy & 2.54  & 58    & 32    & 25    & 1030.24 \bigstrut\\
+		\cline{2-7}          & phòng cấp cứu & 2.54  & 58    & 32    & 25    & 1030.24 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\label{tab:addlabel}%
+\end{table}%
+\textbf{Vậy tổng nhiệt lượng truyền qua vách tường:} Q$_{24} = 23877.36(W)$
+
+\subsubsection{Nhiệt truyền qua mái -- Q{\scriptsize 25}:}
+
+Các phòng ở tầng 27 có trần tiếp xúc phòng không điều hòa.
+\begin{equation*}
+	Q_{25} = k_{25}\times F\times \Delta t
+\end{equation*}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Trần}} \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{g}$}} & 250 mm & {\large $\lambda_{g}$} & 0.81 kg/mK \bigstrut\\
+		\hline
+		\textbf{{\large $\delta_{v}$}} & 50 mm & \textbf{{\large $\lambda_{v}$}} & 0.93 W/mK \bigstrut\\	
+		\hline
+	\end{tabular}
+	\label{b:kct}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Nhiệt truyền qua mái}
+	\begin{tabular}{|c|l|r|r|r|r|r|}
+		\hline
+		\textbf{ TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{K$ _{25} $}} & \multicolumn{1}{p{6.145em}|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{t$_{N}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{t$_{T}$ ($^{\circ}C$)}} & \multicolumn{1}{c|}{\textbf{Q$ _{25} $(W)}} \bigstrut\\
+		\hline
+		\textbf{Tầng 27} & khối văn phòng & 2.54     & 2041     & 32       & 25       & 36282.6 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\label{b:ntqm}%
+\end{table}%
+\textbf{Vậy tổng nhiệt lượng truyền qua vách tường:} Q$_{25} = 36282.6(W)$
+
+\subsubsection{NHIỆT TOẢ DO ĐÈN \& CÁC THIẾT BỊ KHÁC -- Q{\scriptsize 3}}
+
+Do chưa biết chính xác có bao nhiêu bòng đèn chiếu sáng thì ta lấy mật độ tải chiếu sáng theo tài liệu.
+
+-- Tải do chiếu sáng lấy 11 W/m$^2$.
+
+-- Tải do thiết bị điện lấy 25 W/m$^2$.
+
+Ta có công thức:
+\begin{equation*}
+	Q = A\times F
+\end{equation*}
+
+Trong đó:
+\begin{itemize}[leftmargin = 2.2cm]
+	\item F là diện tích sàn, đơn vị m$^2$.
+	\item A là mật độ tải do chiếu sáng /mật độ tải thiết bị.
+\end{itemize}
+
+\begin{table}[H]
+	\centering
+	\caption{Tải do chiếu sáng}
+	\begin{adjustbox}{width=\textwidth, height=.2\textheight}
+	\begin{tabular}{|c|l|r|r|r|r|r|}
+		\hline
+		\textbf{SỐ TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{A (W/m²)}} & \multicolumn{1}{c|}{\textbf{n$ _{t} $}} & \multicolumn{1}{c|}{\textbf{n{\scriptsize đ}}} & \multicolumn{1}{c|}{\textbf{Q$_{3}$ (W)}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 509.579  & 1        & 0.87     & 0.85     & 376.8337 \bigstrut\\
+		\cline{2-7}             & coffe    & 717.5506 & 1        & 0.84     & 0.85     & 512.3311 \bigstrut\\
+		\cline{2-7}             & phòng máy & 57.9477  & 1        & 0.87     & 0.85     & 42.85232 \bigstrut\\
+		\cline{2-7}             & phòng cấp cứu & 57.9477  & 1        & 0.87     & 0.85     & 42.85232 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng M}} & phòng điều khiển 1 & 266.8014 & 1        & 0.87     & 0.85     & 197.2996 \bigstrut\\
+		\cline{2-7}             & phòng điều khiển 2 & 662.885  & 1        & 0.87     & 0.85     & 490.2035 \bigstrut\\
+		\hline
+		\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & cửa hàng 1 & 218.2908 & 1        & 0.87     & 0.85     & 161.426 \bigstrut\\
+		\cline{2-7}             & cửa hàng 2 & 167.484  & 1        & 0.87     & 0.85     & 123.8544 \bigstrut\\
+		\cline{2-7}             & cửa hàng 3 & 166.2525 & 1        & 0.87     & 0.85     & 122.9437 \bigstrut\\
+		\cline{2-7}             & cửa hàng 4 & 166.2525 & 1        & 0.87     & 0.85     & 122.9437 \bigstrut\\
+		\cline{2-7}             & cửa hàng 5 & 167.484  & 1        & 0.87     & 0.85     & 123.8544 \bigstrut\\
+		\cline{2-7}             & cửa hàng 6 & 218.2908 & 1        & 0.87     & 0.85     & 161.426 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng 4}} & khối văn phòng 1 & 724.812  & 1        & 0.84     & 0.85     & 517.5158 \bigstrut\\
+		\cline{2-7}             & khối văn phòng 2 & 724.812  & 1        & 0.84     & 0.85     & 517.5158 \bigstrut\\
+		\hline
+		\textbf{Tầng 5 - 27} & khối văn phòng & 2040.78  & 1        & 0.84     & 0.85     & 33513.69 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\end{adjustbox}
+	\label{b:tcs}%
+\end{table}%
+\textbf{Vậy tổng nhiệt lượng do chiếu sáng:} Q$_{3} = 37028(W)$
+
+\begin{table}[H]
+	\centering
+	\caption{Tải do thiết bị}
+	\begin{tabular}{|c|l|r|r|r|}
+		\hline
+		\textbf{SỐ TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{A (W/m²)}} & \multicolumn{1}{c|}{\textbf{Q3 (w)}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 509.579  & 25       & 12739.47 \bigstrut\\
+		\cline{2-5}             & coffe    & 717.5506 & 25       & 17938.76 \bigstrut\\
+		\cline{2-5}             & phòng máy & 57.9477  & 25       & 1448.693 \bigstrut\\
+		\cline{2-5}             & phòng cấp cứu & 57.9477  & 25       & 1448.693 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng M}} & phòng điều khiển 1 & 266.8014 & 25       & 6670.035 \bigstrut\\
+		\cline{2-5}             & phòng điều khiển 2 & 662.885  & 25       & 16572.13 \bigstrut\\
+		\hline
+		\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & cửa hàng 1 & 218.2908 & 25       & 5457.269 \bigstrut\\
+		\cline{2-5}             & cửa hàng 2 & 167.484  & 25       & 4187.1 \bigstrut\\
+		\cline{2-5}             & cửa hàng 3 & 166.2525 & 25       & 4156.313 \bigstrut\\
+		\cline{2-5}             & cửa hàng 4 & 166.2525 & 25       & 4156.313 \bigstrut\\
+		\cline{2-5}             & cửa hàng 5 & 167.484  & 25       & 4187.1 \bigstrut\\
+		\cline{2-5}             & cửa hàng 6 & 218.2908 & 25       & 5457.269 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{Tầng 4}} & khối văn phòng 1 & 724.812  & 25       & 18120.3 \bigstrut\\
+		\cline{2-5}             & khối văn phòng 2 & 724.812  & 25       & 18120.3 \bigstrut\\
+		\hline
+		\textbf{Tầng 5 - 27} & khối văn phòng & 2040.78  & 25       & 1173449 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\label{b:ttb}%
+\end{table}%
+\textbf{Vậy tổng nhiệt lượng do thiết bị:} Q$_{3} = 1294.108(KW)$
+
+\subsection{NHIỆT TOẢ DO NGƯỜI -- Q{\scriptsize 4} }
+\subsubsection{Nhiệt hiện do người toả ra Q{\scriptsize 4h}}
+-- Lượng nhiệt hiện do người toả ra:
+\begin{equation*}
+	Q_{4h} = n\times q_{h}, W
+\end{equation*}
+
+Trong đó:
+\begin{itemize}[leftmargin=2.2cm]
+	\item n - là số người trong không gian cần điều hòa.
+	\item $q_{h}$ - là nhiệt hiện tỏa ra từ một người, W/người.
+\end{itemize}
+
+Trong trường hợp số lượng người quá đông như : hội trường, rạp hát, vũ trường, sân khấu, phòng thi đấu thể thao …cần kể đến sự hấp thụ của kết cấu bao che . Do đó, ta cần kể đến hệ số tác động tức thời nt (hệ số tác động tức thời do chiếu sáng và nhiệt hiện của người), tra bảng 4-8.
+
+Đối với các tòa nhà lớn ta cần tính thêm hệ số tác dụng không đồng thời n{\scriptsize đ}:
+\begin{itemize}[leftmargin=2.2cm, label={-}]
+	\item Cửa hàng bách hóa: n{\scriptsize đ} = 0,75 $ \div $ 0,9.
+	\item Nhà cao tầng khách sạn: n{\scriptsize đ} = 0,8 $ \div $ 0,9.
+	\item Nhà cao tầng công sở: n{\scriptsize đ} = 0,8 $ \div $ 0,9.
+\end{itemize}
+
+Vậy: $Q_{4h} = n_{t}\times n_{d}\times n\times q_{h}$
+
+\subsubsection{Nhiệt ẩn do người toả ra -- Q{\scriptsize 4a}}
+Trong không gian cần điều hoà ngoài sự hiện diện của thành phần nhiệt hiện còn có thành phần khác cũng phải kể đến là nhiệt ẩn. Nhiệt ẩn trong không gian điều hoà có thể do ngưới toả ra (như mồ hôi, do thở), do thức ăn toả ra (nơi ăn uống).
+
+Nhiệt ẩn của phòng điều hoà được xác định như sau:
+\begin{equation*}
+	Q_{3} = n\times q_{a}, W
+\end{equation*}
+
+Trong đó:
+\begin{itemize}[leftmargin=2.2cm]
+	\item n - số người trong phòng cần điều hoà.
+	\item $q_{a}$ -  nhiệt ẩn do một người toả ra , W/người.
+\end{itemize}
+
+Đối với khu ăn uống cộng thêm 10 W/người do thức ăn toả ra .
+
+Chọn hệ số tác dụng đồng thời n{\scriptsize đ} = 0,9.
+
+Do số người hiện diện trong không gian cần điều hoà không cố định nên xem sự hiện diện của nam và nữ trong không gian điều hoà là như nhau để thuận lợi cho việc tính toán.
+
+Ta lấy:
+\begin{itemize}[leftmargin=2.2cm, label={-}]
+	\item Nhiệt ẩn do một người tỏa ra: $q_{a}$ = 60 W.
+	\item Nhiệt hiện do một người tỏa ra: $q_{h}$ = 70 W.
+\end{itemize}
+
+\begin{table}[H]
+	\centering
+	\caption{Mật độ người trong các loại phòng}
+	\begin{adjustbox}{width=\textwidth}
+	\begin{tabular}{|p{10.785em}|c|c|c|c|c|}
+		\hline
+		\textbf{Loại không  gian} & \multicolumn{1}{p{7.285em}|}{\textbf{Văn phòng làm việc}} & \multicolumn{1}{p{4.07em}|}{\textbf{Cà phê}} & \multicolumn{1}{p{4.07em}|}{\textbf{Sảnh}} & \multicolumn{1}{p{4.07em}|}{\textbf{Hội nghị}} & \multicolumn{1}{p{6.785em}|}{\textbf{Phòng phụ trợ}} \bigstrut\\
+		\hline
+		Mật độ , m2/người & 8        & 3        & 10       & 2        & 5 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\end{adjustbox}
+	\label{b:mdn}%
+\end{table}%
+
+\begin{landscape}
+\begin{table}[H]
+	\vspace{1cm}
+	\centering
+	\begin{adjustbox}{width=1.5\textheight, height=0.4\textwidth}
+	\begin{tabular}{|c|l|r|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{c|}{\textbf{DIỆN TÍCH (m²) }} & \multicolumn{1}{c|}{\textbf{MẬT ĐỘ NGƯỜI m²/người}} & \multicolumn{1}{c|}{\textbf{n}} & \multicolumn{1}{c|}{\textbf{qh (w)}} & \multicolumn{1}{c|}{\textbf{qn (w)}} & \multicolumn{1}{c|}{\textbf{nđ}} & \multicolumn{1}{c|}{\textbf{Qh (w)}} & \multicolumn{1}{c|}{\textbf{Qa (w)}} & \multicolumn{1}{c|}{\textbf{Q4 (w)}} \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\textbf{tầng 1}} & sảnh văn phòng & 509.579  & 10       & 50.9579  & 70       & 60       & 0.9      & 3210.348 & 3057.474 & 6267.822 \bigstrut\\
+		\cline{2-11}             & coffe    & 717.5506 & 3        & 239.1835 & 70       & 60       & 0.9      & 15068.56 & 14351.01 & 29419.57 \bigstrut\\
+		\cline{2-11}             & phòng máy & 57.9477  & 5        & 11.58954 & 70       & 60       & 0.9      & 730.141  & 695.3724 & 1425.513 \bigstrut\\
+		\cline{2-11}             & phòng cấp cứu & 57.9477  & 5        & 11.58954 & 70       & 60       & 0.9      & 730.141  & 695.3724 & 1425.513 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{tầng M}} & phòng điều khiển 1 & 266.8014 & 5        & 53.36028 & 70       & 60       & 0.9      & 3361.697 & 3201.617 & 6563.314 \bigstrut\\
+		\cline{2-11}             & phòng điều khiển 2 & 662.885  & 5        & 132.577  & 70       & 60       & 0.9      & 8352.351 & 7954.62  & 16306.97 \bigstrut\\
+		\hline
+		\multirow{6}[12]{*}{\textbf{tầng 2 - 3}} & cửa hàng 1 & 218.2908 & 8        & 27.28635 & 70       & 60       & 0.9      & 1719.04  & 1637.181 & 3356.22 \bigstrut\\
+		\cline{2-11}             & cửa hàng 2 & 167.484  & 8        & 20.9355  & 70       & 60       & 0.9      & 1318.937 & 1256.13  & 2575.067 \bigstrut\\
+		\cline{2-11}             & cửa hàng 3 & 166.2525 & 8        & 20.78156 & 70       & 60       & 0.9      & 1309.238 & 1246.894 & 2556.132 \bigstrut\\
+		\cline{2-11}             & cửa hàng 4 & 166.2525 & 8        & 20.78156 & 70       & 60       & 0.9      & 1309.238 & 1246.894 & 2556.132 \bigstrut\\
+		\cline{2-11}             & cửa hàng 5 & 167.484  & 8        & 20.9355  & 70       & 60       & 0.9      & 1318.937 & 1256.13  & 2575.067 \bigstrut\\
+		\cline{2-11}             & cửa hàng 6 & 218.2908 & 8        & 27.28635 & 70       & 60       & 0.9      & 1719.04  & 1637.181 & 3356.22 \bigstrut\\
+		\hline
+		\multirow{2}[4]{*}{\textbf{tầng 4}} & khối văn phòng 1 & 724.812  & 8        & 90.6015  & 70       & 60       & 0.9      & 5707.895 & 5436.09  & 11143.98 \bigstrut\\
+		\cline{2-11}             & khối văn phòng 2 & 724.812  & 8        & 90.6015  & 70       & 60       & 0.9      & 5707.895 & 5436.09  & 11143.98 \bigstrut\\
+		\hline
+		\textbf{tầng 5 - 27} & khối văn phòng & 2040.78  & 8        & 255.0975 & 70       & 60       & 0.9      & 16071.14 & 15305.85 & 721670.8 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\end{adjustbox}
+	\caption{Nhiệt lượng do người toả ra}
+	\label{b:ndn}%
+\end{table}%
+\end{landscape}
+\textbf{Vậy tổng nhiệt lượng do người toả ra:} Q$_{4} = 822342(W)$
+
+\subsection{NHỆT HIỆN \& ẨN DO GIÓ TƯƠI MANG VÀO -- Q{\scriptsize 5}}
+\subsubsection{Các khu vực sử dụng FCU:}
+Lượng nhiệt do gió tươi mang vào được xác định bằng biểu thức sau:
+\begin{equation*}
+	\begin{split}
+	Q_{5} &= Q_{5h} + Q_{5a} \\
+	Q_{5h} &= 1.2 \times n \times l \times (t_{N} - t_{T}), W \\
+	Q_{5a} &= 3 \times n \times l \times (d_{N} - d_{T}), W
+	\end{split}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}[leftmargin=2.2cm]
+	\item $t_{N}$, $t_{T}$ - nhiệt độ của không khí tươi bên ngoài và không khí trong không gian điều hoà, $^{\circ}C$.
+	\item $d_{N}$, $d_{T}$ - độ chứa hơi của không khí tươi bên ngoài và không khí trong không gian điều hoà, g /kg.
+	\item $ n $ - số người trong không gian điều hoà.
+	\item $l$ - lượng không khí tươi từ ngoài trời cần đưa vào phòng cho một người trong một giây, l/s.
+\end{itemize}
+
+Yêu cầu gió tươi:
+\begin{itemize}[leftmargin=2.2cm, label={-}]
+	\item Phòng làm việc: 25 m$^3$/h.người
+	\item Hành lang: 25 m$^3$/h.m$^2$sàn
+	\item Bếp: 30 m$^3$/h.người
+	\item Cà phê: 30 m$^3$/h.người
+	\item Phòng hội nghị: 30 m$^3$/h.người
+\end{itemize}
+
+-- Tuỳ thuộc vào không gian mà nhiệt độ và độ chứa hơi khác nhau.
+
+-- Độ chứa hơi của không khí được xác định theo phần mềm DAIKIN.
+
+\begin{table}[H]
+	\centering
+	\caption{Độ chứa hơi của không khí}
+	\begin{tabular}{|p{7.645em}|c|c|c|}
+		\hline
+		\textbf{Thông số} & \multicolumn{1}{p{5.43em}|}{\textbf{t ($^{\circ}C$)}} & \multicolumn{1}{p{4.645em}|}{\textbf{j (\%)}} & \multicolumn{1}{p{5.785em}|}{\textbf{d (g/kg kk)}} \bigstrut\\
+		\hline
+		Bên trong & 25       & 55       & 10.94 \bigstrut\\
+		\hline
+		Bên ngoài & 32       & 75       & 22.84 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\label{b:dch}%
+\end{table}%
+
+\begin{landscape}
 	\begin{table}[H]
+		\vspace{1.3cm}
 		\centering
-		\begin{tabular}{|r|r|r|r|r|}
-			\toprule
-			\multicolumn{5}{|c|}{\textbf{Tường dày 200mm}} \\
-			\midrule
-			{\LARGE $\delta_{g}$} & 180   &       & {\LARGE $\rho_{g}$}  & 1800 \\
-			\midrule
-			{\LARGE $\delta_{v}$} & 10    &       & {\LARGE $\rho_{v}$}  & 1800 \\
-			\bottomrule
+		\begin{adjustbox}{width=1.5\textheight, height=0.4\textwidth}
+		\begin{tabular}{|c|l|r|r|r|r|r|r|r|r|r|r|r|}
+			\hline
+			\textbf{TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{p{5.285em}|}{\textbf{THỂ TÍCH (m3) }} & \multicolumn{1}{p{4.07em}|}{\textbf{n}} & \multicolumn{1}{p{5.5em}|}{\textbf{l (l/s/người)}} & \multicolumn{1}{p{6.645em}|}{\textbf{LN (l/s)}} & \multicolumn{1}{p{4.07em}|}{\textbf{tN}} & \multicolumn{1}{p{4.07em}|}{\textbf{tT}} & \multicolumn{1}{p{4.07em}|}{\textbf{dT}} & \multicolumn{1}{p{4.07em}|}{\textbf{dN}} & \multicolumn{1}{p{5.855em}|}{\textbf{Q5h (W)}} & \multicolumn{1}{p{6em}|}{\textbf{Q5a (W)}} & \multicolumn{1}{p{6.715em}|}{\textbf{Q5 (W)}} \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 2293.11  & 51       & 5.5      & 280.27   & 32       & 25       & 10.94    & 22.84    & 2354.25  & 10003.19 & 12357.45 \bigstrut\\
+			\cline{2-13}             & coffe    & 3228.98  & 239      & 4.7      & 1124.16  & 32       & 25       & 10.94    & 22.84    & 9442.97  & 40123.02 & 49565.98 \bigstrut\\
+			\cline{2-13}             & phòng máy & 260.76   & 12       & 4.5      & 52.15    & 32       & 25       & 10.94    & 22.84    & 438.08   & 1861.41  & 2299.50 \bigstrut\\
+			\cline{2-13}             & phòng cấp cứu & 260.76   & 12       & 4.5      & 52.15    & 32       & 25       & 10.94    & 22.84    & 438.08   & 1861.41  & 2299.50 \bigstrut\\
+			\hline
+			\multirow{2}[4]{*}{\textbf{Tầng M}} & phòng điều khiển 1 & 1200.61  & 53       & 4.5      & 240.12   & 32       & 25       & 10.94    & 22.84    & 2017.02  & 8570.28  & 10587.30 \bigstrut\\
+			\cline{2-13}             & phòng điều khiển 2 & 2982.98  & 133      & 4.5      & 596.60   & 32       & 25       & 10.94    & 22.84    & 5011.41  & 21293.41 & 26304.82 \bigstrut\\
+			\hline
+			\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & cửa hàng 1 & 1178.77  & 27       & 5        & 136.43   & 32       & 25       & 10.94    & 22.84    & 1146.03  & 4869.45  & 6015.48 \bigstrut\\
+			\cline{2-13}             & cửa hàng 2 & 904.41   & 21       & 5        & 104.68   & 32       & 25       & 10.94    & 22.84    & 879.29   & 3736.09  & 4615.39 \bigstrut\\
+			\cline{2-13}             & cửa hàng 3 & 897.76   & 21       & 5        & 103.91   & 32       & 25       & 10.94    & 22.84    & 872.83   & 3708.62  & 4581.45 \bigstrut\\
+			\cline{2-13}             & cửa hàng 4 & 897.76   & 21       & 5        & 103.91   & 32       & 25       & 10.94    & 22.84    & 872.83   & 3708.62  & 4581.45 \bigstrut\\
+			\cline{2-13}             & cửa hàng 5 & 904.41   & 21       & 5        & 104.68   & 32       & 25       & 10.94    & 22.84    & 879.29   & 3736.09  & 4615.39 \bigstrut\\
+			\cline{2-13}             & cửa hàng 6 & 1178.77  & 27       & 5        & 136.43   & 32       & 25       & 10.94    & 22.84    & 1146.03  & 4869.45  & 6015.48 \bigstrut\\
+			\hline
+			\multirow{2}[4]{*}{\textbf{Tầng 4}} & khối văn phòng 1 & 3913.98  & 91       & 8.5      & 770.11   & 32       & 25       & 10.94    & 22.84    & 6468.95  & 27486.46 & 33955.41 \bigstrut\\
+			\cline{2-13}             & khối văn phòng 2 & 3913.98  & 91       & 8.5      & 770.11   & 32       & 25       & 10.94    & 22.84    & 6468.95  & 27486.46 & 33955.41 \bigstrut\\
+			\hline
+			\textbf{Tầng 5 - 27} & khối văn phòng & 8163.12  & 255      & 8.5      & 2168.33  & 32       & 25       & 10.94    & 22.84    & 18213.96 & 77390.85 & 2198910.68 \bigstrut\\
+			\hline
 		\end{tabular}%
-		\caption{Bảng thông số tường}
-		\label{B:tstuong}
-	\end{table}
-\end{minipage}
+		\end{adjustbox}
+		\caption{Nhiệt do gió tươi mang vào}
+		\label{b:ndgt}%
+	\end{table}%
+\end{landscape}
+\textbf{Vậy tổng nhiệt lượng do gió tươi mang vào:} Q$_{5} = 2 400 660.6(W)$
 
-\vspace{0.5cm}
-Và kết quả là Virk đã có hẳn một cuốn sách nói về giả thuyết cho rằng thế giới của chúng ta là một mô phỏng. Anh cũng đã vạch ra một con đường phát triển của công nghệ, để một ngày nào đó, chúng ta sẽ tiến được tới một "Điểm mô phỏng", ở đó, con người có thể tạo ra được những thế giới mô phỏng mới giống hệt thế giới của mình, không thể phân biệt được giống như Ma trận.
+\subsection{NHIỆT HIỆN \& ẨN DO LỌT GIÓ -- Q{\scriptsize 6}}
+Để tiết kiệm năng lượng, phòng cần điều hoà phải được làm kín để ta chủ động cấp lượng không khí tươi cho phòng. Tuy nhiên vẫn có hiện tượng không khí tươi lọt vào phòng qua cửa ra vào, qua khe cửa sổ,…Mức độ rò rỉ phụ thuộc vào nhiều yếu tố: độ chênh áp bên trong và bên ngoài, tốc độ gió, số lần đóng mở cửa,..Lượng nhiệt đó được xác định như sau :
+\begin{equation*}
+	\begin{split}
+	Q_{6} &= Q_{6h} + Q_{6a} \\
+	Q_{6h} &= 0.39 \times \xi \times V \times (t_{N} - t_{T}), W \\
+	Q_{6a} &= 0.84 \times \xi \times V \times (d_{N} - d_{T}), W		
+	\end{split}
+\end{equation*}
 
-Trong khuôn khổ một buổi phỏng vấn với Vox, đây là những gì mà bạn có thể tìm hiểu về giả thuyết mô phỏng từ Rizwan Virk. Các câu trả lời phỏng vấn của anh đã được chỉnh sửa nhẹ để mọi thứ trở nên dễ hiểu hơn.
+Trong đó:
+\begin{itemize}[leftmargin=2.2cm]
+	\item $\xi$ - hệ số kinh nghiệm.
+	\item $V$ - thể tích phòng, m$^3$.
+\end{itemize}
 
+Nếu ở không gian cần điều hoà có số người ra vào nhiều, cửa đóng mở nhiều lần thì cần phải bổ sung thêm vào lượng nhiệt hiện và ẩn sau:
 
+\begin{equation*}
+	\begin{split}
+		Q_{bsh} &= 1.23\times L_{bs}\times (t_{N} - t_{T}), W\\
+		Q_{bsa} &= 3\times L_{bs}\times (d_{N} - d_{T}), W\\
+	\end{split}
+\end{equation*}
 
-\begin{figure}[H]
+Trong đó:
+\begin{itemize}[leftmargin=2.2cm]
+	\item $t_{N}$, $t_{T}$ - nhiệt độ của không khí tươi bên ngoài và không khí trong không gian điều hoà, $^{\circ}C$.
+	\item $d_{N}$, $d_{T}$ - độ chứa hơi của không khí tươi bên ngoài và không khí trong không gian điều hoà, g /kg.
+	\item $ n $ - số người qua cửa trong một giờ.
+	\item $L_{bs}$ - $= 0.28\times n\times L_{c}$, l/s.
+	\item $L_{c}$ - Lượng không khí lọt qua mỗi lần mở cửa, m$^3$/người. 
+\end{itemize}
+
+\begin{landscape}
+	\begin{table}[H]
+		\vspace{0.5cm}
 		\centering
-		\includegraphics[width=0.8\textwidth]{Floor_Section.png}
-		\caption{Mặt cắt sàn}
-		\label{H:tssan}
-\end{figure}
-
-\begin{wraptable}{l}{0.35\textwidth}
-		\centering
-		\begin{tabular}{|r|r|r|r|r|}
-			\toprule
-			\multicolumn{5}{|c|}{\textbf{Sàn}} \\
-			\midrule
-			{\LARGE $\delta_{bt}$} & 250 &      & {\LARGE $\rho_{bt}$} & 2400 \\
-			\midrule
-			{\LARGE $\delta_{v}$} & 50   &      & {\LARGE $\rho_{v}$} & 1800 \\
-			\bottomrule
+	\begin{adjustbox}{width=1.5\textheight}
+		\begin{tabular}{|c|l|r|r|r|r|r|r|r|r|r|}
+			\hline
+			\textbf{TẦNG} & \multicolumn{1}{c|}{\textbf{TÊN PHÒNG}} & \multicolumn{1}{p{6.645em}|}{\textbf{THỂ TÍCH (m3) }} & \multicolumn{1}{p{6.855em}|}{\textbf{HỆ SỐ KINH NGHIỆM}} & \multicolumn{1}{c|}{\textbf{tN}} & \multicolumn{1}{c|}{\textbf{tT}} & \multicolumn{1}{c|}{\textbf{dT}} & \multicolumn{1}{c|}{\textbf{dN}} & \multicolumn{1}{c|}{\textbf{Q6h}} & \multicolumn{1}{c|}{\textbf{Q6a}} & \multicolumn{1}{c|}{\textbf{Q6}} \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\textbf{Tầng 1}} & sảnh văn phòng & 2293.11  & 0.42     & 32       & 25       & 10.94    & 22.84    & 2629.3   & 9624.9   & 12254 \bigstrut\\
+			\cline{2-11}             & coffe    & 3228.98  & 0.35     & 32       & 25       & 10.94    & 22.84    & 3085.3   & 11294    & 14379 \bigstrut\\
+			\cline{2-11}             & phòng máy & 260.76   & 0.7      & 32       & 25       & 10.94    & 22.84    & 498.32   & 1824.2   & 2322.5 \bigstrut\\
+			\cline{2-11}             & phòng cấp cứu & 260.76   & 0.7      & 32       & 25       & 10.94    & 22.84    & 498.32   & 1824.2   & 2322.5 \bigstrut\\
+			\hline
+			\multirow{2}[4]{*}{\textbf{Tầng M}} & phòng điều khiển 1 & 1200.61  & 0.55     & 32       & 25       & 10.94    & 22.84    & 1802.7   & 6599.1   & 8401.8 \bigstrut\\
+			\cline{2-11}             & phòng điều khiển 2 & 2982.98  & 0.4      & 32       & 25       & 10.94    & 22.84    & 3257.4   & 11924    & 15182 \bigstrut\\
+			\hline
+			\multirow{6}[12]{*}{\textbf{Tầng 2 - 3}} & cửa hàng 1 & 1178.77  & 0.55     & 32       & 25       & 10.94    & 22.84    & 1769.9   & 6479.1   & 8249 \bigstrut\\
+			\cline{2-11}             & cửa hàng 2 & 904.41   & 0.6      & 32       & 25       & 10.94    & 22.84    & 1481.4   & 5423     & 6904.4 \bigstrut\\
+			\cline{2-11}             & cửa hàng 3 & 897.76   & 0.6      & 32       & 25       & 10.94    & 22.84    & 1470.5   & 5383.1   & 6853.7 \bigstrut\\
+			\cline{2-11}             & cửa hàng 4 & 897.76   & 0.6      & 32       & 25       & 10.94    & 22.84    & 1470.5   & 5383.1   & 6853.7 \bigstrut\\
+			\cline{2-11}             & cửa hàng 5 & 904.41   & 0.6      & 32       & 25       & 10.94    & 22.84    & 1481.4   & 5423     & 6904.4 \bigstrut\\
+			\cline{2-11}             & cửa hàng 6 & 1178.77  & 0.55     & 32       & 25       & 10.94    & 22.84    & 1769.9   & 6479.1   & 8249 \bigstrut\\
+			\hline
+			\multirow{2}[4]{*}{\textbf{Tầng 4}} & khối văn phòng 1 & 3913.98  & 0.35     & 32       & 25       & 10.94    & 22.84    & 3739.8   & 13690    & 17430 \bigstrut\\
+			\cline{2-11}             & khối văn phòng 2 & 3913.98  & 0.35     & 32       & 25       & 10.94    & 22.84    & 3739.8   & 13690    & 17430 \bigstrut\\
+			\hline
+			\textbf{Tầng 5 - 27} & khối văn phòng & 8163.12  & 0.35     & 32       & 25       & 10.94    & 22.84    & 7799.9   & 28553    & 836108 \bigstrut\\
+			\hline
 		\end{tabular}%
-		\caption{Bảng thông số sàn}
-		\label{B:tssan}%
-\end{wraptable}
+	\end{adjustbox}
+		\caption{Nhiệt do lọt gió}
+		\label{b:ndlg}%
+	\end{table}%
+\end{landscape}
+\textbf{Vậy tổng nhiệt lượng do gió tươi mang vào:} Q$_{6} = 969845(W)$
 
-
-Có phải tất cả chúng ta chỉ đang sống trong một mô phỏng máy tính, một trò chơi điện tử mà ai đó "ngoài kia" đã lập trình lên? Câu hỏi có vẻ vô lý. Tuy nhiên, có rất nhiều người thông minh, bao gồm Elon Musk, Nick Bostrom và John Wheeler, một nhà vật lý sống ở thời đại Einstein cho rằng điều này hoàn toàn có thể.
-
-Nick Bostrom là một triết gia tại Đại học Oxford. Ông nổi tiếng với một lập luận về giả thuyết mô phỏng cho rằng trong số 3 điều dưới đây, có ít nhất một điều có khả năng là đúng:
-
-1) Tất cả các nền văn minh giống với nền văn minh của loài người trong vũ trụ đều tuyệt chủng trước khi phát triển được một trình độ công nghệ có thể tạo ra các thực tại mô phỏng.
-
-2) Nếu có bất kỳ nền văn minh nào đạt được đến trình độ công nghệ này, không ai trong số họ còn bận tâm đến việc tạo ra một thế giới mô phỏng nữa (Có thể họ bận tâm đến những thứ khác, vượt ra ngoài những gì chúng ta đang suy nghĩ)
-
-Có phải tất cả chúng ta chỉ đang sống trong một mô phỏng máy tính, một trò chơi điện tử mà ai đó "ngoài kia" đã lập trình lên? Câu hỏi có vẻ vô lý. Tuy nhiên, có rất nhiều người thông minh, bao gồm Elon Musk, Nick Bostrom và John Wheeler, một nhà vật lý sống ở thời đại Einstein cho rằng điều này hoàn toàn có thể.
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Ceiling_section.png}
-	\caption{Mặt cắt trần}
-	\label{H:tstran}	
-\end{figure}
-
-\begin{wraptable}{l}{0.35\textwidth}
-		\centering
-		\begin{tabular}{|r|r|r|r|r|}
-			\toprule
-			\multicolumn{5}{|c|}{\textbf{Trần }} \\
-			\midrule
-			{\LARGE $\delta$}& 50    &       &{\LARGE $\rho$}& 1000 \\
-			\bottomrule
-		\end{tabular}%
-		\label{B:tstran}%
-		\caption{Bảng thông số trần}
-\end{wraptable}
-
-Và kết quả là Virk đã có hẳn một cuốn sách nói về giả thuyết cho rằng thế giới của chúng ta là một mô phỏng. Anh cũng đã vạch ra một con đường phát triển của công nghệ, để một ngày nào đó, chúng ta sẽ tiến được tới một "Điểm mô phỏng", ở đó, con người có thể tạo ra được những thế giới mô phỏng mới giống hệt thế giới của mình, không thể phân biệt được giống như Ma trận.
-
-Trong khuôn khổ một buổi phỏng vấn với Vox, đây là những gì mà bạn có thể tìm hiểu về giả thuyết mô phỏng từ Rizwan Virk. Các câu trả lời phỏng vấn của anh đã được chỉnh sửa nhẹ để mọi thứ trở nên dễ hiểu hơn.
+$\Rightarrow$ \textbf{Vậy tổng tải lạnh Q{\scriptsize 0} công trình là}: \textbf{6821.779267, KW}
 
 
 
 
-\section{PHƯƠNG PHÁP CARRIER}
--
+
+
+%\section{XÂY DỰNG MÔ HÌNH 3D BẰNG \emph{REVIT}}
+%Toà khách sạn Grand Plaza được xây dựng 27 tầng, mỗi tầng có nhiệm vụ và chức năng khác nhau, dưới đây là hình toà khách sạn được dựng bởi mô hình 3D bằng Revit.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{revit}
+%	\caption{Mô hình 3D Revit}
+%	\label{revit}
+%\end{figure}
+%
+%\newpage
+%\textbf{Tầng 1}: Được sử dụng làm phòng cấp cứu, coffee, phòng máy và sảnh văn phòng.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{1stcad}
+%	\caption{Tầng 1 được vẽ bằng AutoCAD}
+%	\label{1stcad}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{1strevit}
+%	\caption{Tầng 1 được mô hình hoá bằng phần mềm Revit}
+%	\label{1strevit}
+%\end{figure}
+%
+%\newpage
+%\textbf{Tầng M}: Được sử dụng làm phòng điều khiển.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{mcad}
+%	\caption{Tầng M được vẽ bằng AutoCAD}
+%	\label{mcad}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{mrevit}
+%	\caption{Tầng M được mô hình hoá bằng phần mềm Revit}
+%	\label{mrevit}
+%\end{figure} 
+%
+%\newpage
+%\textbf{Tầng 2 - 3}: Được sử dụng làm cửa hàng.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{23cad}
+%	\caption{Tầng 2 - 3 được vẽ bằng AutoCAD}
+%	\label{23cad}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{23revit}
+%	\caption{Tầng 2 - 3 được mô hình hoá bằng phần mềm Revit}
+%	\label{23revit}
+%\end{figure} 
+%
+%\newpage
+%\textbf{Tầng 4}: Được sử dụng làm văn phòng.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{4cad}
+%	\caption{Tầng 4 được vẽ bằng AutoCAD}
+%	\label{4cad}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{4revit}
+%	\caption{Tầng 4 được mô hình hoá bằng phần mềm Revit}
+%	\label{4revit}
+%\end{figure} 
+%
+%\newpage
+%\textbf{Tầng 5 - 27}: Được sử dụng làm văn phòng.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{527cad}
+%	\caption{Tầng 5 - 27 được vẽ bằng AutoCAD}
+%	\label{527cad}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{527revit}
+%	\caption{\textbf{Tầng 5 - 27} được mô hình hoá bằng phần mềm Revit}
+%	\label{527revit}
+%\end{figure} 
+
 
 \section{TÍNH TẢI LẠNH BẰNG \emph{REVIT MEP}}
-- 

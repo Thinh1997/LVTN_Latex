@@ -1,15 +1,36 @@
 \documentclass[a4paper]{report}
 
-\usepackage{multicol} %dung de su dung khi dung excel sang table Latex
-\setlength{\columnsep}{1cm}
+\usepackage{times} %dung de su dung font chu Times New Roman
 
-\usepackage{multirow} 
+\usepackage{multicol} %dung de su dung khi dung excel sang table Latex
+
+\usepackage{multirow} %dung de su dung khi dung excel sang table latex
+
+\usepackage{bigstrut} %su dung thay package booktabs
+
+\usepackage{multido} %dung de ve may dotted lines
 
 \usepackage[utf8]{vietnam} %dung de viet tieng Viet
 
 \usepackage{fancyhdr} %dung de tao ra cac style kho giay
 
-\usepackage[left=3cm, right=2cm, top=2.5cm, bottom=2cm, includefoot, includehead]{geometry} %dung de dinh dang kho giay
+\usepackage[Rejne]{fncychap}
+\makeatletter
+\def\@makeschapterhead#1{%
+	\vspace*{50\p@}%
+	{\parindent\z@\raggedright\normalfont\interlinepenalty\@M
+		\DOTIS{#1}%
+		\vskip-30\p@ 
+		\kern-.6\p@
+		\hrule
+		\vskip-80\p@}%
+}
+\ChNumVar{\fontsize{40}{18}\selectfont}
+\ChNameVar{\centering\fontsize{30}{18}\selectfont}
+\ChRuleWidth{1mm}
+\makeatother
+
+\usepackage[a4paper,left=3cm, right=2cm, top=2cm, bottom=2cm, includefoot, includehead, headsep=0.5cm]{geometry} %dung de dinh dang kho giay
 
 \usepackage{amsmath} %dung de tao ra cac phuong trinh toan hoc
 
@@ -20,13 +41,18 @@
 \usepackage{graphicx} %dung de su dung khi insert image 
 \graphicspath{{E:/K22 Nhiet Lanh/LVTN/Files Latex LVTN/Pic/}}
 
-\usepackage[titles]{tocloft} %Dùng để chỉnh mục lục - khoảng cách tiêu đề các thể loại
-\cftsetindents{chapter}{0cm}{1cm}
-\cftsetindents{section}{1cm}{1cm}
+\usepackage{tocloft}
+\setlength{\cftbeforechapskip}{1em}
+\setlength{\cftbeforesecskip}{0.5em}
+\setlength{\cftbeforesubsecskip}{0.5em}
+\let\oldcftchappresnum\cftchappresnum
+\renewcommand*{\cftchappresnum}{CHƯƠNG \oldcftchappresnum}
+\setlength{\cftchapnumwidth}{3cm}
+\cftsetindents{section}{1cm}{0.7cm} %chinh khoang cach trong TOC
 \cftsetindents{subsection}{1.5cm}{1.5cm}
 \addtocontents{toc}{~\hfill\textbf{Trang}\par}
 
-\usepackage[hidelinks]{hyperref} %dùng để làm toc có thể click được
+\usepackage[hidelinks, unicode]{hyperref} %dùng để làm toc có thể click được
 
 \usepackage{float} %dung de tao, di chuyen cac object nhu table, image...
 
@@ -37,22 +63,43 @@
 \usepackage{lscape} %dung de xoay ngang to giay
 
 \usepackage{scrextend} %dung de dieu chinh size font chu
-\changefontsizes{12pt}
+\changefontsizes{13pt}
 
 \usepackage{indentfirst} %dùng để sau khi section thì dòng đầu tiên thục vào n cm
 \setlength{\parindent}{1cm}
-\renewcommand{\baselinestretch}{1.5} %dùng để giãn dòng 1.5
+\renewcommand{\baselinestretch}{1.2} %dùng để giãn dòng 1.2
 
-\usepackage[Rejne]{fncychap} %dùng để tạo style cho page
+\widowpenalty=1000
+\clubpenalty=1000
 
 \usepackage{wrapfig} %dùng để wrap các text xung quanh table hoặc figure(image)
 
 \usepackage{enumitem} %dùng để thiết kế lại các định dạng khi sử dụng list hoặc item, enumerate
 
-\usepackage{booktabs} %dùng cho excel2latex
+\usepackage{anyfontsize} %dùng cho mọi kích cỡ chữ
 
-\usepackage[backend=bibtex]{biblatex} %dùng để tạo "TÀI LIỆU THAM KHẢO"
+\usepackage[dvipsnames]{xcolor} %dung de highlight chu viet hoac doi mau chu
+
+\usepackage{tcolorbox} %dung de tao cac colorbox
+
+\usepackage[backend=bibtex, style=verbose-trad2]{biblatex} %dùng để tạo "TÀI LIỆU THAM KHẢO"
+\citetrackerfalse
+\interfootnotelinepenalty=10000 %dung de tranh tinh trang footcite qua trang khac
 \addbibresource{thamkhao.bib}
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\selectfont\fontsize{12}{8}\bfseries\color{Red}}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\selectfont\fontsize{12}{8}\bfseries\color{TealBlue}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\selectfont\fontsize{12}{8}\bfseries\color{Green}}{\thesubsubsection}{1em}{}
+\titlespacing*{\section}
+{0cm}{0.2cm}{0.2cm}
+\titlespacing*{\subsection}
+{0cm}{0.2cm}{0.2cm}
+\titlespacing*{\subsubsection}
+{0cm}{0.2cm}{0.2cm}
 
 %Phan nay la su dung package fancyhdr
 \pagestyle{fancy}
@@ -70,29 +117,38 @@
 %Tạo 1 lệnh để tạo chương mới, trình độ này thượng thừa vl ra
 \newcommand{\chapmoi}[1]{
 	\chapter{\textbf{#1}}
-	\begin{center} %cái này là tạo biểu tượng dưới cái chương
+	\begin{center}
 		{\Huge \APLminus}
 		{\Huge \faBookOpen}
 		{\Huge \APLminus}
 	\end{center}
 	\newpage}
 
+\newcommand{\dottedline}[1]{
+	\par\nobreak
+	\noindent\rule{0pt}{1.5\baselineskip}
+	\multido{}{#1}{\noindent\makebox[\linewidth]{\dotfill}\endgraf}
+	\bigskip}
+
 %Đây chính là phần soạn thảo Latex, add các file vào để compile
 %Khi compile thì compile file chính là đủ.
 \begin{document}
+	\include{loinoidau}
+	\include{nhanxet&loicamon}
 	\include{LVTN_Mucluc}
-	\include{LVTN_chap1&2}
+	\include{LVTN_chap1}
+	\include{LVTN_chap2}
 	\include{LVTN_chap3}
-	\include{LVTN_chap4}
-	\include{LVTN_chap5}
-	\include{LVTN_chap6}
-	\include{LVTN_chap7}
-	\include{LVTN_chap8}
-	\include{LVTN_chap9}
-	\include{LVTN_chap10}
-	\include{LVTN_chap11}
-	\include{LVTN_chap12}
-	\include{LVTN_chap13}
-	\include{LVTN_chap14}
-	\include{main_end}
+%	\include{LVTN_chap4}
+%	\include{LVTN_chap5}
+%	\include{LVTN_chap6}
+%	\include{LVTN_chap7}
+%	\include{LVTN_chap8}
+%	\include{LVTN_chap9}
+%	\include{LVTN_chap10}
+%	\include{LVTN_chap11}
+%	\include{LVTN_chap12}
+%	\include{LVTN_chap13}
+%	\include{LVTN_chap14}
+%	\include{main_end}
 \end{document}
