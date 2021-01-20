@@ -1,13 +1,311 @@
-\chapmoi{THIẾT KẾ THIẾT BỊ NGƯNG TỤ}
+\fancyhead[L]{\leftmark}
+\chapmoi{TÍNH TOÁN - THIẾT KẾ BÌNH BAY HƠI}
+\section{GIỚI THIỆU VỀ THIẾT BỊ BAY HƠI}
+\subsection{CHỨC NĂNG}
+Thiết bị bay hơi là thiết bị chính quan trọng trong hệ thống lạnh, dùng để làm lạnh chất tải lạnh (nước hay dung dịch NaCl, CaCl{\scriptsize 2} ). Các chất tải lạnh này được dẫn vào dàn lạnh và làm lạnh không khí trong không gian cần làm lạnh.
+
+Trong thiết bị bay hơi có sự trao đổi nhiệt giữa tác nhân lỏng và chất tải lạnh từ dàn lạnh trở về. Chất tải lạnh chuyển động trong ống, còn tác nhân lạnh chuyển động bên ngoài ống. Kết quả của sự truyền nhiệt là tác nhân lạnh chuyển thành hơi, chất tải lạnh làm lạnh xuống nhiệt độ cần thiết.
+
+\subsection{PHÂN LOẠI}
+Theo cách phân loại về mức độ hoán chỗ của tác nhân trong thiết bị bay hơi, chia làm 2 loại sau:
+\begin{itemize}
+	\item Thiết bị bay hơi kiểu ngập lỏng.
+	\item Thiết bị bay hơi kiểu ngập lỏng nửa.
+	\item Thiết bị bay hơi kiểu trực tiếp.
+\end{itemize}
+\subsection{PHÂN TÍCH \& LỰA CHỌN THIẾT BỊ BAY HƠI}
+Thiết bị bay hơi kiểu ngập lỏng: tác nhân lạnh lỏng bao phủ toàn bộ bề mặt trao đổi nhiệt, tác nhân lạnh lỏng được cấp từ phía dưới. Với loại này, nước lạnh chuyển động trong ống, còn tác nhân lạnh lỏng chuyển động bên ngoài ống. Hệ số truyền nhiệt cao.
+
+Thiết bị bay hơi kiểu không ngập lỏng: tác nhân lạnh lỏng chỉ bao phủ một bề mặt trao đổi nhiệt, phần còn lại của bề mặt trao đổi nhiệt dùng để quá nhiệt hơi hút vế máy nén. Ở loại này, tác nhân lạnh lỏng được cấp từ phía trên của thiết bị bay hơi và chuyển động bên ngoài ống, còn nước lạnh chuyển động trong ống. Loại này có hệ số truyền nhiệt cao.
+
+Thiết bị bay hơi kiểu trực tiếp: tác nhân lạnh lỏng chuyển động trong ống, còn nước lạnh chuyển động bên ngoài ống. Với loại này thì tổn thất áp về phía nước nhỏ, lượng tác nhân lạnh nạp vào hệ thống tương đối ít. Nhưng hệ số truyền nhiệt không cao.
+
+Từ sự phân tích ở trên ta chọn thiết bị bay hơi là loại ngập lỏng, do hệ số trruyền nhiệt cao nên kích thước thiết bị sẻ nhỏ ứng với năng suất lạnh lớn. Do công trình cần điều hoà không khí có tổn thất nhiệt là $Q_{O}$ = \_\_\_ kW nên việc chọn lựa thiết bị trên là hợp lý. Với loại bình bay hơi này, nước chuyển động trong có thể xem như kín nên không khí ít lọt vào hệ thống, do đó giảm được sự ăn mòn thiết bị.
+
+\section{TÍNH TOÁN - THIẾT KẾ BÌNH BAY HƠI}
+\subsection{THÔNG SỐ BAN ĐẦU}
+Tổng tải lạnh của công trình $Q_{O}$ = \_\_\_ kW. Chọn 1 thiết bị bay hơi. Năng suất lạnh của mỗi thiết bị bay hơi là: $Q'_{O} = $
+
+Trong hệ thống ta sử dụng thiết bị bay hơi với chất tải lạnh là nước chuyển động trong ống, còn tác nhân lạnh R134a chuyển động bên ngoài ống. Trong thiết bị bay hơi sử dụng ống đồng có làm cánh bên ngoài.
+
+Nhiệt độ nước vào bình bay hơi: $t_{s1}$ = $^{\circ}$C
+
+Nhiệt độ nước ra bình bay hơi: $t_{s2}$ = $^{\circ}$C
+
+Các thông số về ống đồng sử dụng như sau:
+\begin{itemize}
+	\item Đường kính trong của ống : $ d_{tr} $ =  m
+	\item Đường kính chân cánh : $ d_{ng} $ =  m
+	\item Đường kính cánh : $D_{C}$ =  m
+	\item Bước cánh : $ S_{C} $ =  m
+	\item Bề dày chân cánh : $ \delta_{o} $ =  m
+	\item Bề dày đầu cánh : $ \delta_{d} $ = m
+	\item Bước ống : $S$ = 0,027 m
+\end{itemize}
+
+Diện tích bề mặt trong của 1m ống:
+\begin{equation*}
+	F_{tr} = \pi\times d_{tr} = 
+\end{equation*}
+
+Diện tích bề mặt đứng của 1m ống:
+\begin{equation*}
+	\begin{split}
+		F_{d} &= \dfrac{\pi\times(D_{C}^2 - d_{ng}^2)}{2\times S_{C}}\\
+		&= 
+	\end{split}
+\end{equation*}
+
+Diện tích mặt ngoài của 1m ống:
+\begin{equation*}
+	\begin{split}
+		F_{ng} &= \pi\times d_{ng}\times\left(1 - \dfrac{\delta_{o}}{S_{C}}\right) + \dfrac{\pi\times D_{C}\times d_{ng}}{S_{C}} \\
+		&= 
+	\end{split}
+\end{equation*}
+
+Tổng diện tích mặt ngoài ứng với 1m ống:
+\begin{equation*}
+	F = F_{d} + F_{ng} = 
+\end{equation*}
+
+Hệ số làm cánh:
+\begin{equation*}
+	\beta = \dfrac{F}{F_{tr}} =
+\end{equation*}
+
+\subsection{TÍNH TOÁN VỀ PHÍA NƯỚC}
+Nhiệt độ trung bình của nước:
+\begin{equation*}
+	\overline{t_{w}} = \dfrac{1}{2}\times(t_{w1} + t_{w2}) = 
+\end{equation*}
+
+Tra phụ lục 28 trang 613 TL[2], các tính chất vật lý của nước ta được:
+\begin{itemize}
+	\item Nhiệt dung riêng : $C_{\rho n}$ = 4.191 kJ/kg.K
+	\item Khối lượng riêng : $ \rho_{n} $ = 999.7 kg/m3
+	\item Độ nhớt động học : $ \nu_{n} $ = 1.306$\times10^{-6}$ m2/s
+	\item Hệ số dẫn nhiệt : $ \lambda_{n} $ = 57.45$\times10^{-2}$ W/m.K
+	\item Hệ số Prandtl : $ Pr_{n} $ = 9.52
+\end{itemize}
+
+Lưu lượng nước lạnh cần cung cấp cho 1 giây:
+\begin{equation*}
+	G_{n} = \dfrac{Q_{o}}{C\times\Delta t} = 
+\end{equation*}
+
+Với chất lượng nước ở nước ta không cao, để đảm nước chảy rối thích hợp trong bình ngưng, để giảm tổn thất năng lượng cho bơm, giảm khả năng mài mòn ống thì tốc độ nước không nên chọn quá lớn. Tốc độ nước được chọn nằm trong khoảng (1$\div$2.5m/s).
+
+Cụ thể ta chọn tốc độ nước: $\omega_{n}$ = 2 m/s.
+
+Số ống trong một đường nước:
+\begin{equation*}
+	n_{1} = \dfrac{4\times G_{n}}{\pi\times\rho_{n}\times\omega_{n}\times d_{tr}^2} = 
+\end{equation*}
+
+Chọn số ống là: $n_{1}$  = 
+
+Ta xác định lại vận tốc nước chảy trong ống:
+\begin{equation*}
+	n_{1} = \dfrac{4\times G_{n}}{\pi\times\rho_{n}\times n_{1}\times d_{tr}^2} = 
+\end{equation*}
+
+Trị số Reynold của nước:
+\begin{equation*}
+	Re = \dfrac{\omega_{n}\times d_{tr}}{\nu_{n}} =
+\end{equation*}
+
+Do đó chế độ chảy của nước trong ống là chảy rối.
+
+Trị số Nusselt của nước:
+\begin{equation*}
+	Nu = 0.017\times Re^{0.8}\times Pr^{0.4}\times\left(\dfrac{d_{ng}}{d_{tr}}\right)^{0.18}
+\end{equation*}
+
+Xem nhiệt độ giữa bề mặt vách ống và nước trong ống là không quá lớn, nên xem $\left(\dfrac{Pr_{f}}{Pr_{w}}\right)$ = 1. Do $\dfrac{l}{d} >$ 50, nên xem $\varepsilon_{1}$ = 1, với ống sử dụng là ống thẳng nên $\varepsilon_{R}$ = 1.
+
+Do đó:
+\begin{equation*}
+	Nu = 0.017\times x^{0.8}\times y^{0.4}\times\left(\dfrac{u}{i}\right)^{0.18} = 
+\end{equation*}
+
+Hệ số tỏa nhiệt về phía nước giải nhiệt:
+\begin{equation*}
+	\alpha_{s.tr} = \dfrac{Nu\times\lambda}{d_{tr}} =
+\end{equation*}
+
+\subsection{TÍNH TOÁN VỀ PHÍA TÁC NHÂN LẠNH}
+Với nhiệt sôi của tác nhân $t_{o}$ = \_\_\_$^{\circ}$C, nhiệt độ trung bình logarit của bình bay hơi được xác định như sau:
+\begin{equation*}
+	\theta_{m} = \dfrac{t_{s1} - t_{s2}}{\ln{\dfrac{t_{s1} - t_{s0}}{t_{s2} - t_{s0}}}} = 
+\end{equation*}
+
+Tổng trở nhiệt của lớp cáu:
+$\Sigma \dfrac{\delta_{i}}{\lambda_{i}} = (0.12 \div 0.15)\times 10^{-3} m^2.K/W$
+
+Ta chọn tổng nhiệt trở để tính toán: $\Sigma \dfrac{\delta_{i}}{\lambda_{i}} = (0.13)\times 10^{-3} m^2.K/W$
+
+Mật độ dòng nhiệt về phía nước:
+\begin{equation*}
+	\begin{split}
+		q_{s.tr} &= \dfrac{t_{V} - t_{W}}{\dfrac{1}{\alpha_{s.tr}} + \Sigma \dfrac{\delta_{i}}{\lambda_{i}}} = \dfrac{\theta_{m} - \theta}{\dfrac{1}{\alpha_{s.tr}} + \Sigma \dfrac{\delta_{i}}{\lambda_{i}}}\\
+		&=
+	\end{split}
+\end{equation*}
+
+Mật độ dòng nhiệt của tác nhân R134A khi sôi trên bề mặt có cánh được tính quy về phía nước (bề mặt trong) như sau:
+\begin{equation*}
+	q_{a.tr} = 335\times p_{o}^{0.5}\times\theta^2\times\varepsilon_{n}\times\varepsilon_{d}\times\dfrac{F}{F_{tr}}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $p_{o}$ - áp suất sôi của tác nhân ở $t_{o}$ = $^{\circ}$C.
+	\item $\varepsilon_{n}$ - hệ số xét đến ảnh hưởng của chùm ống có cánh, trong bình bay hơi làm lạnh nước ta lấy $\varepsilon_{n}$ = 1.
+	\item $\varepsilon_{d}$ - hệ số xét đến ảnh hưởng của dầu bôi trơn hoà tan trong tác nhân R143A, ta lấy $\varepsilon_{d}$ = 0.82.
+\end{itemize}
+
+Vậy:
+\begin{equation*}
+	\begin{split}
+		q_{a.tr} &= 335\times p_{o}^{0.5}\times\theta^2\times\varepsilon_{n}\times\varepsilon_{d}\times\dfrac{F}{F_{tr}}\\
+		&= 
+	\end{split}
+\end{equation*}
+
+Ta có hệ phương trình:
+\begin{equation*}
+	\begin{cases}
+		q_{s.tr} &= 3491.34\times(5.87 - \theta)\\
+		q_{a.tr} &= 2132.33\times\theta^2
+	\end{cases}
+\end{equation*}
+\begin{equation*}
+	\begin{split}
+	2132.33\times\theta^2 &= 3491.34\times(5.87 - \theta)\\
+	\Rightarrow \theta &= \\
+				q_{tr} &=
+	\end{split}
+\end{equation*}
+
+Diện tích truyền nhiệt bề mặt trong:
+\begin{equation*}
+	F_{tr} = \dfrac{Q_{o}}{q_{tr}} =  
+\end{equation*}
+
+Tổng chiều dài ống của bình bốc hơi:
+\begin{equation*}
+	L_{\Sigma} = \dfrac{F_{tr}}{\pi\times d_{tr}} =  
+\end{equation*}
+
+Chọn số đường nước z = 2.
+
+Do đó, tổng số ống trong bình bay hơi là: $n = n_{1}\times z =$ 
+
+Chọn cách bố trí ống trong bình bay hơi theo hình lục giác đều. Ta chọn số ống bố trí theo đường chéo lớn nhất là: m = 25 ống
+
+Tổng số ống trong bình bay hơi là:
+\begin{equation*}
+	n = 0.75\times(m^2 - 1) + 1 = 
+\end{equation*}
+
+Vậy còn thiếu \_\_ ống nữa là đủ \_\_\_ ống ta sẽ bố trí chúng ở khoảng trống bình bay hơi.
+
+Chiều dài của một đoạn ống trong bình bay hơi:
+\begin{equation*}
+	l = \dfrac{L}{n} = 
+\end{equation*}
+
+Đường kính mặt sàng:
+\begin{equation*}
+	D = m\times S = 
+\end{equation*}
+
+Tỉ số: $k = \dfrac{L}{D} = $
+
+Ta thấy tỉ số $k$ là chấp nhận được do nằm trong khoảng (3,5$\div$10).
+
+\section{TÍNH TOÁN THUỶ ĐỘNG CHO BÌNH BAY HƠI}
+Ngoài việc tính toán truyền nhiệt trong bình bay hơi, ta còn tính trở lực của nước lạnh khi qua bình bay hơi. Theo công thức 9.25 trang 358 TL[2]:
+
+Trở lực về phía nước qua bình bay hơi:
+\begin{equation*}
+	\Delta P = \left(\lambda\times\dfrac{L}{d_{tr}} +\xi_{v} + 1 + \dfrac{\xi_{v} + 1}{z}\right)\times \dfrac{\omega^2\times\rho}{2}\times z
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $\xi_{v}$ - hệ số trở lực cục bộ khi nước vào ống: $\xi_{v}$ = 0.5
+	\item $L$ - chiều dài thân bình giữa 2 mặt sàng: $L$ = 
+	\item $d_{tr}$ - đường kính trong của ống: $d_{tr}$ =
+	\item $z$ - số đường nước trong thiết bị: $z$ = 
+	\item $\omega$ - vận tốc dòng nước trong ống: $\omega$ = 2 m/s
+	\item $\rho$ - khối lượng riêng của nước lạnh: $\rho$ = 999.71 $kg/m^3$
+	\item $\lambda$ - hệ số ma sát	
+\end{itemize}
+
+Do nước trong ống ở trạng thái chảy rối, nên đối với các ống đồng hệ số ma sát được tính như sau:
+\begin{equation*}
+	\begin{split}
+		\lambda &= \dfrac{0.3164}{Re^{0.25}}\\
+		&=  
+	\end{split}
+\end{equation*}
+
+Vậy trở lực của nước qua bình bay hơi:
+\begin{equation*}
+	\begin{split}
+		\Delta P &= \left(\lambda\times\dfrac{L}{d_{tr}} +\xi_{v} + 1 + \dfrac{\xi_{v} + 1}{z}\right)\times \dfrac{\omega^2\times\rho}{2}\times z\\
+		&=  
+	\end{split}
+\end{equation*}
+
+\section{TÍNH BỀN CHO BÌNH BAY HƠI}
+\subsection{TÍNH TOÁN BỀN CHO THÂN BÌNH}
+Thiết bị bốc hơi trong hệ thống điều hoà không khí là thiết bị chịu áp lực phía hạ áp. Do đó, ta phải tính toán bền cho thiết bị để đảm bảo an toàn cho thiết bị khi vận hành…
+
+Do kết cấu của bình bốc hơi dạng hình trụ, vì thế chịu được áp lực đều. Bề dày của thân hình trụ S được chọn phải thỏa mãn điều kiện sau:
+
+\begin{equation*}
+	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn: $P_{R}$ =  bar =  MPa.
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là: t = $^{\circ}$C có $[\sigma]$ = 
+	\item $D_{tr}$ - đường kính trong của thân bình ngưng: $D_{tr}$ = 
+	\item $\varphi_{d}$ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
+	\item $C$ - chiều dày bổ sung, mm
+\end{itemize}
+\begin{equation*}
+	C = C_{1} + C_{2} + C_{3}
+\end{equation*}
+\begin{itemize}
+	\item $C_{1}$ - phần bề dày bổ sung để bù cho sự ăn mòn khi tiếp xúc với các	chất độc hại $C_{1}$ = 0,001 m
+	\item $C_{2}$ - chiều dày bổ sung đề bù dung sai âm bề dày $C_{4}$ = 0,001 m
+	\item $C_{3}$ - phần bề dày bổ sung do bề dày thân bình bị mỏng đi trong quá trình gia công kéo, dập , uốn… $C_{3}$ = 0,001m
+\end{itemize}
+
+Vậy:
+\begin{equation*}
+	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C = 
+\end{equation*}
+
+Ta chọn: $S$ =
+
+Bình bay hơi có kích thước như sau:
+\begin{itemize}[label={$\diamond$}]
+	\item $D_{tr}$ = 
+	\item $D_{ng} = D_{tr} + 2\times S = $ 
+\end{itemize}
 
 
-\section{CÁC DẠNG THIẾT BỊ NGƯNG TỤ}
-
-
-\section{THIẾT KẾ THIẾT BỊ NGƯNG TỤ}
 
 
 
-\section{XÂY DỰNG MÔ HÌNH 3D BẰNG \textit{INVENTOR}}
+
+
+
 
 

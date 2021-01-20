@@ -39,7 +39,7 @@
 
 \section{TÍNH TOÁN TẢI LẠNH}
 \subsection{NHIỆT HIỆN BỨC XẠ QUA KÍNH --- Q{\scriptsize 1}}
-\subsubsection{Xác định Q$_{1}$}
+\subsubsection{Xác định Q{\scriptsize 1}}
 Với điều kiện nhiệt độ và độ ẩm của không khí bên ngoài như đã chọn để thiết kế điều hoà không khí cho tòa nhà: t$_{T}$ = 32$^{\circ}$C; {\large $\varphi$}$_{N}$ = 75\%.
 
 Tra đồ thị t – d ta được nhiệt độ đọng sương: {\large t}{\scriptsize đs} = 28.2619$^{\circ}$C.
@@ -435,7 +435,7 @@ Với kết cấu sàn tầng 1 (tiếp xúc với không gian không điều h�
 	\end{split}
 \end{equation*}}
 
-Do các phòng ở tầng hầm 1 và tầng 1 có sàn tiếp xúc với tầng (Có không gian không điều hòa) nên ta phải tính toán giá trị Q24, còn các phòng từ tầng 2 đến tầng 27 có sàn tiếp xúc với phòng có điều hòa nên giá trị Q$ _{24} $ = 0.
+Do các phòng ở tầng hầm 1 và tầng 1 có sàn tiếp xúc với tầng (Có không gian không điều hòa) nên ta phải tính toán giá trị Q$ _{24} $, còn các phòng từ tầng 2 đến tầng 27 có sàn tiếp xúc với phòng có điều hòa nên giá trị Q$ _{24} $ = 0.
 
 \begin{table}[H]
 	\centering
@@ -829,107 +829,375 @@ Trong đó:
 \end{landscape}
 \textbf{Vậy tổng nhiệt lượng do gió tươi mang vào:} Q$_{6} = 969845(W)$
 
-$\Rightarrow$ \textbf{Vậy tổng tải lạnh Q{\scriptsize 0} công trình là}: \textbf{6821.779267, KW}
+$\Rightarrow$ \textbf{Vậy tổng tải lạnh Q{\scriptsize 0} công trình là}: \textbf{6821.779267, KW} 
+
+\section{THÀNH LẬP \& TÍNH TOÁN SƠ ĐỒ ĐHKK}
+\subsection{SƠ ĐỒ THẲNG}
+-- Sơ đồ thẳng là sơ đồ không có tái tuần hoàn không khí từ không gian điều hòa về thiết bị xử lý. Trong sơ đồ này toàn bộ không khí đưa vào thiết bị xử lý là không khí bên ngoài trời túc là khí tươi.
+
+-- Sơ đồ thẳng được sử dụng trong các trường hợp sau:
+\begin{itemize}
+	\item Khi kênh gió hồi quá lớn, việc thực hiện hồi gió quá tốn kém hoặc không thực hiện được do không gian quá tốn kém.
+	\item Khi phòng phát sinh nhiều chất độc hại, việc hồi gió không có lợi.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\caption{Sơ đồ thẳng trên đồ thị l-d}
+	\includegraphics[width=\textwidth]{sodothang}
+\end{figure}
+\subsection{SƠ ĐỒ TUẦN HOÀN KHÔNG KHÍ 1 CẤP}
+Sơ đồ có thực hiện hồi một phần gió từ gian máy điều hòa trở lại thiết bị xử lý nhiệt ẩm. Do có tận dụng nhiệt của không khí tuần hoàn nên năng suất lạnh tăng so với sơ đồ thẳng nhưng chi phí đầu tư tăng do phải trang bị hệ thống kênh hồi gió, miệng hút….Sơ đồ được sử dụng rộng rãi nhất vì hệ thống tương đối đơn giản, đảm bảo được các yêu cầu vệ sinh, vận hành không phức tạp lại có tính kinh tế cao. Sơ đồ này được sử dụng cả ở lĩnh vực điều hòa tiện nghi và công nghệ yêu cầy xử lý không khí kiểu trung tâm như hội trường, rạp hát, nhà ăn, tiền sảnh, phòng họp, nhà hàng ăn uống,...
+\begin{figure}[H]
+	\centering
+	\caption{Sơ đồ tuần hoàn không khí 1 cấp}
+	\includegraphics[width=\textwidth]{kk1cap}
+\end{figure}
+\subsection{SƠ ĐỒ TUẦN HOÀN KHÔNG KHÍ 2 CẤP}
+-- Nhiệt độ và độ ẩm không khí thổi vào phòng có thể điều chỉnh để thỏa mãn điều kiện vệ sinh hoặc thỏa mãn về ẩm độ. Hệ thống bắt buộc phải trang bị buồng hòa trộn thứ hai và hệ thống trích gió đến buồng hòa trộn nên chi phí đầu tư và vận hành tăng. Vậy nên sơ đồ này được sử dụng trong các xí nghiệp công nghiệp nhằm nâng cao hiệu quả kinh tế và tiết kiệm năng lượng.
+
+-- Ta thấy sơ đồ tuần hoàn không khí 1 cấp là phù hợp với công trình nên \textbf{lựa chọn sơ đồ tuần hoàn không khí 1 cấp}.
+
+\subsection{TÍNH TOÁN SƠ ĐỒ ĐHKK 1 CẤP}
+\subsubsection{Xác định điểm gốc}
+\subsubsection{Xác định hệ số nhiệt hiện của phòng (Room Sensible Heat Factor)}
+\begin{equation*}
+	RSHF = \dfrac{Q_{hf}}{Q_{hf} + Q_{af}}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{hf}$ : Tổng nhiệt hiện do bức xạ, truyền nhiệt qua kết cấu bao che và nhiệt do các nguồn nhiệt do bên trong phòng tỏa ra.
+	\item $Q_{af}$ : Tổng nhiệt ẩn tỏa ra từ phòng.
+\end{itemize}
+\subsubsection{Nhiệt hiện tổng (Grand Sensible Heat Factor)}
+\begin{equation*}
+	GSHF = \dfrac{Q_{h}}{Q_{h} + Q_{a}}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{h}$ : Tổng nhiệt hiện của không gian điều hòa bao gồm nhiệt hiện do gió tươi mang vào.
+	\item $Q_{a}$ : Tổng nhiệt hiện của không gian điều hòa bao gồm nhiệt hiện do gió tươi mang vào.
+\end{itemize}
+\subsubsection{Hệ số đi vòng (Bypass Factor)}
+\begin{equation*}
+	BF = \dfrac{Q_{h}}{Q_{h} + Q_{0}}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{h}$ : Lưu lượng không khí đi qua dàn lạnh nhưng không trao đổi nhiệt ẩm.
+	\item $Q_{0}$ : Lưu lượng không khí đi qua dàn lạnh có trao đổi nhiệt ẩm với dàn.
+\end{itemize}
+\subsubsection{Hệ số nhiệt hiện hiệu dụng ( Efective Sensible Heat Factor)}
+\begin{equation*}
+	ESHF = \dfrac{Q_{hf} + BF\times Q_{hN}}{(Q_{hf} + BF\times Q_{hN}) + (Q_{af} + BF\times Q_{aN})}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{hN}$ : Nhiệt hiện của không gian do gió tươi mang vào.
+	\item $Q_{aN}$ : Nhiệt ẩn của không gian điều hòa do gió tươi mang vào.
+\end{itemize}
+\subsubsection{Nhiệt độ đọng sương của thiết bị}
+-- Tra bảng 4.24 [1] hay đồ thi t-d ta có nhiệt độ điểm đọng sương của thiết bị.
+\subsubsection{Xác định nhiệt độ không khí sau dàn lạnh}
+\begin{equation*}
+	t_{0} = t_{S} + BF\times (t_{H} + t_{S}) = t_{V}
+\end{equation*}
+
+Với:
+\begin{itemize}
+	\item $t_{0} = t_{V}$: là nhiệt độ không khí sau dàn lạnh.
+	\item $t_{S}$: là nhiệt độ đọng sương của thiết bị.
+	\item $t_{H}$:  là nhiệt độ điểm hòa trộn.
+	\item $BF = 0.1$: hệ số đi vòng của dàn lạnh.
+\end{itemize}
+\subsubsection{Xác định lưu lượng không khí của dàn lạnh}
+\begin{equation*}
+	L = \dfrac{Q_{hef}}{1.2\times (t_{T} - t_{S})\times (1-BF)}
+\end{equation*}
+
+\subsection{TÍNH CHỌN AHU}
+\section{TÍNH TOÁN CHU TRÌNH LẠNH – CHỌN MÁY NÉN}
+\subsection{CHỌN MÔI CHẤT LẠNH}
+-- Tác nhân lạnh phải thỏa mãn các yêu cầu:
+\begin{itemize}
+	\item Yêu cầu nhiệt động.
+	\item Yêu cầu về hóa lý.
+	\item Yêu cầu về lý sinh.
+	\item Yêu cầu kinh tế.
+\end{itemize}
+
+Có nhiều tác nhân lạnh, với những đặc điểm khác nhau do đó rất khó khăn khi tìm tác nhân lạnh thoả mãn các yêu cầu trên. Sau đây ta sẽ phân tích và lựa chọn tác nhân lạnh thích hợp.
+
+\subsubsection{Amoniac}
+Là chất khí không màu, mùi hôi khó thở, độc hại với cơ thể con người, hàm lượng cho phép trong không khí là 0,02mg/l. Hơi NH3 nhẹ hơn không khí.
+
+Ở áp suất: 
+\hspace{1cm}
+p = 6.3 bar, có nhiệt độ sôi : t$_{S}$ = 10$^{\circ}$C
+
+\hspace{2.95cm}
+p = 1 bar, có nhiệt độ sôi : t$_{S}$ = –34$^{\circ}$C
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{amoniac}
+	\caption{Bình ga Amoniac}
+\end{figure}
+
+Dễ hoà tan trong nước, cho phép chứa 0,2\% nước.
+
+Không ăn mòn kim loại đen, nhôm.
+
+Dễ kiếm, rẻ tiền.
+
+Năng suất lạnh thể tích tương đối lớn.
+
+Nếu có nước thì ăn mòn các kim loại màu như kẽm, đồng…
+
+Ít hòa tan tốt dầu, ảnh hưởng đến bôi trơn, truyền nhiệt, không làm mát tốt.
+
+Nhiệt độ cuối tầm nén cao, nếu không làm mát tốt máy nén dễ làm cháy dầu bôi trơn và làm hỏng lớp bề mặt kim loại.
+\subsubsection{Freon(R12)}
+Là chất khí không màu, có mùi thơm rất nhẹ đặc biệt không cảm thấy được ở nồng độ nhỏ hơn 20\%, ở thể hơi nặng hơn không khí 4,18 lần, ở thể lỏng nặng hơn nước khoảng 1.3 lần.
+
+Ở áp suất: 
+\hspace{1cm}
+p = 4.5 bar, có nhiệt độ sôi : t$_{S}$ = 10$^{\circ}$C
+
+\hspace{2.95cm}
+p = 1.014 bar, có nhiệt độ sôi : t$_{S}$ = –30$^{\circ}$C
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{R12}
+	\caption{Bình ga R12}
+\end{figure}
+
+Không gây cháy nổ, được xem là tác nhân lạnh an toàn.
+
+Năng suất lạnh riêng khối lượng và thể tích đều nhỏ → kết cấu cồng kềnh thích hợp cho phụ tải lạnh nhỏ.
+
+Nhiệt độ cuối tầm nén thấp.
+
+Không độc hại cho cơ thể.
+
+Không ăn mòn kim loại và không dẫn điện.
+
+Hoà tan vô tận trong dầu.
+
+Dễ kiếm và bảo quản dễ dàng.
+
+Ở nhiệt độ > 400$^{\circ}$C rất dể cháy khi gặp lửa tạo thành các hổn hợp độc hại.
+
+Tính lưu động kém, không hòa tan nước nên dễ bị tách ẩm.
+
+Độ nhớt động học lớn nên tổn thất áp suất trên đường ống lớn.
+
+Năng suất lạnh riêng thể tích bé. Do đó, hệ thống cồng kềnh.
+
+Năng suất lạnh riêng khối lượng bé, vì thế lượng tác nhân nạp vào hệ thống nhiều, thích hợp cho hệ thống có năng suất lạnh nhỏ và rất nhỏ.
+
+Khả năng rò rỉ lớn, những nơi rò rỉ có vết dầu do tính hoà tan dầu tốt.
+
+\subsubsection{Freon R22}
+Là chất khí không màu, có mùi thơm rất nhẹ.
+
+Ở áp suất: 
+\hspace{1cm}
+p = 6.82 bar, có nhiệt độ sôi : t$_{S}$ = 10$^{\circ}$C
+
+\hspace{2.95cm}
+p = 1.05 bar, có nhiệt độ sôi : t$_{S}$ = –40$^{\circ}$C
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{R22}
+	\caption{Ga R22}
+\end{figure}
+
+Năng suất lạnh riêng thể tích lớn hơn 1,6 lần so với R12.
+
+Khả năng trao đổi nhiệt lớn hơn 1,3 lần so với R12.
+
+Không gây nổ.
+
+Hoà tan vô tận trong dầu ở nhiệt độ cao, còn ở nhiệt độ thấp thì ít hơn.
+
+Khả năng hoà tan nước lớn hơn R12 khoảng 5 lần, do đó giảm bớt nguy cơ tắc ẩm.
+
+Không ăn mòn kim loại, không độc hại.
+
+Có tính chất nhiệt động tốt.
+
+Trong khoảng nhiệt độ từ –20$^{\circ}$C đến –40$^{\circ}$C thì hầu như hoàn toàn không hoà tan trong dầu. Do đó, tránh hoạt động ở vùng nhiệt độ này.
+
+Có khả năng dẫn điện ở thể lỏng, các tính chất về điện của R22 bị giảm nhanh khi có ẩm và bẩn.
+
+Có khả năng làm trương phòng một số chất hữu cơ như : cao su… Do đó, cần sử dụng các loại chất dẻo và cao su đặc biệt để làm kín.
+
+Giá thành tương đối đắt.
+
+\subsubsection{Freon R134A}
+Ở áp suất: 
+\hspace{1cm}
+p = 4.15 bar, có nhiệt độ sôi : t$_{S}$ = 10$^{\circ}$C
+
+\hspace{2.95cm}
+p = 1.07 bar, có nhiệt độ sôi : t$_{S}$ = –25$^{\circ}$C
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{R134A}
+	\caption{Ga 134A}
+\end{figure}
+
+Không gây nổ.
+
+Không ăn mòn kim loại, không độc hại.
+
+Có tính chất nhiệt động tốt.
+
+Hòa tan trong dầu.
+
+Không gây ảnh hưởng đến môi trường.
+
+Giá thành tương đối đắt.
+
+Tính chất nhiệt động không tốt bằng R22.
+
+\textbf{$\Rightarrow$ Từ những đặc điểm phân tích ta chọn tác nhân cho hệ thống máy lạnh là Freon R134A.} Vì với tác nhân này, không huỷ hoại tầng ozon như các loại chất Freon khác.
+
+\subsection{TÍNH TOÁN CHU TRÌNH LẠNH}
+\subsubsection{Các thông số ban đầu}
+Ở đây ta dùng dàn ngưng giải nhiệt bằng nước.
+
+Trong đó:
+\begin{itemize}
+	\item $t_{W1}, t_{W2}$ - Nhiệt độ vào và ra của nước giải nhiệt (dàn ngưng).
+	\item $t_{W1}$ = 
+	\item $t_{W2}$ = 
+	\item $t_{K}$ = 
+\end{itemize}
+
+Chọn nhiệt độ bay hơi $t_{0}$ = 
+
+Chọn độ quá nhiệt: 
+
+Chọn độ quá lạnh: 
+
+\subsubsection{Tính toán thông số điểm nút của chu trình}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.47\textwidth]{SDNL1}
+	\caption{Sơ đồ nguyên lý chu trình lạnh 1 cấp}
+	\includegraphics[width=0.45\textwidth]{lgp-h}
+	\caption{Đồ thị $\log$P - h chu trình lạnh 1 cấp}
+\end{figure}
+
+-- Từ các thông số đầu vào, ta tính được các thông số còn lại của môi chất lạnh:
+%phần điền bảng
+%
+%
+
+Công nén đơn vị: $w = i_{2} - i_{1'} = $
+
+Năng suất lạnh đơn vị: $q_{o} = i_{1'} - i_{4} = $
+
+Năng suất giải nhiệt đơn vị: $q_{k} = i_{2} - i_{3'} = $
+
+Kiểm tra lại bằng định luật nhiệt động thứ 1:
+\begin{equation*}
+	\begin{split}
+		q_{k} &= q_{o} + w = \\
+		COP &= \dfrac{q_{o}}{w} = 
+	\end{split}
+\end{equation*}
+
+\subsection{TÍNH CHỌN MÁY NÉN}
+Tổng tải lạnh là Q = .
+
+Chọn hệ thống gồm 2 tổ máy, mỗi tổ máy gồm có máy nén, bình ngưng, bình bốc hơi, tháp giải nhiệt. Gồm 1 tổ máy hoạt động và 1 tổ máy dự phòng. Vì tính chất công trình quốc tế quan trọng và không thể dừng hệ thống, bên cạnh đó 2 tổ máy sẽ được chạy luân phiên để tăng tuổi thọ của máy.
+
+-- Năng suất lạnh của chiller: $Q_{o} = $
+
+-- Lưu lượng tác nhân lạnh: 
+\begin{equation*}
+	G = \dfrac{Q_{o}}{q_{o}}
+\end{equation*}
+
+-- Hệ số lưu lượng của máy nén: 
+
+Theo trang 116 TL Máy Lạnh với tỉ số áp suất $\dfrac{p_{k}}{p_{o}} = $
+	
+Theo đồ thị 5-41 TL 2 ta được $\lambda$ = 0,75 lấy theo R134a.
 
 
+-- Thể tích hơi thực tế hút vào máy nén: 
+\begin{equation*}
+	V_{tt} = G \times v_{1'} = 
+\end{equation*}
 
+-- Thể tích hơi lý thuyết hút vào máy nén:
+\begin{equation*}
+	V_{lt} = \dfrac{V_{tt}}{\lambda} = 
+\end{equation*}
 
+-- Công nén đoạn nhiệt của máy nén:
+\begin{equation*}
+	N_{a} = G\times w = 
+\end{equation*}
 
+-- Hiệu suất hiệu dụng của máy nén:
 
-%\section{XÂY DỰNG MÔ HÌNH 3D BẰNG \emph{REVIT}}
-%Toà khách sạn Grand Plaza được xây dựng 27 tầng, mỗi tầng có nhiệm vụ và chức năng khác nhau, dưới đây là hình toà khách sạn được dựng bởi mô hình 3D bằng Revit.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{revit}
-%	\caption{Mô hình 3D Revit}
-%	\label{revit}
-%\end{figure}
-%
-%\newpage
-%\textbf{Tầng 1}: Được sử dụng làm phòng cấp cứu, coffee, phòng máy và sảnh văn phòng.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{1stcad}
-%	\caption{Tầng 1 được vẽ bằng AutoCAD}
-%	\label{1stcad}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{1strevit}
-%	\caption{Tầng 1 được mô hình hoá bằng phần mềm Revit}
-%	\label{1strevit}
-%\end{figure}
-%
-%\newpage
-%\textbf{Tầng M}: Được sử dụng làm phòng điều khiển.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{mcad}
-%	\caption{Tầng M được vẽ bằng AutoCAD}
-%	\label{mcad}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{mrevit}
-%	\caption{Tầng M được mô hình hoá bằng phần mềm Revit}
-%	\label{mrevit}
-%\end{figure} 
-%
-%\newpage
-%\textbf{Tầng 2 - 3}: Được sử dụng làm cửa hàng.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{23cad}
-%	\caption{Tầng 2 - 3 được vẽ bằng AutoCAD}
-%	\label{23cad}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{23revit}
-%	\caption{Tầng 2 - 3 được mô hình hoá bằng phần mềm Revit}
-%	\label{23revit}
-%\end{figure} 
-%
-%\newpage
-%\textbf{Tầng 4}: Được sử dụng làm văn phòng.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{4cad}
-%	\caption{Tầng 4 được vẽ bằng AutoCAD}
-%	\label{4cad}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1\textwidth]{4revit}
-%	\caption{Tầng 4 được mô hình hoá bằng phần mềm Revit}
-%	\label{4revit}
-%\end{figure} 
-%
-%\newpage
-%\textbf{Tầng 5 - 27}: Được sử dụng làm văn phòng.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.9\textwidth]{527cad}
-%	\caption{Tầng 5 - 27 được vẽ bằng AutoCAD}
-%	\label{527cad}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.9\textwidth]{527revit}
-%	\caption{\textbf{Tầng 5 - 27} được mô hình hoá bằng phần mềm Revit}
-%	\label{527revit}
-%\end{figure} 
+Theo đồ thị 5-42 trang 117 TL 2, với tỉ số nén $ \dfrac{p_{k}}{p_{o}} =  $
 
+Ta được $\eta_{e}$ = 
 
-\section{TÍNH TẢI LẠNH BẰNG \emph{REVIT MEP}}
+-- Công suất hiệu dụng của máy nén:
+\begin{equation*}
+	N_{e} = \dfrac{N_{a}}{\eta_{e}} = 
+\end{equation*}
+
+-- Công suất trên trục động cơ:
+\begin{equation*}
+	N = \dfrac{N_{e}}{\eta_{tr}} = 
+\end{equation*}
+
+$ \eta_{tr} $ = 1 vì truyền động trực tiếp. 
+
+-- Hệ số lạnh hiệu dụng:
+\begin{equation*}
+	K_{e} = \dfrac{Q_{o}}{N_{e}} = 
+\end{equation*}
+
+-- Năng suất giải nhiệt của thiết bị ngưng tụ:
+\begin{equation*}
+	Q_{k} = G\times q_{k} = 
+\end{equation*}
+
+-- Lượng nước giải nhiệt cho bình ngưng tụ:
+\begin{equation*}
+	G_{k} = \dfrac{Q_{k}}{c_{p}\times \Delta t} = 
+\end{equation*}
+
+-- Lưu lượng nước lạnh qua bình bay hơi:
+\begin{equation*}
+	G_{o} = \dfrac{Q_{o}}{c_{p}\times \Delta t} = 
+\end{equation*}
+
+-- Xác định lượng dầu bôi trơn máy nén
+
+Lượng dầu có thể xác định theo Trang 84 TL[2]: $G_{d} = G\times g_{d}$.
+
+Trong đó:
+\begin{itemize}
+	\item $G$ - Lượng tác nhân làm việc trong máy nén.
+	\item $g_{d}$ - Lượng dầu tiêu hao trên 1 kg tác nhân lạnh.
+\end{itemize}
+
+Theo bảng 5-28 trang 90 TL Máy Lạnh, với pk/po =  ta tra được gd = 
+
+$\Rightarrow G_{d} = $
+
+Ngoài lượng dầu Gd đưa vào khoang làm việc của máy nén cón có một lượng dầu khác để bôi trơn ổ trục, chèn. Vậy tổng lượng dầu cần thiết cho máy nén là:
+
+$G_{d} = \times 1.2 = $
