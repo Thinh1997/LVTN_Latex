@@ -1,4 +1,3 @@
-\fancyhead[L]{\leftmark}
 \chapmoi{TÍNH TOÁN - THIẾT KẾ BÌNH BAY HƠI}
 \section{GIỚI THIỆU VỀ THIẾT BỊ BAY HƠI}
 \subsection{CHỨC NĂNG}
@@ -281,7 +280,7 @@ Trong đó:
 \begin{equation*}
 	C = C_{1} + C_{2} + C_{3}
 \end{equation*}
-\begin{itemize}
+\begin{itemize}[label={$\star$}]
 	\item $C_{1}$ - phần bề dày bổ sung để bù cho sự ăn mòn khi tiếp xúc với các	chất độc hại $C_{1}$ = 0,001 m
 	\item $C_{2}$ - chiều dày bổ sung đề bù dung sai âm bề dày $C_{4}$ = 0,001 m
 	\item $C_{3}$ - phần bề dày bổ sung do bề dày thân bình bị mỏng đi trong quá trình gia công kéo, dập , uốn… $C_{3}$ = 0,001m
@@ -299,6 +298,62 @@ Bình bay hơi có kích thước như sau:
 	\item $D_{tr}$ = 
 	\item $D_{ng} = D_{tr} + 2\times S = $ 
 \end{itemize}
+
+\subsection{TÍNH TOÁN BỀ DÀY MẶT SÀNG}
+Bề dày mặt sàng $S_{m}$ phải đảm bảo có thể núc được ống và phải thõa mãn điều kiện:
+\begin{equation*}
+	S_{m} \geq 0.5\times D_{E}\times \sqrt{\dfrac{|P_{O} - P_{R}|}{[\sigma]}} + C
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn $P_{R}$ =  bar =  MPa.
+	\item $P_{O}$ - áp suất tính toán bên trong ống $P_{O}$ =  bar =  MPa.
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là t = $^{\circ}$C có $[\sigma]$ = 	
+	\item $D_{E}$ - đường kính của vòng tròn có thể chứa được trong diện tích không có ống lớn nhất trên mặt sàng $D_{E}$ = 
+	\item $C$ - bề dày bổ sung $C$ = 
+\end{itemize}
+
+Vậy:
+\begin{equation*}
+	\begin{split}
+		S_{m} &\geq 0.5\times D_{E}\times \sqrt{\dfrac{|P_{O} - P_{R}|}{[\sigma]}} + C\\
+		&\geq 
+	\end{split}
+\end{equation*}
+
+Ta chọn chiều dày mặt sàng: $S_{m}$ = 
+
+\subsection{TÍNH SỨC BỀN CHO NẮP}
+Với thiết bị bay hơi dạng hình trụ, ta sử dụng nắp cong có thể tháo mở được để lắp ghép với bích ở 2 đầu thân hình trụ. Ta chọn loại đáy cong cho thiết bị là đáy cong hình tròn có bo mép (hình 10-4 c, trang 370 TL[2]).
+
+Bề dày loại nắp tròn được xác định như sau: (công thức trang 370 TL[2])
+\begin{equation*}
+	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $D_{tr}$ = 
+	\item $H_{tr} = 0.25\times D_{tr} = $ - chiều cao bên trong nắp.
+	\item $R$ bán kính của nắp cong, m.
+	
+	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = $ 
+	\item $ \varphi_{d} $ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
+	\item $P_{R}$ - áp suất tính toán của thiết bị: $P_{R}$ = 1.6 MPa
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo đáy $[\sigma]$ = 138.35 MPa 
+	\item $C$ - chiều dày bổ sung $C$ = 
+\end{itemize}
+
+Vậy: 
+\begin{equation*}
+	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C = 
+\end{equation*}
+
+Ta chọn chiều dày nắp: $S_{n}$ = 
+
+
+
 
 
 

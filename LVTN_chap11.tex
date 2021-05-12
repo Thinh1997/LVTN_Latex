@@ -1,9 +1,49 @@
-\chapmoi{THIẾT KẾ HỆ THỐNG CẤP THOÁT NƯỚC}
+\chapmoi{TÍNH TOÁN ĐƯỜNG ỐNG PHÂN PHỐI GIÓ}
+\section{GIỚI THIỆU}
+-- Hệ thống đường ống gió gồm:
+\begin{itemize}
+	\item Đường gió cấp từ các bộ phận làm lạnh như AHU, FCU đến không gian điều hòa.
+	\item Đường ống gió hồi không khí từ phòng về AHU.
+	\item Đường gió thải đưa một phần không khí trong phòng ra bên ngoài.
+	\item Đường ống gió tươi đưa không khí ngoài trời qua thiết bị xử lý sơ bộ PAU (nếu có) sau đó qua qua các dàn lạnh của AHU hoặc FCU.
+\end{itemize}
 
-\section{CẤP NƯỚC SINH HOẠT - SẢN XUẤT}
+\section{CÁC PHƯƠNG ÁN THIẾT KẾ}
+-- Theo [1] thì thông thường, khi thiết kế hệ thống điều hòa không khí, người ta sử dụng một trong ba phương pháp sau:
+\subsection{PHƯƠNG PHÁP MA SÁT ĐỒNG ĐỀU}
+Nội dung chính của phương pháp này là tổn thất áp suất trên một đơn vị chiều dài ống là như nhau trong toàn bộ hệ thống. Thường thì phương pháp này thích hợp cho các hệ thống có tốc độ thấp.
+\subsection{PHƯƠNG PHÁP GIẢM TỐC ĐỘ}
+Khi thực hiện phương pháp này đòi hỏi người thiết kế phải có kinh nghiệm để chọn một vận tốc thích hợp cho hệ thống.
+\subsection{PHƯƠNG PHÁP PHỤC HỒI ÁP SUẤT TĨNH}
+Phương pháp này có thể sử dụng cho bất kỳ loại tốc độ nào. Người ta thường sử dụng phương pháp này để thiết kế đường ống đi.
+
+Nội dung chính của phương pháp này là xác định kích thước ống sao cho tổn thất áp suất của hệ thống bằng độ gia tăng áp suất tĩnh trong ống.
+
+$\divideontimes$ \textbf{CHỌN PHƯƠNG ÁN:} Qua việc phân tích các phương pháp trên thì ta chọn phương pháp ma sát đồng đều để thiết kế hệ thống ống gió cho công trình.
+\begin{itemize}
+	\item Theo phương pháp này, tổn thất áp suất tính trên một đơn vị chiều dài ống đều như nhau trong toàn bộ hệ thống.
+	\item Đối với các ống đi, phương pháp này đồng thời giảm luôn tốc độ di chuyển của không khí theo hướng chuyển động của dòng, điều này giúp giảm bớt độ ồn của hệ thống.
+	\item Quá trình thiết kế hệ thống ống dẫn theo phương pháp ma sát đồng đều có thể tiến hành theo một trong hai hướng sau:
+	\begin{itemize}[label={$\circledast$}]
+		\item Lựa chọn tiết diện điển hình trong hệ thống ống dẫn và chọn tốc độ không khí thích hợp ứng với tiết diện đó. Từ lưu lượng đã biết, xác định cụ thể các kích thước của tiết diện này, trên cơ sở đó tính toán tổn thất áp suất. Giá trị tổn thất áp suất ở tiết diện
+		điển hình được giữ không đổi để tính tiếp các đoạn ống còn lại.
+		\item Chọn giá trị tổn thất áp suất hợp lý và giữ nguyên giá trị này cho toàn bộ hệ thống. Trên cơ sở lưu lượng đã biết, có thể xác định được kích thước của ống dẫn ở các vị trí khác nhau.
+	\end{itemize}
+\end{itemize}
+
+\section{TÍNH TOÁN KÍCH THƯỚC VÀ TRỞ LỰC ĐƯỜNG ỐNG GIÓ}
+\subsection{CÁC BƯỚC THỰC HIỆN}
+\begin{enumerate}
+	\item Lựa chọn giá trị tổn thất áp suất ma sát cho 1 mét ống $\Delta p_{l}$.
+	\item Từ $\Delta p_{l}$ và lưu lượng không khí trong ống, xác định được đường kính tương đương của ống gió dựa đồ thị 7.24[1].
+	\item Từ đường kính tương đương suy ra được kích thước ống gió dựa vào bảng 7.3[1], sau đó tra lại tổn thất áp suất cho 1 mét ống bằng đồ thị 7.24[1] và lấy giá trị $\Delta p_{l}$ đó tính cho các đoạn ống còn lại.
+\end{enumerate}
+
+\subsection{TÍNH TOÁN ĐƯỜNG ỐNG GIÓ TẦNG ĐIỂN HÌNH (TẦNG \_\_\_)}
+\subsubsection{ĐƯỜNG ỐNG GIÓ TƯƠI}
 
 
-\section{CẤP NƯỚC CHỮA CHÁY}
+
 
 
 

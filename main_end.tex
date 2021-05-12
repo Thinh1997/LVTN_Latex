@@ -1,1 +1,15 @@
+\makeatletter
+\def\@makeschapterhead#1{%
+	\vspace*{50\p@}%
+	{\parindent\z@\raggedright\normalfont\interlinepenalty\@M
+		\DOTIS{#1}%
+		\vskip-30\p@ 
+		\kern-.6\p@
+		\hrule
+		\vskip14\p@}%
+}
+\ChNumVar{\fontsize{48}{18}\selectfont}
+\ChNameVar{\centering\fontsize{30}{18}\selectfont}
+\ChRuleWidth{1mm}
+\makeatother
 \printbibliography[title={TÀI LIỆU THAM KHẢO}] %Tạo các trang nguồn tài liệu tham khảo

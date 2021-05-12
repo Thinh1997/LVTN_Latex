@@ -1,11 +1,43 @@
-\chapmoi{THIẾT KẾ HỆ THỐNG ĐƯỜNG ỐNG}
+\chapmoi{TÍNH TOÁN HỆ THỐNG PHÂN PHỐI NƯỚC LẠNH}
+\section{PHƯƠNG PHÁP TÍNH}
+Để tính toán đường ống phân phối nước lạnh đến các tầng và đến các dàn lạnh ta làm theo các bước sau:
+\subsection{BƯỚC 1}
+-- Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C\times\Delta t}
+\end{equation*}
 
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$: là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta t$:  là độ chênh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item $C$: Nhiệt dung riêng của nước ở nhiệt độ trung bình. 
+\end{itemize}
 
-\section{ỐNG GIÓ}
+\subsection{BƯỚC 2}
+Chọn vận tốc sơ bộ: $\omega$ = (0.5$\div$2)m/s
 
+\subsection{BƯỚC 3}
+Xác định kích thước đường kính trong của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4\times G}{\pi\times\omega\times\rho}}
+\end{equation*}
 
-\section{ỐNG NƯỚC}
+Trong đó:
+\begin{itemize}
+	\item $G$: là lưu lượng nước trong đường ống, kg/s
+	\item $\omega$: vận tốc nước chuyển động trong ống, m/s
+	\item $\rho$: là khối lượng riêng của nước ở nhiệt độ trung bình.
+\end{itemize}
 
+\subsection{BƯỚC 4}
+Chọn đường kính danh nghĩa và thống số $d_{tr}$, $d_{ng}$ tương ứng.
 
-\section{ỐNG GAS}
+\subsection{BƯỚC 5}
+Tính lại vận tốc thực trong ống theo đường kính trong vừa chọn:
+\begin{equation*}
+	\omega = \dfrac{4\times G}{\rho\times\pi\times d_{tr}^2}
+\end{equation*}
+
+\section{TÍNH TOÁN ỐNG CHÍNH CẤP NƯỚC CHO CÁC TẦNG}
 

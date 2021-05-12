@@ -1,7 +1,227 @@
 \fancyhead[L]{\leftmark}
 %trang bìa
-\chapmoi{TRIỂN KHAI HỆ THỐNG IoT HVAC}
-\section{KHÁI QUÁT VỀ IoT \& SỰ CẦN THIẾT CỦA NÓ}
+\chapmoi{IoT HVAC - KHÁI QUÁT \& TRIỂN KHAI}
+\section{KHÁI QUÁT VỀ IoT CHO HVAC}
+-- Một trong những ứng dụng phổ biến của IoT chính là Nhà Thông Minh, cụ thể hơn là trong nền công nghiệp Sửi ấm, thông gió \& điều hoà không khí (HVAC). Theo báo cáo của Zion Market Research, thị trường HVAC thông minh sẽ đạt giá trị 28.3 tỉ đô vào năm 2025 so với 8.3 tỉ đô vào năm 2018. Sự kết hợp giữa HVAC và hệ thống IoT trước tiên sẽ cung cấp cho khách hàng một dịch vụ điều khiển toàn diện. Tiến thêm một bước nữa, hệ thống còn có khả năng cung cấp những tiên đoán về hệ thống dựa trên lịch sử.
+
+-- IoT sẽ thay đổi ngành HVAC trong việc giúp sử dụng năng lượng hiệu quả hơn, thông minh hơn, và kết nối các thiết bị trong toà nhà tốt hơn. Ưu điểm lớn nhất của IoT HVAC chính là các thiết bị cảm biến sẽ rẻ hơn do tính chất open source.
+
+\section{CẤU TRÚC HỆ THỐNG IoT}
+-- Một hệ thống IoT bao gồm các thiết bị end users, các node và các gateway, cuối cùng là cloud (mạng internet). 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{HVAC_IOT_TOPOLOGY}
+	\caption{Sơ đồ hệ thống IoT HVAC}
+\end{figure}
+-- Ở hình trên, chúng ta có thể thấy hệ thống bao gồm những thành phần sau:
+\begin{enumerate}
+	\item Bên trái ngoài cùng chính là các thiết bị cảm biến, các thiết bị giám sát.
+	\item Phía trên là các Node (còn được gọi là các nút - được sử dụng như 1 bộ trung tâm kiểm soát các thiết bị bên dưới, có vai trò như một giáo viên chủ nhiệm trong lớp học).
+	\item Trên nữa là GATEWAY, thiết bị này có nhiệm vụ đưa lượng dữ liệu lấy được từ các Node lên trên cloud để xử lý.
+	\item Cuối cùng và quan trọng nhất chính là cloud (còn được gọi là Internet), thành phần này đóng vai trò xử lý lượng dữ liệu được đưa lên bằng cách phân tích dữ liệu dựa vào các thuật toán mà người dùng yêu cầu. Sau đó trả về dưới dạng các loại dữ liệu visual như biểu đồ.
+\end{enumerate}
+
+-- Từ những điều ở trên, ta có thể thấy rằng để triển khai một hệ thống IoT cho HVAC đòi hỏi một kỹ năng kèm theo đó là lượng kiến thức vô cùng khổng lồ đến từ nhiều lĩnh vực. 
+\section{KHÓ KHĂN KHI TRIỂN KHAI IoT HVAC}
+-- IoT là một hệ thống đa ngành vì vậy rất khó để triển khai một cách toàn diện nếu chỉ biết duy nhất một lĩnh vực.
+
+-- Những lĩnh vực khác yêu cầu ngoài kiến thức về hệ thống HVAC:
+\begin{enumerate}
+	\item Hệ thống nhúng, thiết kế mạch PCB (mạch in).
+	\item Cơ sở hạ tầng mạng.
+	\item Data Analysis, AI.
+	\item Hệ thống HVAC.
+\end{enumerate}
+
+-- Những kiến thức từ những lĩnh vực trên đều được áp dụng một cách trọn vẹn vào trong hệ thống IoT nói chung và HVAC IoT nói riêng. 
+
+\subsection{HỆ THỐNG NHÚNG, THIẾT KẾ PCB}
+-- Đối với hệ thống IoT thì lập trình nhúng, mạch PCB chính là cốt lõi của hệ thống vì IoT đòi hỏi phải làm việc với các loại cảm biến, các giao tiếp, giao thức, chống nhiễu cho thiết bị. Nếu không có kiến thức về lĩnh vực này sẽ rất khó để vận hành, bảo trì cũng như xác định lỗi của hệ thống. 
+
+-- Khó khăn khi làm việc với hệ thống nhúng chính là độ ổn định của hệ thống vì nó liên quan trực tiếp với điều khiển - nguồn của thiết bị. Nếu độ ổn định không cao, sẽ làm hệ thống chạy sai lệch gây ra hao tổn năng lượng. Thẩm chí, có thể làm hư hỏng cả thiết bị. Chỉ cần vài dòng code sai từ bộ điều khiển, máy nén có thể chạy một cách quá đà gây ra hư hỏng máy nén. 
+
+-- Thiết kế mạch PCB kém có thể gây ra tình trạng nhiễu trên mạch, gửi/nhận tín hiệu rất khó khăn. Thường xuyên bị rớt các gói. Đỉnh điểm chính là việc không bảo vệ được mạch PCB, linh kiện chết thường xuyên, phải thay thế và hàn lại (đôi khi phải bỏ nguyên cả mạch mà thay mới). 
+
+\subsection{CƠ SỞ HẠ TẦNG MẠNG}
+-- Cơ sở hạ tầng mạng đóng vai trò như một mạng lưới giao thông giữa các Node với Gateway, và giữa Gateway với Cloud. Một cơ sở hạ tầng mạng được thiết kế tốt sẽ giúp hệ thống hoạt động một cách trơn tru và xuyên suốt. Đặc biệt, nếu có kiến thức vững trong lĩnh vực sẽ giảm thiểu rủi ro khi hệ thống hoạt động Offline. Lĩnh vực này giúp tăng tính ổn định cho hệ thống và là ``huyết mạch'' của toàn hệ thống.
+
+-- Khó khăn lớn nhất đối với lĩnh vực này chính là tính bảo mật. Mức độ bảo mật phải đảm bảo đủ tốt vì nó liên quan tới điều khiển và giám sát. Nếu bảo mật kém sẽ khiến hệ thống dễ bị hack. Và hậu quả tệ nhất là hacker có thể toàn quyền kiểm soát HVAC của toà nhà và hơn thế nữa.
+
+\subsection{DATA ANALYSIS, ARTIFICIAL INTELLIGENCE}
+-- Nếu ví hệ thống nhúng như những cơ bắp, cơ sở hạ tầng mạng như huyết mạch của một cơ thể. Thì Data analysis chính là ``bộ não'' của cơ thể. Lĩnh vực này sẽ đóng vai trò như 1 chuyên gia phân tích \& đưa quyết định đến các hệ thống điều khiển, giám sát. Ở lĩnh vực này, không chỉ giúp chúng ta đưa quyết định mà hơn nữa còn đưa ra được các dự đoán tương lai khi mà chúng ta cần xem xét hoặc ước lượng. Đỉnh cao nhất chính là việc nó dự đoán thói quen sử dụng của toà nhà và đưa ra các biện pháp tiết kiệm điện hiệu quả nhất (ví dụ như biết chính xác khi nào nên bật điều hoà trong phòng nào đó để khi có người sử dụng, nó sẽ ở nhiệt độ thích hợp, tránh mở quá muộn gây bất tiện cho người dùng hoặc quá sớm gây lãng phí điện năng).
+
+--Phân tích dữ liệu cũng được áp dụng một cách triệt để khi nó có thể lấy dữ liệu từ các toà nhà khác để làm một cơ sở tham khảo; cũng như giúp hệ thống giao tiếp giữa các toà nhà. Điều này cực kỳ hữu ích khi các toà nhà có thể biết được thông tin thời tiết của vùng xunh quanh mình (như mưa, hướng gió, lốc, bão, v.v...) từ đó tạo nên một mạng lưới dựa báo thời tiết. 
+
+\subsection{HỆ THỐNG HVAC}
+-- Bản thân kiến thức để xây dựng 1 hệ thống HVAC IoT cũng đã là một thử thách khi nó đòi hỏi người thiết kế phải có một sự am hiểu tốt về HVAC, về những cảm biến cần lắp đặt và những địa điểm nên lắp đặt cảm biến. Đó còn chưa kể đến việc họ phải là những người đặt ra thuật toán để xử lý dữ liệu, tìm được những dữ liệu tốt (dữ liệu có nghĩa) và loại bỏ đi những dữ liệu làm nhiễu database.
+
+$\Rightarrow$ Như vậy để thiết kế một hệ thống IoT HVAC hoàn chỉnh, đòi hỏi phải kết hợp rất nhiều kiến thức từ những lĩnh vực khác nhau. Sẽ rất khó cho một nhóm hoàn thành điều này mà là sự đòi hỏi ở một đơn vị có số lượng lớn nhân viên đến từ những lĩnh vực nêu trên.
+
+\section{TRIỂN KHAI IoT HVAC TRONG PHẠM VI LUẬN VĂN NÀY}
+-- Như đã nói ở trên, để một người trong lĩnh vực làm được hoàn chỉnh điều này sẽ tốn rất nhiều thời gian và công sức. Nên trong phạm vi luận văn này, chúng em sẽ chỉ làm mô phỏng một phần, cụ thể là mô phỏng việc lấy dữ liệu và thể hiện nó lên thành visual cho người dùng. Bỏ qua việc thiết kế mạch in, bảo mật \& xử lý dữ liệu. 
+
+\subsection{MÔ TẢ DỰ ÁN}
+-- Sử dụng một cảm biến nhiệt độ \& độ ẩm phổ thông - DHT11. Để gửi tín hiệu về một bộ vi điều khiển - ESP8266 Node MCU - thông qua giao thức One-wire. Bộ vi điều khiển sau đó sẽ sử dụng sóng RF - module nRF24L01+ - để đẩy dữ liệu lên một bộ vi điều khiển trung tâm đóng vai trò là Gateway - ESP32 Devkit.
+
+-- Từ vi điều khiển trung tâm, dữ liệu sẽ được gửi lên database trên cloud - dịch vụ database Firebase của Google.
+
+-- Tiếp đến dữ liệu sẽ được 1 đoạn script viết bằng Python \& sử dụng module firebase để lấy dữ liệu xuống và vẽ biểu đồ nhiệt độ - thời gian theo thời gian thực.
+
+-- Dữ liệu được đoạn script Python lấy xuống sẽ được lưu vào trong một file Excel để sử dụng khi cần tra cứu sau này.
+
+\subsection{CÁC LINH KIỆN ĐIỆN TỬ ĐƯỢC SỬ DỤNG TRONG LUẬN VĂN}
+\subsubsection{Thông số kỹ thuật các linh kiện}
+-- Cảm biến nhiệt độ \& độ ẩm DHT11:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.3\textwidth]{dht11.jpg}
+	\caption{DHT11}
+\end{figure}
+
+$\circledast$ Thông số kỹ thuật của cảm biến:
+\begin{itemize}
+	\item Điện áp hoạt động: 5VDC.
+	\item Chuẩn giao tiếp: TTL, 1 wire.
+	\item Khoảng đo độ ẩm: 20\%-80\%RH sai số $ \pm $ 5\%RH.
+	\item Khoảng đo nhiệt độ: 0-50°C sai số $ \pm $ 2°C.
+	\item Tần số lấy mẫu tối đa 1Hz (1 giây / lần).
+	\item Kích thước: 28mm x 12mm x 10m.
+\end{itemize}
+
+-- Vi điều khiển ESP8266 Node MCU:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{esp8266_nodemcu.jpg}
+	\caption{ESP8266 NODE MCU}
+\end{figure}
+
+$\circledast$ Đặc tính nổi bật vi điều khiển ESP8266:
+\begin{itemize}
+	\item Tích hợp 2 nút nhấn
+	\item Tích hợp chip chuyển usb – uart CP2102
+	\item Full IO : 10 GPIO, 1 Analog, 1SPI , 2 UART, 1 I2C/I2S, PWM,v.v….
+	\item Được hỗ trợ bởi cộng đồng lớn mạnh Nodemcu.
+\end{itemize}
+
+$\circledast$ Thông số kỹ thuật của ESP8266:
+\begin{itemize}
+	\item Tương thích các chuẩn wifi : 802.11 b/g/n
+	\item Hỗ trợ: Wi-Fi Direct (P2P), soft-AP
+	\item Tích hợp TCP/IP protocol stack
+	\item Tích hợp TR switch, balun, LNA, power amplifier and matching network
+	\item Tích hợp bộ nhân tần số, ổn áp, DCXO and power management units
+	+25.dBm output power in 802.11b mode
+	\item Power down leakage current of <10uA
+	\item Integrated low power 32-bit CPU could be used as application processor
+	\item SDIO 1.1/2.0, SPI, UART
+	\item STBC, 1×1 MIMO, 2×1 MIMO
+	\item A-MPDU \& A-MSDU aggregation \& 0.4ms guard interval
+	\item Wake up and transmit packets in < 2ms
+	\item Dòng tiêu thụ ở Standby Mode < 1.0mW (DTIM3)
+\end{itemize}
+
+-- NRF24L01 kết hợp với đế ra chân:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{nrf24l01_derachan.jpg}
+	\caption{NRF24L01 + đế ra chân}
+\end{figure}
+
+$\circledast$ Thông số kỹ thuật của đế ra chân NRF24L01 với ic ổn áp:
+\begin{itemize}
+	\item Điện áp: Áp ngõ vào: 4.8VDC – 8.7VDC
+	\item Module giảm áp: AMS1117 – 3V3
+	\item Kích thước: 16mm * 19mm * 11.3mm
+	\item Trọng lượng: 2g
+\end{itemize}
+
+-- NRF24L01:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{nrf24l01.jpg}
+	\caption{NRF24L01}
+\end{figure}
+
+$\circledast$ Thông số kỹ thuật của NRF24L01:
+\begin{itemize}
+	\item Điện thế hoạt động: 1.9V – 3.6V
+	\item Có sẵn anthena sứ 2.4GHz.
+	\item Truyền được 100m trong môi trường mở với 250kbps baud.
+	\item Tốc độ truyền dữ liệu qua sóng: 250kbps to 2Mbps.
+	\item Tự động bắt tay (Auto Acknowledge).
+	\item Tự động truyền lại khi bị lỗi (auto Re-Transmit).
+	\item Multiceiver – 6 Data Pipes.
+	\item Bộ đệm dữ liệu riêng cho từng kênh truyền nhận: 32 Byte separate TX and RX FIFOs.
+	\item Các chân IO đều chịu được điện áp vào 5V.
+	\item Lập trình được kênh truyền sóng trong khoảng 2400MHz đến 2525MHz (chọn được 125 kênh).
+	\item Thứ tự chân giao tiếp : GND,VCC,CS,CSN,SCK,MOSI,MISO,IQR
+\end{itemize}
+
+-- ESP32:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.4\textwidth]{esp32.jpg}
+	\caption{ESP32}
+\end{figure}
+
+$\circledast$ Thông số kỹ thuật của ESP32:
+\begin{itemize}
+	\item Model: Wifi BLE SoC ESP32 ESP-WROOM-32E (Tương thích hoàn toàn với phiên bản cũ ESP-WROOM-32 hiện đã ngưng sản xuất).
+	\item ESP32-D0WD-V3 embedded, Xtensa® dual-core 32-bit LX6 microprocessor, up to 240 MHz
+	\item Điện áp sử dụng: 3~3.6VDC
+	\item Dòng điện sử dụng: ~90mA
+	\item 448 KB ROM for booting and core functions
+	\item 520 KB SRAM for data and instructions
+	\item 16 KB SRAM in RTC
+	\item Kiểu Antenna: PCB
+	\item WiFi
+	\begin{itemize}
+		\item 802.11b/g/n
+		\item Bit rate: 802.11n up to 150 Mbps
+		\item A-MPDU and A-MSDU aggregation
+		\item 0.4 µs guard interval support
+		\item Center frequency range of operating channel: 2412 ~ 2484 MHz 
+	\end{itemize}
+	\item Bluetooth
+	\begin{itemize}
+		\item Bluetooth V4.2 BR/EDR and Bluetooth LE specification
+		\item Class-1, class-2 and class-3 transmitter
+		\item AFH
+		\item CVSD and SBC
+	\end{itemize}
+	\item Hardware
+	\begin{itemize}
+		\item Interfaces: SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, Two-Wire Automotive Interface (TWAI®, compatible with ISO11898-1)
+		\item 40 MHz crystal oscillator
+		\item 4 MB SPI flash
+	\end{itemize}
+	\item Kích thước: 18 x 25.5 x 3.1mm
+\end{itemize}
+
+\subsubsection{Sơ đồ đi dây của mạch}
+-- Thiết kế hệ thống này bao gồm 2 mạch:
+\begin{enumerate}
+	\item Mạch thu tín hiệu (bao gồm ESP32 nhận tín hiệu từ nRF24L01).
+	\item Mạch phát tín hiệu (bao gồm ESP8266 phát tín hiệu đi bằng nRF24L01).
+\end{enumerate}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\textwidth]{topology_iot_hvac}
+	\caption{Text}
+\end{figure}
+
+-- Ở đây, mạch thu tín hiệu đóng vai trò như 1 Gateway để từ đó truyền dữ liệu lên database.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{ESP32-nRF}
+	\caption{Text}
+\end{figure}
+\begin{itemize}
+	\item AA
+\end{itemize}
+-- 
+
+\lstinputlisting[language=Python, firstline=2, lastline=26]{Kivy_Android_1.py}
 
 
 
