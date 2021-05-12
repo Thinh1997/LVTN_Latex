@@ -1,11 +1,522 @@
 \chapmoi{THIẾT KẾ HỆ THỐNG ĐƯỜNG ỐNG}
-
-
-\section{ỐNG GIÓ}
-
-
 \section{ỐNG NƯỚC}
+\subsection{PHƯƠNG PHÁP TÍNH}
+Để tính toán đường ống phân phối nước lạnh đến các tầng và đến các dàn lạnh ta làm theo các phương sau:
 
+\textbf{a. Bước 1}
 
-\section{ỐNG GAS}
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}}. )Kg/s.
+\end{equation*}
 
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+\textbf{b.Bước 2} : Chọn vận tốc sơ bộ, $\omega$ = 0.5 $\approx$ 2 (m/s).
+
+\textbf{c.Bước 3} : Xác định kích thước đường kính trong của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times G}{\pi \times \omega \times \rho }}
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item G : Lưu lượng nước trong đường ống, kg/s.
+	\item $\omega$ : Vận tốc nước chuyển động trong ống, m/s.
+	\item $\rho$ : Khối lượng riêng của nước ở nhiệt độ trung bình.
+\end{itemize}
+
+\textbf{d.Bước 4} : Chọn đường kính danh nghĩa và thông số $d_{tr}, d_{ng}$ tương ứng.
+
+\textbf{e.Bước 5} : Tính lại vận tốc thức trong ống theo đường kính trong vừa chọn:
+\begin{equation*}
+	\omega = \dfrac{4 \times G}{\rho \times \pi \times d_{tr}^{2}}
+\end{equation*} 
+
+\subsection{TÍNH TOÁN ỐNG CHÍNH CẤP NƯỚC CHO CÁC TẦNG}
+
+\textbf{Tính toán ống chính cấp cho tầng 2-3 (tầng điển hình)}.
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{144.28}{4.186 \times 5} = 6.89(kg/s).
+\end{equation*}
+
+\newpage
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$ = 5$^{\circ}$C : Độ chênh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C = 4.186 (kJ/kg.$^{\circ}$K) : Nhiệt dung riêng của nước,
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 6.89}{3.14 \times 1.5 \times 999.71}} = 0.0765(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 80(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 90.1(mm).
+	\item $d_{ng}$ = 101.6(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 144.28 }{999.71 \times 3.14 \times 0.0901^{2}} = 1.08(m/s)
+\end{equation*}
+
+\begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=1\textwidth]{kichthuocongchinhcap}
+ 	\caption{\textbf{Kích thước ống chính cấp cho các tầng}}
+	\label{kichthuocongchinhcap}	 
+\end{figure}
+
+\subsection{TÍNH TOÁN ỐNG NƯỚC KẾT NỐI VỚI CÁC FCU }
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{17.71}{4.186 \times 5} = 0.85(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 0.8462}{3.14 \times 1.5 \times 999.71}} = 0.0268(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 32(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 35.1(mm).
+	\item $d_{ng}$ = 42.1(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 0.85 }{999.71 \times 3.14 \times 0.0351^{2}} = 0.88(m/s)
+\end{equation*}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{kichthuocongketnoitb}
+	\caption{\textbf{Kích thước ống kết nối với các thiết bị}}
+	\label{kichthuocongketnoitb}	 
+\end{figure}
+
+\subsection{TÍNH TOÁN ĐƯỜNG ỐNG CHO CÁC TẦNG}
+** \textbf{TẦNG 1}
+
+\textbf{Tính toán cho ống chính}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{221.55}{4.186 \times 5} = 10.59(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 10.59}{3.14 \times 1.5 \times 999.71}} = 0.0948(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 125(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 97.2(mm).
+	\item $d_{ng}$ = 114.3(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 0.85 }{999.71 \times 3.14 \times 0.0972^{2}} = 1.43(m/s)
+\end{equation*}
+
+-- \textbf{NHÁNH 1}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{19.88}{4.186 \times 5} = 0.95(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 0.95}{3.14 \times 1.5 \times 999.71}} = 0.0284(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 32(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 35.1(mm).
+	\item $d_{ng}$ = 42.1(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 0.95 }{999.71 \times 3.14 \times 0.0351^{2}} = 0.98(m/s)
+\end{equation*}
+
+\newpage
+
+--\textbf{NHÁNH 2}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{29.82}{4.186 \times 5} = 1.42(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 1.42}{3.14 \times 1.5 \times 999.71}} = 0.0348(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 40(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 40.9(mm).
+	\item $d_{ng}$ = 48.2(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 1.42 }{999.71 \times 3.14 \times 0.0409^{2}} = 1.09(m/s)
+\end{equation*}
+
+--\textbf{NHÁNH 3}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{24.78}{4.186 \times 5} = 1.18(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 1.18}{3.14 \times 1.5 \times 999.71}} = 0.0317(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 32(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 935.1(mm).
+	\item $d_{ng}$ = 42.1(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 0.1.18 }{999.71 \times 3.14 \times 0.0351^{2}} = 1.22(m/s)
+\end{equation*}
+
+**\textbf{TẦNG M}
+
+\textbf{Tính toán cho ống chính}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{124.57}{4.186 \times 5} = 5.95(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 5.95}{3.14 \times 1.5 \times 999.71}} = 0.0711(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 70(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 73.7(mm).
+	\item $d_{ng}$ = 88.9(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 5.95 }{999.71 \times 3.14 \times 0.0737^{2}} = 1.40(m/s)
+\end{equation*}
+
+-- \textbf{NHÁNH 1}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{35.42}{4.186 \times 5} = 1.69(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 1.69}{3.14 \times 1.5 \times 999.71}} = 0.0379(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 40(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 40.9(mm).
+	\item $d_{ng}$ = 42.1(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 1.69 }{999.71 \times 3.14 \times 0.0409^{2}} = 1.29(m/s)
+\end{equation*}
+
+-- \textbf{NHÁNH 2}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{19.88}{4.186 \times 5} = 0.95(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 0.95}{3.14 \times 1.5 \times 999.71}} = 0.0284(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 32(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 35.1(mm).
+	\item $d_{ng}$ = 42.1(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 0.95 }{999.71 \times 3.14 \times 0.0351^{2}} = 0.98(m/s)
+\end{equation*}
+
+**\textbf{ (TẦNG 2-3)}.
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{144.28}{4.186 \times 5} = 6.89(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$ = 5$^{\circ}$C : Độ chênh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C = 4.186 (kJ/kg.$^{\circ}$K) : Nhiệt dung riêng của nước,
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 6.89}{3.14 \times 1.5 \times 999.71}} = 0.0765(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 80(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 90.1(mm).
+	\item $d_{ng}$ = 101.6(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 144.28 }{999.71 \times 3.14 \times 0.0901^{2}} = 1.08(m/s)
+\end{equation*}
+
+-- \textbf{NHÁNH 1-2}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{28.2}{4.186 \times 5} = 1.35(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 1.35}{3.14 \times 1.5 \times 999.71}} = 0.0338(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 40(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 40.9(mm).
+	\item $d_{ng}$ = 48.2(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 1.35 }{999.71 \times 3.14 \times 0.0409^{2}} = 1.03(m/s)
+\end{equation*}
+
+\subsection{TÍNH TOÁN ỐNG NƯỚC TRONG PHÒNG CHILLER}
+
+**\textbf{ỐNG KẾT NỐI VỚI CHILLER}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{539.44}{4.186 \times 5} = 25.77(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 25.77}{3.14 \times 1.5 \times 999.71}} = 0.1480(m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 150(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 154.1(mm).
+	\item $d_{ng}$ = 168.3(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 25.77 }{999.71 \times 3.14 \times 0.1541^{2}} = 1.38(m/s)
+\end{equation*}
+
+**\textbf{ỐNG GÓP}
+
+Tính lưu lượng nước lạnh qua từng đoạn ống:
+\begin{equation*}
+	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{25.85}{4.186 \times 5} = 1.23(kg/s).
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $Q_{0}$ : Là năng suất lạnh yêu cầu của không gian cần điều hòa.
+	\item $\Delta_{t}$: Là độ chênh lệnh nhiệt độ của nước vào và ra khỏi dàn lạnh.
+	\item C : Nhiệt dung riêng của nước ở nhiệt độ trung bình, KJ/kg.
+\end{itemize}
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 1.23}{3.14 \times 1.5 \times 999.71}} =0.0324 (m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 40(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 40.9(mm).
+	\item $d_{ng}$ = 48.2(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 1.23 }{999.71 \times 3.14 \times 0.0409^{2}} = 0.94(m/s)
+\end{equation*}
+
+\subsection{TÍNH TOÁN ĐƯỜNG ỐNG CHO THÁP GIẢI NHIỆT}
+
+**\textbf{ỐNG KẾT NỐI TỚI THÁP GIẢI NHIỆT}
+
+Lưu lượng nước lạnh: G = 24.62(kg/s)
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 24.62}{3.14 \times 1.5 \times 999.71}} =0.14461 (m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 150(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 154.1(mm).
+	\item $d_{ng}$ = 168.3(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 24.62 }{999.71 \times 3.14 \times 0.1541^{2}} = 1.32(m/s)
+\end{equation*}
+
+**\textbf{ỐNG GÓP}
+
+Lưu lượng nước lạnh: G = 73.85(kg/s)
+
+Chọn vận tốc sơ bộ : $\omega$ = 1.5(m/s)
+
+Xác định kích thước đường kính của đoạn ống:
+\begin{equation*}
+	d_{tr} = \sqrt{\dfrac{4 \times 73.85}{3.14 \times 1.5 \times 999.71}} =0.2505 (m)
+\end{equation*}
+
+Chọn đường kính danh nghĩa $d_{N}$ = 250(mm)
+\begin{itemize}
+	\item $d_{tr}$ = 254.5(mm).
+	\item $d_{ng}$ = 273(mm)
+\end{itemize}
+
+Tính lại vận tốc thực theo đường kính trong:
+\begin{equation*}
+	\omega = \dfrac{4 \times 73.85 }{999.71 \times 3.14 \times 0.2545^{2}} = 1.45(m/s)
+\end{equation*}
