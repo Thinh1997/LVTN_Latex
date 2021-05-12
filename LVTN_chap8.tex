@@ -20,64 +20,64 @@ Thiết bị bay hơi kiểu không ngập lỏng: tác nhân lạnh lỏng ch�
 
 Thiết bị bay hơi kiểu trực tiếp: tác nhân lạnh lỏng chuyển động trong ống, còn nước lạnh chuyển động bên ngoài ống. Với loại này thì tổn thất áp về phía nước nhỏ, lượng tác nhân lạnh nạp vào hệ thống tương đối ít. Nhưng hệ số truyền nhiệt không cao.
 
-Từ sự phân tích ở trên ta chọn thiết bị bay hơi là loại ngập lỏng, do hệ số trruyền nhiệt cao nên kích thước thiết bị sẻ nhỏ ứng với năng suất lạnh lớn. Do công trình cần điều hoà không khí có tổn thất nhiệt là $Q_{O}$ = \_\_\_ kW nên việc chọn lựa thiết bị trên là hợp lý. Với loại bình bay hơi này, nước chuyển động trong có thể xem như kín nên không khí ít lọt vào hệ thống, do đó giảm được sự ăn mòn thiết bị.
+Từ sự phân tích ở trên ta chọn thiết bị bay hơi là loại ngập lỏng, do hệ số trruyền nhiệt cao nên kích thước thiết bị sẻ nhỏ ứng với năng suất lạnh lớn. Do công trình cần điều hoà không khí có tổn thất nhiệt là $Q_{O}$ = 539.44 kW nên việc chọn lựa thiết bị trên là hợp lý. Với loại bình bay hơi này, nước chuyển động trong có thể xem như kín nên không khí ít lọt vào hệ thống, do đó giảm được sự ăn mòn thiết bị.
 
 \section{TÍNH TOÁN - THIẾT KẾ BÌNH BAY HƠI}
 \subsection{THÔNG SỐ BAN ĐẦU}
-Tổng tải lạnh của công trình $Q_{O}$ = \_\_\_ kW. Chọn 1 thiết bị bay hơi. Năng suất lạnh của mỗi thiết bị bay hơi là: $Q'_{O} = $
+Tổng tải lạnh của công trình $Q_{O}$ = 539.44 kW.
 
 Trong hệ thống ta sử dụng thiết bị bay hơi với chất tải lạnh là nước chuyển động trong ống, còn tác nhân lạnh R134a chuyển động bên ngoài ống. Trong thiết bị bay hơi sử dụng ống đồng có làm cánh bên ngoài.
 
-Nhiệt độ nước vào bình bay hơi: $t_{s1}$ = $^{\circ}$C
+Nhiệt độ nước vào bình bay hơi: $t_{s1}$ = 12$^{\circ}$C
 
-Nhiệt độ nước ra bình bay hơi: $t_{s2}$ = $^{\circ}$C
+Nhiệt độ nước ra bình bay hơi: $t_{s2}$ = 7$^{\circ}$C
 
 Các thông số về ống đồng sử dụng như sau:
 \begin{itemize}
-	\item Đường kính trong của ống : $ d_{tr} $ =  m
-	\item Đường kính chân cánh : $ d_{ng} $ =  m
-	\item Đường kính cánh : $D_{C}$ =  m
-	\item Bước cánh : $ S_{C} $ =  m
-	\item Bề dày chân cánh : $ \delta_{o} $ =  m
-	\item Bề dày đầu cánh : $ \delta_{d} $ = m
-	\item Bước ống : $S$ = 0,027 m
+	\item Đường kính trong của ống : $ d_{tr} $ = 0.016 (m)
+	\item Đường kính chân cánh : $ d_{ng} $ = 0.019 (m)
+	\item Đường kính cánh : $D_{C}$ = 0.022 (m)
+	\item Bước cánh : $ S_{C} $ =  0.00118(m)
+	\item Bề dày chân cánh : $ \delta_{o} $ = 0.0003(m) 
+	\item Bề dày đầu cánh : $ \delta_{d} $ = 0.0002(m)
+	\item Bước ống : $S$ = 0,027 (m)
 \end{itemize}
 
 Diện tích bề mặt trong của 1m ống:
 \begin{equation*}
-	F_{tr} = \pi\times d_{tr} = 
+	F_{tr} = \pi\times d_{tr} = 3.14 \times 0.016 = 0.05024(m^2/m)
 \end{equation*}
 
 Diện tích bề mặt đứng của 1m ống:
 \begin{equation*}
 	\begin{split}
 		F_{d} &= \dfrac{\pi\times(D_{C}^2 - d_{ng}^2)}{2\times S_{C}}\\
-		&= 
-	\end{split}
+		&= \dfrac{3.14 \times (0.022^2 - 0.019^2)}{2 \times 0.00118}=0.16365(m^2/m)
+	\end{split} 
 \end{equation*}
 
 Diện tích mặt ngoài của 1m ống:
 \begin{equation*}
 	\begin{split}
 		F_{ng} &= \pi\times d_{ng}\times\left(1 - \dfrac{\delta_{o}}{S_{C}}\right) + \dfrac{\pi\times D_{C}\times d_{ng}}{S_{C}} \\
-		&= 
+		&= 3.14 \times 0.019 \times (1 - \dfrac{0.0003}{0.00118}) + \dfrac{3.14 \times 0.022 \times 0.019}{0.00118}= 0.05620(m^2/m)
 	\end{split}
 \end{equation*}
 
 Tổng diện tích mặt ngoài ứng với 1m ống:
 \begin{equation*}
-	F = F_{d} + F_{ng} = 
+	F = F_{d} + F_{ng} = 0.16365 + 0.05620 = 0.21985(m^2/m)
 \end{equation*}
 
 Hệ số làm cánh:
 \begin{equation*}
-	\beta = \dfrac{F}{F_{tr}} =
+	\beta = \dfrac{F}{F_{tr}} = \dfrac{0.21985}{0.05024}=4.376
 \end{equation*}
 
 \subsection{TÍNH TOÁN VỀ PHÍA NƯỚC}
 Nhiệt độ trung bình của nước:
 \begin{equation*}
-	\overline{t_{w}} = \dfrac{1}{2}\times(t_{w1} + t_{w2}) = 
+	\overline{t_{w}} = \dfrac{1}{2}\times(t_{w1} + t_{w2}) = \dfrac{1}{2} \times (12+7)=9.5{^\circ}C
 \end{equation*}
 
 Tra phụ lục 28 trang 613 TL[2], các tính chất vật lý của nước ta được:
@@ -91,7 +91,7 @@ Tra phụ lục 28 trang 613 TL[2], các tính chất vật lý của nước ta
 
 Lưu lượng nước lạnh cần cung cấp cho 1 giây:
 \begin{equation*}
-	G_{n} = \dfrac{Q_{o}}{C\times\Delta t} = 
+	G_{n} = \dfrac{Q_{o}}{C\times\Delta t} = \dfrac{539.44}{4.191 \times 5}=25.74(l/s)
 \end{equation*}
 
 Với chất lượng nước ở nước ta không cao, để đảm nước chảy rối thích hợp trong bình ngưng, để giảm tổn thất năng lượng cho bơm, giảm khả năng mài mòn ống thì tốc độ nước không nên chọn quá lớn. Tốc độ nước được chọn nằm trong khoảng (1$\div$2.5m/s).
@@ -100,44 +100,44 @@ Cụ thể ta chọn tốc độ nước: $\omega_{n}$ = 2 m/s.
 
 Số ống trong một đường nước:
 \begin{equation*}
-	n_{1} = \dfrac{4\times G_{n}}{\pi\times\rho_{n}\times\omega_{n}\times d_{tr}^2} = 
+	n_{1} = \dfrac{4\times G_{n}}{\pi\times\rho_{n}\times\omega_{n}\times d_{tr}^2} = \dfrac{4 \times 25.74}{3.14 \times 999.7 \times 2 \times 0.016^2}=64.07(ống)
 \end{equation*}
 
-Chọn số ống là: $n_{1}$  = 
+Chọn số ống là: $n_{1}$  = 65(ống)
 
 Ta xác định lại vận tốc nước chảy trong ống:
 \begin{equation*}
-	n_{1} = \dfrac{4\times G_{n}}{\pi\times\rho_{n}\times n_{1}\times d_{tr}^2} = 
+	n_{1} = \dfrac{4\times G_{n}}{\pi\times\rho_{n}\times n_{1}\times d_{tr}^2} = \dfrac{4 \times 25.74}{3.14 \times 999.7 \times 65 \times 0.016^2}=1.971(m/s)
 \end{equation*}
 
 Trị số Reynold của nước:
 \begin{equation*}
-	Re = \dfrac{\omega_{n}\times d_{tr}}{\nu_{n}} =
+	Re = \dfrac{\omega_{n}\times d_{tr}}{\nu_{n}} = \dfrac{1.971 \times 0.016}{1.306 \times 10^{-6}}=24151
 \end{equation*}
 
 Do đó chế độ chảy của nước trong ống là chảy rối.
 
 Trị số Nusselt của nước:
 \begin{equation*}
-	Nu = 0.017\times Re^{0.8}\times Pr^{0.4}\times\left(\dfrac{d_{ng}}{d_{tr}}\right)^{0.18}
+	Nu = 0.017\times Re^{0.8}\times Pr^{0.4}\times\left(\dfrac{d_{ng}}{d_{tr}}\right)^{0.18} 
 \end{equation*}
 
 Xem nhiệt độ giữa bề mặt vách ống và nước trong ống là không quá lớn, nên xem $\left(\dfrac{Pr_{f}}{Pr_{w}}\right)$ = 1. Do $\dfrac{l}{d} >$ 50, nên xem $\varepsilon_{1}$ = 1, với ống sử dụng là ống thẳng nên $\varepsilon_{R}$ = 1.
 
 Do đó:
 \begin{equation*}
-	Nu = 0.017\times x^{0.8}\times y^{0.4}\times\left(\dfrac{u}{i}\right)^{0.18} = 
+	Nu = 0.017\times x^{0.8}\times y^{0.4}\times\left(\dfrac{u}{i}\right)^{0.18} = 0.017 \times 24151^{0.8} \times 9.52^{0.4} \times (\dfrac{0.019}{0.016})^{0.18}=138.58
 \end{equation*}
 
 Hệ số tỏa nhiệt về phía nước giải nhiệt:
 \begin{equation*}
-	\alpha_{s.tr} = \dfrac{Nu\times\lambda}{d_{tr}} =
+	\alpha_{s.tr} = \dfrac{Nu\times\lambda}{d_{tr}} =\dfrac{138.58 \times 0.5745}{0.016}=4975.75(W/m^2K)
 \end{equation*}
 
 \subsection{TÍNH TOÁN VỀ PHÍA TÁC NHÂN LẠNH}
-Với nhiệt sôi của tác nhân $t_{o}$ = \_\_\_$^{\circ}$C, nhiệt độ trung bình logarit của bình bay hơi được xác định như sau:
+Với nhiệt sôi của tác nhân $t_{o}$ = 5$^{\circ}$C, nhiệt độ trung bình logarit của bình bay hơi được xác định như sau:
 \begin{equation*}
-	\theta_{m} = \dfrac{t_{s1} - t_{s2}}{\ln{\dfrac{t_{s1} - t_{s0}}{t_{s2} - t_{s0}}}} = 
+	\theta_{m} = \dfrac{t_{s1} - t_{s2}}{\ln{\dfrac{t_{s1} - t_{s0}}{t_{s2} - t_{s0}}}} = \dfrac{12-7}{\ln{\dfrac{12-5}{7-5}}}=9.19{^\circ}C
 \end{equation*}
 
 Tổng trở nhiệt của lớp cáu:
@@ -149,7 +149,8 @@ Mật độ dòng nhiệt về phía nước:
 \begin{equation*}
 	\begin{split}
 		q_{s.tr} &= \dfrac{t_{V} - t_{W}}{\dfrac{1}{\alpha_{s.tr}} + \Sigma \dfrac{\delta_{i}}{\lambda_{i}}} = \dfrac{\theta_{m} - \theta}{\dfrac{1}{\alpha_{s.tr}} + \Sigma \dfrac{\delta_{i}}{\lambda_{i}}}\\
-		&=
+		&= \dfrac{9.19 - \theta}{\dfrac{1}{4975.75}+0.00013}\\
+		&= 2868.36 \times (9.19 - \theta)
 	\end{split}
 \end{equation*}
 
@@ -160,7 +161,7 @@ Mật độ dòng nhiệt của tác nhân R134A khi sôi trên bề mặt có c
 
 Trong đó:
 \begin{itemize}
-	\item $p_{o}$ - áp suất sôi của tác nhân ở $t_{o}$ = $^{\circ}$C.
+	\item $p_{o}$ - áp suất sôi của tác nhân ở $t_{o}$ =5 $^{\circ}$C.
 	\item $\varepsilon_{n}$ - hệ số xét đến ảnh hưởng của chùm ống có cánh, trong bình bay hơi làm lạnh nước ta lấy $\varepsilon_{n}$ = 1.
 	\item $\varepsilon_{d}$ - hệ số xét đến ảnh hưởng của dầu bôi trơn hoà tan trong tác nhân R143A, ta lấy $\varepsilon_{d}$ = 0.82.
 \end{itemize}
@@ -169,59 +170,60 @@ Vậy:
 \begin{equation*}
 	\begin{split}
 		q_{a.tr} &= 335\times p_{o}^{0.5}\times\theta^2\times\varepsilon_{n}\times\varepsilon_{d}\times\dfrac{F}{F_{tr}}\\
-		&= 
+		&= 335 \times 314.8^{0.5} \times \theta^2 \times 1 \times 0.82 \times 4.376\\
+		&= 21328.45 \times \theta^2
 	\end{split}
 \end{equation*}
 
 Ta có hệ phương trình:
 \begin{equation*}
 	\begin{cases}
-		q_{s.tr} &= 3491.34\times(5.87 - \theta)\\
-		q_{a.tr} &= 2132.33\times\theta^2
+		q_{s.tr} &= 2868.36\times(9.19 - \theta)\\
+		q_{a.tr} &= 21328.45\times\theta^2
 	\end{cases}
 \end{equation*}
 \begin{equation*}
 	\begin{split}
-	2132.33\times\theta^2 &= 3491.34\times(5.87 - \theta)\\
-	\Rightarrow \theta &= \\
-				q_{tr} &=
+	21328.45\times\theta^2 &= 2868.36\times(9.19 - \theta)\\
+	\Rightarrow \theta &= 1.0465^{\circ}C\\
+				q_{tr} &=23358.11(W/m^2)
 	\end{split}
 \end{equation*}
 
 Diện tích truyền nhiệt bề mặt trong:
 \begin{equation*}
-	F_{tr} = \dfrac{Q_{o}}{q_{tr}} =  
+	F_{tr} = \dfrac{Q_{o}}{q_{tr}} = \dfrac{539.44 \times 10^{3}}{23358.11}=23.09(m^2)
 \end{equation*}
 
 Tổng chiều dài ống của bình bốc hơi:
 \begin{equation*}
-	L_{\Sigma} = \dfrac{F_{tr}}{\pi\times d_{tr}} =  
+	L_{\Sigma} = \dfrac{F_{tr}}{\pi\times d_{tr}} = \dfrac{23.09}{3.14 \times 0.016}=459.68(m) 
 \end{equation*}
 
-Chọn số đường nước z = 2.
+Chọn số đường nước z = 3.
 
-Do đó, tổng số ống trong bình bay hơi là: $n = n_{1}\times z =$ 
+Do đó, tổng số ống trong bình bay hơi là: $n = n_{1}\times z =$ 64.07 \times 3=192.21(ống)
 
-Chọn cách bố trí ống trong bình bay hơi theo hình lục giác đều. Ta chọn số ống bố trí theo đường chéo lớn nhất là: m = 25 ống
+Chọn cách bố trí ống trong bình bay hơi theo hình lục giác đều. Ta chọn số ống bố trí theo đường chéo lớn nhất là: m = 17 ống
 
 Tổng số ống trong bình bay hơi là:
 \begin{equation*}
-	n = 0.75\times(m^2 - 1) + 1 = 
+	n = 0.75\times(m^2 - 1) + 1 = 0.75 \times (17^2-1)+1=217(ống)
 \end{equation*}
 
-Vậy còn thiếu \_\_ ống nữa là đủ \_\_\_ ống ta sẽ bố trí chúng ở khoảng trống bình bay hơi.
+Vậy còn thiếu 25 ống nữa là đủ 217 ống ta sẽ bố trí chúng ở khoảng trống bình bay hơi.
 
 Chiều dài của một đoạn ống trong bình bay hơi:
 \begin{equation*}
-	l = \dfrac{L}{n} = 
+	l = \dfrac{L}{n} = \dfrac{459.68}{217}=2.12(m)
 \end{equation*}
 
 Đường kính mặt sàng:
 \begin{equation*}
-	D = m\times S = 
+	D = m\times S = 17 \times 0.027=0.459(m)
 \end{equation*}
 
-Tỉ số: $k = \dfrac{L}{D} = $
+Tỉ số: $k = \dfrac{L}{D} = $ \dfrac{2.12}{0.459}$= 4.6
 
 Ta thấy tỉ số $k$ là chấp nhận được do nằm trong khoảng (3,5$\div$10).
 
@@ -236,9 +238,9 @@ Trở lực về phía nước qua bình bay hơi:
 Trong đó:
 \begin{itemize}
 	\item $\xi_{v}$ - hệ số trở lực cục bộ khi nước vào ống: $\xi_{v}$ = 0.5
-	\item $L$ - chiều dài thân bình giữa 2 mặt sàng: $L$ = 
-	\item $d_{tr}$ - đường kính trong của ống: $d_{tr}$ =
-	\item $z$ - số đường nước trong thiết bị: $z$ = 
+	\item $L$ - chiều dài thân bình giữa 2 mặt sàng: $L$ = 2.12(m)
+	\item $d_{tr}$ - đường kính trong của ống: $d_{tr}$ = 0.016(m)
+	\item $z$ - số đường nước trong thiết bị: $z$ = 3
 	\item $\omega$ - vận tốc dòng nước trong ống: $\omega$ = 2 m/s
 	\item $\rho$ - khối lượng riêng của nước lạnh: $\rho$ = 999.71 $kg/m^3$
 	\item $\lambda$ - hệ số ma sát	
@@ -248,7 +250,7 @@ Do nước trong ống ở trạng thái chảy rối, nên đối với các �
 \begin{equation*}
 	\begin{split}
 		\lambda &= \dfrac{0.3164}{Re^{0.25}}\\
-		&=  
+		&=  \dfrac{0.3164}{24151^{0.25}}=0.0254
 	\end{split}
 \end{equation*}
 
@@ -256,11 +258,10 @@ Vậy trở lực của nước qua bình bay hơi:
 \begin{equation*}
 	\begin{split}
 		\Delta P &= \left(\lambda\times\dfrac{L}{d_{tr}} +\xi_{v} + 1 + \dfrac{\xi_{v} + 1}{z}\right)\times \dfrac{\omega^2\times\rho}{2}\times z\\
-		&=  
+		&=  (0.0254 \times \dfrac{2.12}{0.016}+0.5+1+ \dfrac{0.5+1}{3} \times \dfrac{2^2 \times 999.71}{2} \times 3) = 32152.40(Pa)
 	\end{split}
 \end{equation*}
 
-\section{TÍNH BỀN CHO BÌNH BAY HƠI}
 \subsection{TÍNH TOÁN BỀN CHO THÂN BÌNH}
 Thiết bị bốc hơi trong hệ thống điều hoà không khí là thiết bị chịu áp lực phía hạ áp. Do đó, ta phải tính toán bền cho thiết bị để đảm bảo an toàn cho thiết bị khi vận hành…
 
@@ -272,9 +273,9 @@ Do kết cấu của bình bốc hơi dạng hình trụ, vì thế chịu đư�
 
 Trong đó:
 \begin{itemize}
-	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn: $P_{R}$ =  bar =  MPa.
-	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là: t = $^{\circ}$C có $[\sigma]$ = 
-	\item $D_{tr}$ - đường kính trong của thân bình ngưng: $D_{tr}$ = 
+	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn: $P_{R}$ = 16 bar = 1.6 MPa.
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là: t = 36$^{\circ}$C có $[\sigma]$ = 138.8(MPAa)
+	\item $D_{tr}$ - đường kính trong của thân bình ngưng: $D_{tr}$ = 0.459(m)
 	\item $\varphi_{d}$ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
 	\item $C$ - chiều dày bổ sung, mm
 \end{itemize}
@@ -289,18 +290,69 @@ Trong đó:
 
 Vậy:
 \begin{equation*}
-	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C = 
+	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C = \dfrac{1.6 \times 0.459}{2 \times 138.8 \times 0.8 - 1.6}+0.003 = 0.006(m)
 \end{equation*}
 
-Ta chọn: $S$ =
+Ta chọn: $S$ = 0.007(m)
 
 Bình bay hơi có kích thước như sau:
 \begin{itemize}[label={$\diamond$}]
-	\item $D_{tr}$ = 
-	\item $D_{ng} = D_{tr} + 2\times S = $ 
+	\item $D_{tr}$ = 0.459(m)
+	\item $D_{ng} = D_{tr} + 2\times S = $ 0.459 + 2 \times 0.006$=0.473(m)  
 \end{itemize}
 
+\subsection{TÍNH TOÁN BỀ DÀY MẶT SÀNG}
+Bề dày mặt sàng $S_{m}$ phải đảm bảo có thể núc được ống và phải thõa mãn điều kiện:
+\begin{equation*}
+	S_{m} \geq 0.5\times D_{E}\times \sqrt{\dfrac{|P_{O} - P_{R}|}{[\sigma]}} + C
+\end{equation*}
 
+Trong đó:
+\begin{itemize}
+	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn $P_{R}$ = 16 bar = 1.6  MPa.
+	\item $P_{O}$ - áp suất tính toán bên trong ống $P_{O}$ = 1.5 bar = 0.15 MPa.
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là t = 36$^{\circ}$C có $[\sigma]$ = 138.8(MPa)	
+	\item $D_{E}$ - đường kính của vòng tròn có thể chứa được trong diện tích không có ống lớn nhất trên mặt sàng $D_{E}$ = 0.115(m)
+	\item $C$ - bề dày bổ sung $C$ = 0.003(m)
+\end{itemize}
+
+Vậy:
+\begin{equation*}
+	\begin{split}
+		S_{m} &\geq 0.5\times D_{E}\times \sqrt{\dfrac{|P_{O} - P_{R}|}{[\sigma]}} + C\\
+		&\geq 0.5 \times 0.115 \times \sqrt{\dfrac{|0.15-1.6|}{138.8}} + 0.003 = 0.0089(m)
+	\end{split}
+\end{equation*}
+
+Ta chọn chiều dày mặt sàng: $S_{m}$ = 0.009(m)
+
+\subsection{TÍNH TOÁN BỀN CHO ĐÁY}
+Với thiết bị ngưng tụ dạng hình trụ, ta sử dụng đáy cong có thể tháo mở được để lắp ghép với bích ở 2 đầu thân hình trụ. Ta chọn loại đáy cong cho thiết bị là đáy cong hình tròn không bo mép (hình 10-4 c, trang 370 TL[2]).
+
+Bề dày loại nắp tròn được xác định như sau: (công thức trang 370 TL[2])
+\begin{equation*}
+	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C
+\end{equation*}
+
+Trong đó:
+\begin{itemize}
+	\item $D_{tr}$ = 0.459(m)
+	\item $H_{tr} = 0.25\times D_{tr} = $ 0.25 \times 0.39$ = 0.11475(m)
+	\item $R$ bán kính của nắp cong, m.
+	
+	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = $ \dfrac{0.459^2}{4 \times 0.11475} $= 0.459(m) 
+	\item $ \varphi_{d} $ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
+	\item $P_{R}$ - áp suất tính toán của thiết bị: $P_{R}$ = 1.6 MPa
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo đáy $[\sigma]$ = 138.8 MPa 
+	\item $C$ - chiều dày bổ sung $C$ = 0.03(m)
+\end{itemize}
+
+Vậy: 
+\begin{equation*}
+	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C = \dfrac{1.6 \times 0.459}{2 \times 0.8 \times 138.8}+0.003 = 0.006(m)
+\end{equation*}
+
+Ta chọn chiều dày đáy: $S_{n}$ = 0.007(m)
 
 
 

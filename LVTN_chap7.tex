@@ -13,21 +13,21 @@ Trong công trình HA NOI PLAZA chọn bình ngưng giải nhiệt bằng nướ
 \subsection{CÁC THÔNG SỐ BAN ĐẦU}
 -- Hiệu Entanpy vào và ra khỏi bình ngưng:
 \begin{equation*}
-	\Delta i = q_{k} = i_{2} - i_{3'} = 
+	\Delta i = q_{k} = i_{2} - i_{3'} = 435.65 - 255.95 = 179.70(kJ/kg)
 \end{equation*}
 
 -- Phụ tải nhiệt của bình ngưng:
 \begin{equation*}
-	Q_{k} = \dfrac{Q_{o}}{q_{o}} \times \Delta i =  
+    Q_{k} = G\times q_{k} = 3.49 \times 179.70 = 626.33(kw)
 \end{equation*}
 
 -- Nhiệt độ bên ngoài tra theo TCVN 5687-2010” Tiêu chuẩn Thiết Kế Thông Gió Và Điều Hòa Không Khí.
-$t_{N} = , \varphi_{N} = , t_{u} = $
+$t_{N}$ = 36$^{\circ}$C , $\varphi_{N}$ = 74\% , $t_{u}$ = 31.7$^{\circ}$C 
 
 Tra trên ẩm đồ I-d ta có:
 \begin{itemize}
-	\item $i_{1}$ =  
-	\item $d_{1}$ = 
+	\item $i_{1}$ =  108.7(kJ/kg)
+	\item $d_{1}$ =  28.2(g/kg)
 \end{itemize}
 
 -- Nhiệt độ nước vào bình ngưng:
@@ -35,34 +35,34 @@ Tra trên ẩm đồ I-d ta có:
 	t_{w1} = t_{u} + (3\div 4)
 \end{equation*}
 
-Ta chọn $t_{w1}$ = 
+Ta chọn $t_{w1}$ = 35$^{\circ}$C
 
--- Theo tài liệu [2], ta chọn độ chênh nhiệt độ giữa nước vào và ra bình ngưng là:
+-- Theo tài liệu [2], ta chọn độ chênh nhiệt độ giữa nước vào và ra bình ngưng là: 
 \begin{equation*}
 	\Delta t_{w} = (3\div 6)
 \end{equation*}
 
-Ta chọn: $\Delta t_{w}$ = 
+Ta chọn: $\Delta t_{w}$ = 5$^{\circ}$C
 
 -- Nhiệt độ nước ra bình ngưng:
 \begin{equation*}
 	\begin{split}
 		 t_{w2} &= t_{w1} + \Delta t_{w} \\
-		 &= 
+		 &= 40^{\circ}C
 	\end{split}
 \end{equation*}
 
--- Nhiệt độ ngưng tụ: $t_{k} = t_{w1} + (3\div 5) = $
+-- Nhiệt độ ngưng tụ: $t_{k} = t_{w1} + (3\div 5)$ =  43$^{\circ}$C
 
 Bề mặt truyền nhiệt của bình ngưng được chọn là chùm ống đồng có cánh bố trí so le, trên mặt sàn có các thông số:
 \begin{itemize}
-	\item Đường kính cánh D =  (m)
-	\item Đường kính ngoài của ống d{\scriptsize ng} =  (m)
-	\item Đường kính trong của ống d{\scriptsize tr} =  (m)
-	\item Bước cánh S{\scriptsize c} =  (m)
-	\item Bước ống S =  (m)
-	\item Bề dày đầu cánh $\delta_{d}$ =  (m)
-	\item Bề dày chân cánh $\delta_{c}$ =  (m)
+	\item Đường kính cánh D = 0.02 (m)
+	\item Đường kính ngoài của ống d{\scriptsize ng} = 0.018 (m)
+	\item Đường kính trong của ống d{\scriptsize tr} = 0.016 (m)
+	\item Bước cánh S{\scriptsize c} = 0.00118 (m)
+	\item Bước ống S = 0.026 (m)
+	\item Bề dày đầu cánh $\delta_{d}$ = 0.0002 (m)
+	\item Bề dày chân cánh $\delta_{c}$ = 0.0003 (m)
 \end{itemize}
 
 \subsection{TÍNH TOÁN}
@@ -72,7 +72,7 @@ Các thông số khác của chùm ống:
 \begin{equation*}
 	\begin{split}
 		F_{d} &= \dfrac{\pi\times (D^2 - d^2_{ng})}{2\times S_{c}}\\
-		&=
+		&=\dfrac{3.14 \times (0.02^2 - 0.016^2)}{2 \times 0.00118} = 0.1011(m^2/m)
 	\end{split}
 \end{equation*}
 
@@ -80,7 +80,7 @@ Các thông số khác của chùm ống:
 \begin{equation*}
 \begin{split}
 		F_{n} &= \pi\times d_{ng}\times \left(1-\dfrac{\delta_{c}}{S_{c}}\right) + \dfrac{\pi\times D\times \delta_{d}}{S_{c}}\\
-		&= 
+		&= 3.14 \times 0.018 \times (1-\dfrac{0.0003}{0.00118}) + \dfrac{3.14 \times 0.02 \times 0.0002}{0.00118} = 0.053 (m^2/m)
 \end{split}
 \end{equation*}
 
@@ -88,7 +88,7 @@ Các thông số khác của chùm ống:
 \begin{equation*}
 	\begin{split}
 		F_{ng} &= F_{n} + F_{tr}\\
-		&= 
+		&= 0.053 + 0.1011 = 0.154(m^2/m)
 	\end{split}
 \end{equation*}
 
@@ -96,7 +96,7 @@ Các thông số khác của chùm ống:
 \begin{equation*}
 	\begin{split}
 		F_{tr} &= \pi\times d_{tr}\\
-		&= 
+		&= 3.14 \times 0.016 = 0.05024(m^2/m)
 	\end{split}
 \end{equation*}	
 
@@ -104,7 +104,7 @@ Các thông số khác của chùm ống:
 \begin{equation*}
 	\begin{split}
 		\beta &= \dfrac{F_{ng}}{F_{tr}}\\
-		&= 
+		&= \dfrac{0.154}{0.05024}= 3.06
 	\end{split}
 \end{equation*}	
 
@@ -112,39 +112,38 @@ Các thông số khác của chùm ống:
 \begin{equation*}
 	\begin{split}
 		t_{w} &= \dfrac{t_{w1} + t_{w2}}{2}\\
-		&= 
+		&= \dfrac{35 + 40}{2} = 37.5^{\circ}C
 	\end{split}
 \end{equation*}	
 
-Các tính chất nhiệt vật lý của nước giải nhiệt trong bình ngưng ở nhiệt độ trung bình $t_{w}$ = 
+Các tính chất nhiệt vật lý của nước giải nhiệt trong bình ngưng ở nhiệt độ trung bình $t_{w}$ = 37.5$^{\circ}$C
 
 Tra theo phụ lục 28 tài liệu [2] trang 613 ta được:
 
-Ở nhiệt độ $ t_{w} $ = 
-\begin{multicols}{2}
+Ở nhiệt độ $ t_{w} $ = 37.5$^{\circ}$C
 \begin{itemize}
-	\item $\gamma$ =  
-	\item $\rho$ =  
-	\item $Pr$ =  	
-	\item $C_{w}$ =  	
-	\item $\lambda$ =  	
-\end{itemize}
-\end{multicols}
-
-Tính chất vật lý của R134a ở nhiệt độ ngưng tụ $ t_{k} $ = $^{\circ}$C:
-\begin{itemize}
-	\item $\gamma$ =
-	\item $\rho$ =
-	\item $\lambda$ =
+	\item $\gamma$ = 0.0000007028$(m^2/s$)
+	\item $\rho$ =  993.25$(kg/m^3$)
+	\item $Pr$ =  	5.087
+	\item $C_{w}$ =  4.174(kJ/kg)	
+	\item $\lambda$ = 0.6224(W/mK)
 \end{itemize}
 
-Phụ tải nhiệt bình ngưng: Q{\scriptsize k} = 
+
+Tính chất vật lý của R134a ở nhiệt độ ngưng tụ $ t_{k} $ = 43$^{\circ}$C:
+\begin{itemize}
+	\item $\gamma$ = 0.00000023$(m^2/s$)
+	\item $\rho$ = 56.22$(kg/m^3$)
+	\item $\lambda$ = 1.17(W/mK)
+\end{itemize}
+
+Phụ tải nhiệt bình ngưng: Q{\scriptsize k} = 626.33(kw)
 
 Lượng nước giải nhiệt đi qua bình ngưng:
 \begin{equation*}
 	\begin{split}
 		G_{w} &= \dfrac{Q_{k}}{C_{w}\times \Delta t_{w}}\\
-		&=
+		&=\dfrac{626.33}{4.174 \times 5} = 30.01(kg/s)
 	\end{split}
 \end{equation*}
 
@@ -152,19 +151,19 @@ Lượng nước giải nhiệt đi qua bình ngưng:
 \begin{equation*}
 	\begin{split}
 		n_{1} &= \dfrac{4\times G_{w}}{\pi\times\rho\times\omega\times d_{tr}^2}\\
-		&=
+		&= \dfrac{4 \times 30.01}{3.14 \times 993.25 \times 2 \times 0.016^2}= 75.18
 	\end{split}
 \end{equation*}
 
-Số ống trong một đường nước là \_\_\_
+Số ống trong một đường nước là 76
 
-Tính lại vận tốc nước theo $n_{1}$ = 
+Tính lại vận tốc nước theo $n_{1}$ = 76
 
 Ta có:
 \begin{equation*}
 	\begin{split}
 		\omega &= \dfrac{4\times G_{w}}{\pi\times\rho\times n_{1}\times d_{tr}^2}\\
-		&=
+		&= \dfrac{4 \times 30.01}{3.14 \times 993.25 \times 75.18 \times 0.016^2} = 1.999  \approx 2 (m/s)
 	\end{split}
 \end{equation*}
 
@@ -172,7 +171,7 @@ Hệ số Reynolds:
 \begin{equation*}
 	\begin{split}
 		Re &= \dfrac{\omega\times d_{tr}}{\nu}\\
-		&=
+		&= \dfrac{2 \times 0.016}{0.7028 \times 10^-6} = 45532.16
 	\end{split}
 \end{equation*}
 
@@ -182,7 +181,7 @@ Hệ số Nusselt:
 \begin{equation*}
 	\begin{split}
 		Nu &= 0.021\times Re^{0.8} \times Pr^{0.43} \times\varepsilon_{1}\\
-		&=
+		&= 0.021 \times 45532.16^0.8 \times 5.087^0.43 \times 1 = 225.24
 	\end{split}
 \end{equation*}
 
@@ -190,7 +189,7 @@ Hệ số toả nhiệt về phía nước:
 \begin{equation*}
 	\begin{split}
 		\alpha_{w} &= \dfrac{Nu\times \lambda}{d_{tr}}\\
-		&=
+		&=\dfrac{225.24 \times 0.6224}{0.016} = 8761.98(W/m^2K)
 	\end{split}
 \end{equation*}
 
@@ -198,7 +197,7 @@ Hệ số toả nhiệt về phía nước:
 \begin{equation*}
 	\begin{split}
 		\theta_{m} &= \dfrac{t_{w2} - t_{w1}}{\ln\left(\dfrac{t_{k} - t_{w1}}{t_{k} - t_{w2}}\right)}\\
-		&=
+		&=\dfrac{40-35}{\ln\dfrac{43-35}{43-40}}=11.74^{\circ}C
 	\end{split}
 \end{equation*}
 
@@ -206,27 +205,20 @@ Phương trình xác định mật độ dòng nhiệt về phía nước:
 \begin{equation*}
 	\begin{split}
 		q_{w} &= \dfrac{\theta_{m} - \theta_{a}}{\dfrac{1}{\alpha_{w}}+\Sigma\dfrac{\delta_{i}}{\lambda_{i}}}\\
-		&=
+		&=3741.29 \times (11.74 - \theta_{a})
 	\end{split}
 \end{equation*}
 
-$\Sigma\dfrac{\delta_{i}}{\lambda_{i}}$ : tổng trở nhiệt của lớp cáu và vách ống. Theo tài liệu [2] trang 257, vật liệu vách ống là đồng thì ta chọn $\Sigma\dfrac{\delta_{i}}{\lambda_{i}}$ = 
-\begin{equation*}
-	\begin{split}
-		q_{w} &= \dfrac{\theta_{m} - \theta_{a}}{\dfrac{1}{\alpha_{w}}+\Sigma\dfrac{\delta_{i}}{\lambda_{i}}}\\
-		&=
-	\end{split}
-\end{equation*}
+$\Sigma\dfrac{\delta_{i}}{\lambda_{i}}$ : tổng trở nhiệt của lớp cáu và vách ống. Theo tài liệu [2] trang 257, vật liệu vách ống là đồng thì ta chọn $\Sigma\dfrac{\delta_{i}}{\lambda_{i}}$ = 0.26 $\times 10^-3
 
 Để có thể xác định mật độ dòng nhiệt qtr, cần lưa chọn sơ bộ kết cấu của bình ngưng:
 
-Sơ bộ ta có thể chọn: $\theta_{a}$ = 
+Sơ bộ ta có thể chọn: $\theta_{a}$ = 0.3 $\theta_{m}$
 
 Khi đó:
 \begin{equation*}
 	\begin{split}
-		q'_{tr} &= \\
-		&=
+		q'_{tr} &= 3741.29 \times (11.74 - 0.3 \times 11.74)=30748.22(w/m^2)
 	\end{split}
 \end{equation*}
 
@@ -236,29 +228,29 @@ Theo tài liệu [2] ta được:
 \begin{equation*}
 	\begin{split}
 		m &= 0.75\times\sqrt[3]{\dfrac{Q_{k}}{q'_{tr}\times s\times d_{tr}\times k}} \\
-		&=
+		&= 0.75 \times \sqrt[3]{\dfrac{626.33 \times 10^3}{30748.22 \times 0.026 \times 0.016 \times 8}}
 	\end{split}
 \end{equation*}
 
 Trong đó:
 \begin{itemize}
-	\item $s$: Bước ống ($s = 1.3\times D =$).
-	\item $D$: Đường kính cánh ($D$ = ).
+	\item s: Bước ống (s = 1.3\times D = 1.3 \times 0.02 = 0.026).\\
+`	\item D: Đường kính cánh (D = 0.02).
 \end{itemize}
 
-Ta chọn: $k = l/d = $
+Ta chọn: $k = l/d = $ 8
 
 Ta suy ra:
 \begin{equation*}
 	\begin{split}
 		m &= 0.75\times\sqrt[3]{\dfrac{Q_{k}}{q'_{tr}\times s\times d_{tr}\times k}} \\
-		&=
+		&=0.75 \times \sqrt[3]{\dfrac{626.33 \times 10^3}{30748.22 \times 0.026 \times 0.016 \times 8}} = 13.72
 	\end{split}
 \end{equation*}
 
-Từ kết quả trên ta chọn: $m$ = 
+Từ kết quả trên ta chọn: $m$ = 15
 
-Vậy số hàng ống theo chiều đứng là: $n_{z} = m = $ và $\dfrac{n_{z}}{2} = $
+Vậy số hàng ống theo chiều đứng là: $n_{z} = 15 = $ và $\dfrac{n_{z}}{2} = $ \dfrac{15}{2}$ = 7.5
 
 Hệ số toả nhiệt ngưng tụ R134a tính theo bề mặt trong của ống được xác định theo công thức:
 \begin{equation*}
@@ -269,7 +261,7 @@ Hệ số toả nhiệt ngưng tụ R134a tính theo bề mặt trong của ốn
 
 Trong đó:
 \begin{itemize}
-	\item $\Delta h = q_{k} = $ 
+	\item $\Delta h = q_{k} = $ 179.70(kJ/kg)
 	\item $\Psi_{c}$: hệ số tính đến các điều kiện khác khi ngưng tụ trên đoạn ống có cánh.
 \end{itemize}
 \begin{equation*}
@@ -284,7 +276,7 @@ Với:
 \begin{equation*}
 	\begin{split}
 		h' &= \dfrac{\pi}{4}\times\left(\dfrac{D^2 - d_{ng}^2}{D}\right)\\
-		&=
+		&=\dfrac{\pi}{4} \times \dfrac{0.02^2-0.018^2}{0.02}=0.002983(m)
 	\end{split}
 \end{equation*}
 
@@ -292,7 +284,7 @@ Ta suy ra:
 \begin{equation*}
 \begin{split}
 		\Psi_{c} &= 1.3\times\dfrac{F_{d}}{F_{ng}}\times E^{0.75}\times\left(\dfrac{d_{ng}}{h'}\right)^{0.25} + \dfrac{F_{d}}{F_{ng}}\\
-		&=
+		&=1.3 \times \dfrac{0.1011}{0.154} \times 1^{0.75} \times (\dfrac{0.018}{0.002983})^{0.25} + \dfrac{0.1011}{0.154}= 1.6816
 \end{split}
 \end{equation*}
 
@@ -308,15 +300,15 @@ Ta có:
 \begin{equation*}
 \begin{split}
 		q_{a} &= \alpha_{a}\times\theta_{a}\\
-		&=
+		&=37073.930\theta_{a}
 \end{split}
 \end{equation*}
 
 Ta có hệ phương trình để xác định $q_{tr}$:
 \begin{equation*}
 	\begin{cases}
-		q_{w} &= 8761.84\times(4.72 - \theta_{a}) \\
-		q_{a} &= 35336.08\times\theta_{a}^{0.75}
+		q_{w} &= 3741.29\times(11.74 - \theta_{a}) \\
+		q_{a} &= 37073.930\times\theta_{a}^{0.75}
 	\end{cases}
 \end{equation*}
 
@@ -324,68 +316,60 @@ Giải phương trình bằng phương pháp lặp:
 \begin{equation*}
 	\begin{split}
 		q_{tr} &= \dfrac{(x - 1)\times q_{tr}^{x} + \theta_{m}\times B^{x}}{x\times q_{tr}^{x-1} + \dfrac{B^{x}}{A}}\\
-		&=
 	\end{split}
 \end{equation*}
 
 Trong đó:
 \begin{itemize}
 \begin{multicols}{3}
-	\item $x = 1/k = $
-	\item $A = $
-	\item $B = $
-	\item $\theta_{m} = $
-	\item $q'_{tr} = $
+	\item $x = 1/k = $ 1.33
+	\item $A = $ 3741.29
+	\item $B = $ 37073.93
+	\item $\theta_{m} = $ 11.74
+	\item $q'_{tr} = $ 30748.22
 \end{multicols}
 \end{itemize}
 
 Ta suy ra:
 \begin{equation*}
 	\begin{split}
-		q_{tr1} &= \dfrac{(x - 1)\times q_{tr}^{x} + \theta_{m}\times B^{x}}{x\times q_{tr}^{x-1} + \dfrac{B^{x}}{A}}\\
-		q_{tr2} &= \dfrac{(x - 1)\times q_{tr}^{x} + \theta_{m}\times B^{x}}{x\times q_{tr}^{x-1} + \dfrac{B^{x}}{A}}\\	
-		q_{tr3} &= \dfrac{(x - 1)\times q_{tr}^{x} + \theta_{m}\times B^{x}}{x\times q_{tr}^{x-1} + \dfrac{B^{x}}{A}}\\	
+	q_{tr1} &= \dfrac{(x - 1)\times q_{tr}^{x} + \theta_{m}\times B^{x}}{x\times q_{tr}^{x-1} + \dfrac{B^{x}}{A}}\\
+	& = \dfrac{1.33-1 \times 30748.22^{1.33} + 11.74 \times 37073.93^{1.33}}{1.33 \times 30748.22^{1.33-1}+\dfrac{37073.93^{1.33}}{3741.29}}=39856.012(W/m^2)\\
+	q_{tr2} &= \dfrac{(x - 1)\times q_{tr}^{x} + \theta_{m}\times B^{x}}{x\times q_{tr}^{x-1} + \dfrac{B^{x}}{A}}\\
+	& = \dfrac{1.33-1 \times 39856.012^{1.33} + 11.74 \times 37073.93^{1.33}}{1.33 \times 39856.012^{1.33-1}+\dfrac{37073.93^{1.33}}{3741.29}}=39808.994(W/m^2)\\
 	\end{split}
 \end{equation*}
 
-Ta thấy sai số 0,00012\% nên ta có $q_{tr}$ = 
+Ta thấy sai số 0,00118\% nên ta có $q_{tr}$ = 39808.994$(W/m^2$)
 
 Diện tích truyền nhiệt bề mặt trong của ống:
 \begin{equation*}
-	F_{tr} = \dfrac{Q_{k}}{q_{tr}} = 
+	F_{tr} = \dfrac{Q_{k}}{q_{tr}} = \dfrac{626.33 \times 10^3}{39808.994}=15.73(m^2)
 \end{equation*}
 
 Tổng chiều dài ống trong bình ngưng:
 \begin{equation*}
-	L = \dfrac{F_{tr}}{\pi\times d_{tr}} = 
+	L = \dfrac{F_{tr}}{\pi\times d_{tr}} = \dfrac{15.73}{3.14 \times 0.016}= 313.16(m)
 \end{equation*}
 
-Sơ bộ ta đã tính và chọn m = \_\_ vậy tổng số ống là:
+Sơ bộ ta đã tính và chọn m = 15 vậy tổng số ống là:
 \begin{equation*}
 	\begin{split}
 		n &= 0.75\times (m^2 - 1) + 1\\
-		&=
+		&=0.75 \times (15^2-1)+1 = 169(ống)
 	\end{split}
 \end{equation*}
 
 Số đường nước trong bình ngưng:
 \begin{equation*}
-	z = \dfrac{n}{n_{1}} = 
+	z = \dfrac{n}{n_{1}} = \dfrac{169}{75.18} = 2.25 
 \end{equation*}
 
-Chọn $z$ = 
+Chọn $z$ = 3
 
-Khi đó: $n = z\times n_{1} = $
+Khi đó: $n = z\times n_{1} = $ 3 \times 75.18=225.53( ống ) 
 
-Như vậy ta chọn lại m = 
-\begin{equation*}
-	\begin{split}
-		n &= 0.75\times (m^2 - 1) + 1\\
-		&=  
-	\end{split}
-\end{equation*}
 
-Như vậy ta chọn m =
 
 Để sử dụng phần dưới bình ngưng làm bình chứa chúng ta phải bỏ bớt 2 hàng ống dưới cùng.
 
@@ -393,42 +377,35 @@ Số ống bỏ đi là:
 \begin{equation*}
 	\begin{split}
 		n' &= i\times \dfrac{m + 1}{2} + \sum_{n=1}^{n=i-1}n_{i}\\
-		&=  
+		&=  2 \times \dfrac{15+1}{2}+1 = 17(ống)
 	\end{split}
 \end{equation*}
 
 Với $i$ là số hàng ống bỏ đi.
 
-Vậy số hàng ống còn lại là: $n'' = n - n' = $
-
-Vậy còn thiếu \_\_\_ ống nữa là đủ \_\_\_ ống ta sẽ bố trí chúng ở khoảng trống bình ngưng.
+Vậy số hàng ống còn lại là: $n'' = n - n' = $ 169-17 = 152(ống)
 
 Chiều dài ống:
 \begin{equation*}
-	l = \dfrac{L}{n} = 
+	l = \dfrac{L}{n} = \dfrac{313.16}{152}= 2.06(m)
 \end{equation*}
 
 Bước ống:
 \begin{equation*}
-	S = 1.3\times D = 
+	S = 1.3\times D = 1.3 \times 0.02 = 0.026(m)
 \end{equation*}
 
 Đường kính mặt sàng:
 \begin{equation*}
-	D = m\times S = 
-\end{equation*}
-
-Đường kính mặt sàng:
-\begin{equation*}
-	D = m\times S = 
+	D = m\times S = 15 \times 0.026 = 0.39(m)
 \end{equation*}
 
 Tỉ số:
 \begin{equation*}
-	K = \dfrac{l}{D} = 
+	K = \dfrac{l}{D} =\dfrac{2.06}{0.39}=5.28
 \end{equation*}
 
-Vậy k = \_\_\_ nằm trong khoảng cho phép (4$\div$8)
+Vậy k = 5.28 nằm trong khoảng cho phép (4$\div$8)
 
 \section{TÍNH TOÁN THUỶ ĐỘNG CHO BÌNH NGƯNG}
 Ngoài việc tính toán truyền nhiệt trong bình ngưng, ta còn tính trở lực của nước lạnh khi qua bình ngưng. Theo công thức 9.25 trang 358 TL[2]:
@@ -444,9 +421,9 @@ Trở lực về phía nước qua bình ngưng:
 Trong đó:
 \begin{itemize}
 	\item $\xi_{v}$ - hệ số trở lực cục bộ khi nước vào ống: $\xi_{v}$ = 0.5
-	\item $L$ - chiều dài thân bình giữa 2 mặt sàng: $L$ = 
-	\item $d_{tr}$ - đường kính trong của ống: $d_{tr}$ =
-	\item $z$ - số đường nước trong thiết bị: $z$ = 
+	\item $L$ - chiều dài thân bình giữa 2 mặt sàng: $L$ = 2.06(m)
+	\item $d_{tr}$ - đường kính trong của ống: $d_{tr}$ = 0.016(m)
+	\item $z$ - số đường nước trong thiết bị: $z$ = 3
 	\item $\omega$ - vận tốc dòng nước trong ống: $\omega$ = 2 m/s
 	\item $\rho$ - khối lượng riêng của nước lạnh: $\rho$ = 999.71 $kg/m^3$
 	\item $\lambda$ - hệ số ma sát	
@@ -456,7 +433,7 @@ Do nước trong ống ở trạng thái chảy rối, nên đối với các �
 \begin{equation*}
 	\begin{split}
 		\lambda &= \dfrac{0.3164}{Re^{0.25}}\\
-		&=  
+		&=  \dfrac{0.3164}{45532.16^{0.25}}=0.0217
 	\end{split}
 \end{equation*}
 
@@ -464,7 +441,7 @@ Vậy trở lực của nước qua bình ngưng:
 \begin{equation*}
 	\begin{split}
 		\Delta P &= \left(\lambda\times\dfrac{L}{d_{tr}} +\xi_{v} + 1 + \dfrac{\xi_{v} + 1}{z}\right)\times \dfrac{\omega^2\times\rho}{2}\times z\\
-		&=  
+		&=  (0.0217 \times \dfrac{2.06}{0.016} + 0.5 + 1 + \dfrac{0.5+1}{3}) \times \dfrac{2^2 \times 999.71}{2} \times 3 = 28540.69(Pa)
 	\end{split}
 \end{equation*}
 
@@ -479,9 +456,9 @@ Do kết cấu của bình ngưng dạng hình trụ, vì thế chịu được 
 
 Trong đó:
 \begin{itemize}
-	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn: $P_{R}$ =  bar =  MPa.
-	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là: t = $^{\circ}$C có $[\sigma]$ = 
-	\item $D_{tr}$ - đường kính trong của thân bình ngưng: $D_{tr}$ = 
+	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn: $P_{R}$ = 16 bar = 1.6 MPa.
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là: t = 42 $^{\circ}$C có $[\sigma]$ = 138.35(MPa)
+	\item $D_{tr}$ - đường kính trong của thân bình ngưng: $D_{tr}$ = 0.39(m)
 	\item $\varphi_{d}$ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
 	\item $C$ - chiều dày bổ sung, mm
 \end{itemize}
@@ -496,15 +473,16 @@ Trong đó:
 
 Vậy:
 \begin{equation*}
-	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C = 
+	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C =\dfrac{1.6 \times 0.39}{2 \times 138.35 \times 0.8 - 1.6} + 0.003 = 0.0058
 \end{equation*}
 
-Ta chọn: $S$ = 
+Ta chọn: $S$ = 0.006(m)
 
 Bình ngưng có kích thước như sau:
 \begin{itemize}[label={$\diamond$}]
-	\item $D_{tr}$ = 
-	\item $D_{ng} = D_{tr} + 2\times S = $ 
+	\item $D_{tr}$ = 0.39(m)
+	\item $D_{ng} = D_{tr} + 2\times S =$ 0.39 + 2 \times  0.006$ = 0.4020(m)
+	      
 \end{itemize}
 
 \subsection{TÍNH TOÁN BỀ DÀY MẶT SÀNG}
@@ -515,22 +493,22 @@ Bề dày mặt sàng $S_{m}$ phải đảm bảo có thể núc được ống 
 
 Trong đó:
 \begin{itemize}
-	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn $P_{R}$ =  bar =  MPa.
-	\item $P_{O}$ - áp suất tính toán bên trong ống $P_{O}$ =  bar =  MPa.
-	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là t = $^{\circ}$C có $[\sigma]$ = 	
-	\item $D_{E}$ - đường kính của vòng tròn có thể chứa được trong diện tích không có ống lớn nhất trên mặt sàng $D_{E}$ = 
-	\item $C$ - bề dày bổ sung $C$ = 
+	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn $P_{R}$ = 16 bar = 1.6  MPa.
+	\item $P_{O}$ - áp suất tính toán bên trong ống $P_{O}$ = 1.5 bar = 0.15 MPa.
+	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là t = 36$^{\circ}$C có $[\sigma]$ = 138.35(MPa)	
+	\item $D_{E}$ - đường kính của vòng tròn có thể chứa được trong diện tích không có ống lớn nhất trên mặt sàng $D_{E}$ = 0.115(m)
+	\item $C$ - bề dày bổ sung $C$ = 0.003(m)
 \end{itemize}
 
 Vậy:
 \begin{equation*}
 \begin{split}
 		S_{m} &\geq 0.5\times D_{E}\times \sqrt{\dfrac{|P_{O} - P_{R}|}{[\sigma]}} + C\\
-		&\geq 
+		&\geq 0.5 \times 0.115 \times \sqrt{\dfrac{|0.15-1.6}{138.35}} + 0.003 = 0.0089(m)
 \end{split}
 \end{equation*}
 
-Ta chọn chiều dày mặt sàng: $S_{m}$ = 
+Ta chọn chiều dày mặt sàng: $S_{m}$ = 0.009(m)
 
 \subsection{TÍNH TOÁN BỀN CHO ĐÁY}
 Với thiết bị ngưng tụ dạng hình trụ, ta sử dụng đáy cong có thể tháo mở được để lắp ghép với bích ở 2 đầu thân hình trụ. Ta chọn loại đáy cong cho thiết bị là đáy cong hình tròn không bo mép (hình 10-4 c, trang 370 TL[2]).
@@ -542,20 +520,20 @@ Bề dày loại nắp tròn được xác định như sau: (công thức trang
 
 Trong đó:
 \begin{itemize}
-	\item $D_{tr}$ = 
-	\item $H_{tr} = 0.25\times D_{tr} = $
+	\item $D_{tr}$ = 0.39(m)
+	\item $H_{tr} = 0.25\times D_{tr} = $ 0.25 \times 0.39$ = 0.0975(m)
 	\item $R$ bán kính của nắp cong, m.
 	
-	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = $ 
+	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = $ \dfrac{0.39^2}{4 \times 0.0975} $= 0.39(m) 
 	\item $ \varphi_{d} $ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
 	\item $P_{R}$ - áp suất tính toán của thiết bị: $P_{R}$ = 1.6 MPa
 	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo đáy $[\sigma]$ = 138.35 MPa 
-	\item $C$ - chiều dày bổ sung $C$ = 
+	\item $C$ - chiều dày bổ sung $C$ = 0.03(m)
 \end{itemize}
 
 Vậy: 
 \begin{equation*}
-	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C = 
+	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C = \dfrac{1.6 \times 0.39}{2 \times 0.8 \times 138.35}+0.003 = 0.0058(m)
 \end{equation*}
 
-Ta chọn chiều dày đáy: $S_{n}$ = 
+Ta chọn chiều dày đáy: $S_{n}$ = 0.006(m)
