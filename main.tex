@@ -116,6 +116,14 @@
 \addbibresource{thamkhao.bib}
 \renewcommand*{\thefootnote}{(\arabic{footnote})} %dùng để viết footcite có trong ngoặc đơn
 
+%Phan nay la su dung package fancyhdr
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand*{\thesection}{\Alph{section}.}
+\renewcommand*{\thesubsection}{\hspace{0.75cm}\Roman{subsection}.}
+\renewcommand*{\thesubsubsection}{\arabic{subsubsection}.}
+
 \usepackage{titlesec}
 \titleformat{\section}
 {\selectfont\fontsize{12}{8}\bfseries\color{Red}}{\thesection}{1em}{}
@@ -128,18 +136,10 @@
 \titlespacing*{\subsection}
 {0cm}{0.2cm}{0.2cm}
 \titlespacing*{\subsubsection}
-{0cm}{0.2cm}{0.2cm}
+{0.75cm}{0.2cm}{0.2cm}
 
 \setlist[itemize]{leftmargin=2.2cm}
 \setlist[enumerate]{leftmargin=2.2cm}
-
-%Phan nay la su dung package fancyhdr
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\footrulewidth}{1pt}
-\renewcommand*{\thesection}{\Alph{section}.}
-\renewcommand*{\thesubsection}{\hspace{0.75cm}\Roman{subsection}.}
-\renewcommand*{\thesubsubsection}{\hspace{1cm}\arabic{subsubsection}.}
 
 % Đầu trang có số trang, số chương & chân trang có tên đề tài
 \fancyhead[L]{\leftmark}
@@ -173,14 +173,13 @@
 	\include{LVTN_chap3}
 	\include{LVTN_chap4}
 	\include{LVTN_chap5}
-%	\include{LVTN_chap6}
+	\include{LVTN_chap6}
 	\include{LVTN_chap7}
 	\include{LVTN_chap8}
 	\include{LVTN_chap9}
-%	\include{LVTN_chap10}
+	\include{LVTN_chap10}
 	\include{LVTN_chap11}
 	\include{LVTN_chap12}
 	\include{LVTN_chap13}
-	\include{LVTN_chap14}
 	\include{main_end}
 \end{document}

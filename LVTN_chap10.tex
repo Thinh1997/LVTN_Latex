@@ -1,48 +1,4 @@
-<<<<<<< HEAD
-\chapmoi{TÍNH TOÁN HỆ THỐNG PHÂN PHỐI NƯỚC LẠNH}
-\section{PHƯƠNG PHÁP TÍNH}
-Để tính toán đường ống phân phối nước lạnh đến các tầng và đến các dàn lạnh ta làm theo các bước sau:
-\subsection{BƯỚC 1}
--- Tính lưu lượng nước lạnh qua từng đoạn ống:
-\begin{equation*}
-	G = \dfrac{Q_{0}}{C\times\Delta t}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $Q_{0}$: là năng suất lạnh yêu cầu của không gian cần điều hòa.
-	\item $\Delta t$:  là độ chênh nhiệt độ của nước vào và ra khỏi dàn lạnh.
-	\item $C$: Nhiệt dung riêng của nước ở nhiệt độ trung bình. 
-\end{itemize}
-
-\subsection{BƯỚC 2}
-Chọn vận tốc sơ bộ: $\omega$ = (0.5$\div$2)m/s
-
-\subsection{BƯỚC 3}
-Xác định kích thước đường kính trong của đoạn ống:
-\begin{equation*}
-	d_{tr} = \sqrt{\dfrac{4\times G}{\pi\times\omega\times\rho}}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $G$: là lưu lượng nước trong đường ống, kg/s
-	\item $\omega$: vận tốc nước chuyển động trong ống, m/s
-	\item $\rho$: là khối lượng riêng của nước ở nhiệt độ trung bình.
-\end{itemize}
-
-\subsection{BƯỚC 4}
-Chọn đường kính danh nghĩa và thống số $d_{tr}$, $d_{ng}$ tương ứng.
-
-\subsection{BƯỚC 5}
-Tính lại vận tốc thực trong ống theo đường kính trong vừa chọn:
-\begin{equation*}
-	\omega = \dfrac{4\times G}{\rho\times\pi\times d_{tr}^2}
-\end{equation*}
-
-\section{TÍNH TOÁN ỐNG CHÍNH CẤP NƯỚC CHO CÁC TẦNG}
-=======
-\chapmoi{THIẾT KẾ HỆ THỐNG ĐƯỜNG ỐNG}
+\chapmoi{THIẾT KẾ HỆ THỐNG ĐƯỜNG ỐNG NƯỚC LẠNH}
 \section{ỐNG NƯỚC}
 \subsection{PHƯƠNG PHÁP TÍNH}
 Để tính toán đường ống phân phối nước lạnh đến các tầng và đến các dàn lạnh ta làm theo các phương sau:
@@ -84,7 +40,7 @@ Trong đó:
 
 \subsection{TÍNH TOÁN ỐNG CHÍNH CẤP NƯỚC CHO CÁC TẦNG}
 
-\textbf{Tính toán ống chính cấp cho tầng 2-3 (tầng điển hình)}.
+\subsubsection{Tính toán ống chính cấp cho tầng 2-3 (tầng điển hình)}.
 \begin{equation*}
 	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{144.28}{4.186 \times 5} = 6.89(kg/s).
 \end{equation*}
@@ -115,12 +71,12 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 144.28 }{999.71 \times 3.14 \times 0.0901^{2}} = 1.08(m/s)
 \end{equation*}
 
-\begin{figure}[H]
- 	\centering
- 	\includegraphics[width=1\textwidth]{kichthuocongchinhcap}
- 	\caption{\textbf{Kích thước ống chính cấp cho các tầng}}
-	\label{kichthuocongchinhcap}	 
-\end{figure}
+%\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=1\textwidth]{kichthuocongchinhcap}
+% 	\caption{\textbf{Kích thước ống chính cấp cho các tầng}}
+%	\label{kichthuocongchinhcap}	 
+%\end{figure}
 
 \subsection{TÍNH TOÁN ỐNG NƯỚC KẾT NỐI VỚI CÁC FCU }
 Tính lưu lượng nước lạnh qua từng đoạn ống:
@@ -153,15 +109,16 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 0.85 }{999.71 \times 3.14 \times 0.0351^{2}} = 0.88(m/s)
 \end{equation*}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{kichthuocongketnoitb}
-	\caption{\textbf{Kích thước ống kết nối với các thiết bị}}
-	\label{kichthuocongketnoitb}	 
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{kichthuocongketnoitb}
+%	\caption{\textbf{Kích thước ống kết nối với các thiết bị}}
+%	\label{kichthuocongketnoitb}	 
+%\end{figure}
 
 \subsection{TÍNH TOÁN ĐƯỜNG ỐNG CHO CÁC TẦNG}
-** \textbf{TẦNG 1}
+
+\subsubsection{Tầng 1}
 
 \textbf{Tính toán cho ống chính}
 
@@ -227,10 +184,8 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 0.95 }{999.71 \times 3.14 \times 0.0351^{2}} = 0.98(m/s)
 \end{equation*}
 
-\newpage
-
---\textbf{NHÁNH 2}
-
+-- \textbf{NHÁNH 2}
+ 
 Tính lưu lượng nước lạnh qua từng đoạn ống:
 \begin{equation*}
 	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{29.82}{4.186 \times 5} = 1.42(kg/s).
@@ -293,7 +248,7 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 0.1.18 }{999.71 \times 3.14 \times 0.0351^{2}} = 1.22(m/s)
 \end{equation*}
 
-**\textbf{TẦNG M}
+\subsubsection{TẦNG M}
 
 \textbf{Tính toán cho ống chính}
 
@@ -391,7 +346,7 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 0.95 }{999.71 \times 3.14 \times 0.0351^{2}} = 0.98(m/s)
 \end{equation*}
 
-**\textbf{ (TẦNG 2-3)}.
+\subsubsection{TẦNG 2-3}
 \begin{equation*}
 	G = \dfrac{Q_{0}}{C \times \Delta_{t}} =\dfrac{144.28}{4.186 \times 5} = 6.89(kg/s).
 \end{equation*}
@@ -455,7 +410,7 @@ Tính lại vận tốc thực theo đường kính trong:
 
 \subsection{TÍNH TOÁN ỐNG NƯỚC TRONG PHÒNG CHILLER}
 
-**\textbf{ỐNG KẾT NỐI VỚI CHILLER}
+\subsubsection{ỐNG KẾT NỐI VỚI CHILLER}
 
 Tính lưu lượng nước lạnh qua từng đoạn ống:
 \begin{equation*}
@@ -487,7 +442,7 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 25.77 }{999.71 \times 3.14 \times 0.1541^{2}} = 1.38(m/s)
 \end{equation*}
 
-**\textbf{ỐNG GÓP}
+\subsubsection{ỐNG GÓP}
 
 Tính lưu lượng nước lạnh qua từng đoạn ống:
 \begin{equation*}
@@ -521,7 +476,7 @@ Tính lại vận tốc thực theo đường kính trong:
 
 \subsection{TÍNH TOÁN ĐƯỜNG ỐNG CHO THÁP GIẢI NHIỆT}
 
-**\textbf{ỐNG KẾT NỐI TỚI THÁP GIẢI NHIỆT}
+\subsubsection{ỐNG KẾT NỐI TỚI THÁP GIẢI NHIỆT}
 
 Lưu lượng nước lạnh: G = 24.62(kg/s)
 
@@ -543,7 +498,7 @@ Tính lại vận tốc thực theo đường kính trong:
 	\omega = \dfrac{4 \times 24.62 }{999.71 \times 3.14 \times 0.1541^{2}} = 1.32(m/s)
 \end{equation*}
 
-**\textbf{ỐNG GÓP}
+\subsubsection{ỐNG GÓP}
 
 Lưu lượng nước lạnh: G = 73.85(kg/s)
 
@@ -559,7 +514,6 @@ Chọn đường kính danh nghĩa $d_{N}$ = 250(mm)
 	\item $d_{tr}$ = 254.5(mm).
 	\item $d_{ng}$ = 273(mm)
 \end{itemize}
->>>>>>> 9c38279fe0e68f82ab65081738797c37154e746f
 
 Tính lại vận tốc thực theo đường kính trong:
 \begin{equation*}

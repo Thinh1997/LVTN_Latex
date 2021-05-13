@@ -1,373 +1,4 @@
 \chapmoi{TÍNH TOÁN - THIẾT KẾ THÁP GIẢI NHIỆT}
-<<<<<<< HEAD
-\section{NGUYÊN LÝ HOẠT ĐỘNG CỦA THÁP GIẢI NHIỆT}
-Nguyên lý hoạt động và quá trình truyền nhiệt xảy ra trong tháp giải nhiệt như sau: 
-
-\medskip
--- Nước nóng sau khi giải nhiệt cho tác nhân lạnh và ra khỏi bình ngưng sẽ được bơm lên tháp rồi sẽ phun qua các lỗ nhỏ giúp quá trình tiếp xúc giữa nước và không khí giải nhiệt được tốt hơn. Các giọt nước này rơi trên các tấm chắn (giàn tổ ong) và dưới tác dụng của quạt gió sẽ tạo thành các hạt nhỏ hơn rồi chảy thành từng lớp mỏng trên bề mặt tấm chắn từ trên xuống dưới. Mặt khác không khí từ bên ngoài tháp (là không khí ẩm chưa bảo hòa $\varphi$ < 100\%) nhờ quạt được hút vào từ phía dưới và ra khỏi tháp ở phía trên. Khi không khí tiếp xúc với nước sẽ thực hiện quá trình trao đổi nhiệt và trao đổi chất. Nước sẽ tỏa nhiệt cho không khí, giảm nhiệt độ và quay về bình chứa ở dưới. Sau đó được bơm về bình ngưng. Quá trình truyền nhiệt giữa nước và không khí được thực hiện bằng hai phương thức:
-\begin{enumerate}
-	\item Truyền nhiệt bằng đối lưu do có độ chênh lệch nhiệt độ $\Delta t$ giữa nhiệt độ nước $t_{n}$ và nhiệt độ không khí $t_{k}$. Khi $\Delta t$ tăng thì truyền nhiệt đối lưu giữa nước và không khí tăng lên và ngược lại.
-	\item Truyền nhiệt bằng truyền chất nghĩa là do nước bay hơi vào không khí. Thực tế trong các tháp giải nhiệt thì sự truyền nhiệt từ nước vào không khí bằng phương thức bay hơi là chủ yếu.
-\end{enumerate}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{NLTGN}
-	\caption{Nguyên lý tháp giải nhiệt bằng nước}
-\end{figure}
-
-\section{TÍNH \& CHỌN THÁP GIẢI NHIỆT}
-\subsection{THÔNG SỐ BAN ĐẦU}
-\begin{itemize}
-	\item Năng suất tháp giải nhiệt: $Q$ = $Q_{W}$ = kW
-	\item Nhiệt độ nước vào tháp: $ t_{W1} $ = $^{\circ}$C.
-	\item Nhiệt độ nước ra khỏi tháp: $ t_{W2} $ = $^{\circ}$C.
-\end{itemize}
-
-Với các thông số trên và Catalogue tháp giải nhiệt của hãng \_\_\_\_ để chọn tháp giải nhiệt phù hợp.
-
--- Lượng nước giải nhiệt qua tháp giải nhiệt:
-\begin{equation*}
-	G_{W2} = \dfrac{Q'_{W}}{C_{W}\times\Delta t_{W}} = 
-\end{equation*}
-
--- Phương trình cân bằng chất trong tháp giải nhiệt:
-\begin{equation*}
-	\begin{split}
-		G_{W2} &= G_{W} + G_{xa} \\
-		G_{W} &= G_{W1} + G' + G'' \\
-		G_{bs} &= G' + G'' + G_{x}
-	\end{split}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $G_{W}$ - lượng nước đi vào hệ thống làm mát.
-	\item $G_{W1}$ - lượng nước đi vào bình chứa sau khi được làm mát.
-	\item $G_{W2}$ - lượng nước đi vào bình ngưng.
-	\item $G_{x}$ - lượng nước xả để đảm bảo lượng nước sạch cho hệ thống giải nhiệt.
-	\item $G_{bs}$ - lượng nước bổ sung vào tháp để bù đắp tất cả các tổn thất.
-	\item $G'$ - lượng nước tổn thất do bốc hơi.
-	\item $G''$ - lượng nước tổn thất do gió mang đi.
-\end{itemize}
-
--- Để đảm bảo các ống dẫn nước giải nhiệt ít bị ăn mòn, độ cứng của nước không nên vượt quá giới hạn cho phép. Ta phải xả đi một phần nước giải nhiệt, theo trang 311 TL[2], tỉ lệ lượng nước xả:
-\begin{equation*}
-	\dfrac{g_{x}}{G_{W}} = G_{x} > (3 \div 4)\%
-\end{equation*}
-
-Ta chọn $g_{x}$ = 
-
-Lưu lượng nước xả là: $G_{x} = 0.05\times G_{W}$
-
-Lượng nước đi vào hệ thống làm mát: $G_{W2} = 1.05\times G_{W}$
-\begin{equation*}
-	\Rightarrow G = \dfrac{G_{W2}}{1.05} = 
-\end{equation*}
-
-Lượng nước xả: $G' = G_{W2} - G = $
-
-Lượng nước do gió mang đi: $g'' = \dfrac{G''}{G_{W}} = (3\div 5)\%$
-
-Ta chọn: $g'' = $
-\begin{center}
-	$G'' = 0.005\times G = $
-\end{center}
-
-Lượng không khí cần thiết qua tháp:
-\begin{equation*}
-	G_{KK} = \dfrac{Q}{\Delta i}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $Q$ -  năng suất tháp giải nhiệt.
-	\item $\Delta i$ - độ chênh lệch của không khí trong tháp, $\Delta i = i_{1} - i_{2}$
-\end{itemize}
-
-Để thuận lợi cho việc tính toán ta chọn: $\Delta i = C_{W}\times\Delta t_{W} = $ để cho lượng nước qua tháp và lượng
-không khí qua tháp bằng nhau thì $\frac{G_{W}}{G_{KK}} = 1$.
-
-Vậy lượng không khí qua tháp: $G_{KK}$ = 
-
-Nhiệt độ trung bình của nước vào ra khỏi tháp:
-\begin{equation*}
-	t_{tb} = 0.5\times(t_{W1} - t_{W2}) = 
-\end{equation*}
-
-Các thông số trạng thái không khí:
-\begin{itemize}[label={$\hexstar$}]
-	\item Khi vào tháp:
-	\begin{multicols}{2}
-		\begin{itemize}[label={$\triangleright$}]
-			\item $t_{1}$ = $^{\circ}$C
-			\item $\varphi_{1}$ = \%
-			\item $d_{1}$ = 
-			\item $i_{1}$ = 
-		\end{itemize}
-	\end{multicols}
-
-	\item Ở trạng thái bão hoà:
-	\begin{multicols}{2}
-		\begin{itemize}[label={$\triangleright$}]
-			\item $t_{tb}$ = $^{\circ}$C
-			\item $\varphi_{W}$ = \%
-			\item $d_{W}$ = 
-			\item $i''_{W}$ = 
-		\end{itemize}
-	\end{multicols}
-
-	\item Khi ra khỏi tháp:
-	\begin{itemize}[label={$\triangleright$}]
-		\item $i_{2} = i_{1} + \Delta i = $
-		\item $t_{2} = t_{1} + (t_{W}-t_{1})\times\dfrac{i_{2} - i_{1}}{i''_{W} - i_{1}}$
-	\end{itemize}
-\end{itemize}
-
-Trong đó:
-\begin{itemize}
-	\item $i_{1}$ - entanpy của không khí vào tháp $i_{1}$ = 
-	\item $i_{2}$ - entanpy của không khí ra khỏi tháp $i_{2}$ =
-	\item $i''_{W}$ - entanpy của không khí bão hoà có nhiệt độ ứng với $t_{tb}$ = $^{\circ}$C.
-	\item $t_{1}$ - nhiệt độ không khí vào tháp $t_{1}$ = $^{\circ}$C.
-	\item $t_{2}$ - nhiệt độ không khí ra khỏi tháp $t_{2}$ = $^{\circ}$C.
-\end{itemize}
-
-Vậy:
-\begin{equation*}
-	t_{2} = ^{\circ}C
-\end{equation*}
-
-Tra theo phần mềm, ta được: $i_{2}$ = , $d_{2}$ = ,$\varphi_{2}$ = \%
-
-Độ chênh entanpy trung bình logarit trong tháp giải nhiệt:
-\begin{equation*}
-	\Delta i = \dfrac{(i''_{W1} - i_{2}) - (i''_{W2} - i_{1})}{\ln\dfrac{(i''_{W1} - i_{2})}{(i''_{W2} - i_{1})}}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $i_{1}$ - entanpy của không khí bảo hoà ứng với $t_{1}$ = $^{\circ}$C, tức là $i_{1}$ = 
-	\item $i''_{W1}$ - entanpy của không khí bảo hoà ứng với $t_{W1}$ = $^{\circ}$C, tức là $i''_{W1}$ = 
-	\item $i_{2}$ - entanpy của không khí bảo hoà ứng với $t_{2}$ = $^{\circ}$C, tức là $i_{2}$ = 
-	\item $i''_{W2}$ - entanpy của không khí bảo hoà ứng với $t_{W2}$ = $^{\circ}$C, tức là $i''_{W2}$ = 
-\end{itemize}
-\begin{equation*}
-	\Delta i_{L} = \dfrac{(i''_{W1} - i_{2}) - (i''_{W2} - i_{1})}{\ln\dfrac{(i''_{W1} - i_{2})}{(i''_{W2} - i_{1})}}
-\end{equation*}
-
-Chọn dạng bề mặt xối tưới cho tháp giải nhiệt là bề mặt xối tưới loại tổ ong hình gợn sóng với chất liệu giấy có tẩm epôxi, có đặc tính kỹ thuật như sau (2, trang 320, bảng 8-2):
-\begin{itemize}
-	\item $\omega$ - vận tốc không khí trong bề mặt chính diện, $\omega$ = 3.4m/s
-	\item $F_{v}$ - diện tích riêng, $F_{v}$ = 
-	\item $d_{td}$ - đường kính tương đương, $d_{td}$ = 
-	\item $V_{0}$ - thể tích tự do, $V_{0}$ = 0.91 
-	\item $H$ - chiều cao lớp tổ ong, $H$ = 0.25m
-\end{itemize}
-
-Hệ số bốc hơi đối với bề mặt tổ ong:
-\begin{equation*}
-	\sigma = 0.284\times(\omega\rho)^{0.57}\times g_{L}^{0.29}\times\left(\dfrac{H}{d_{td}}\right)^{-0.515}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $\omega\rho$ - vận tốc khối của không khí trong bề mặt xối tưới, kg/$m^2$.s
-	\item $g_{L}$ - mật độ xối tưới trên 1m chu vi của tiết diện bị thấm nước, kg/m.s
-	\item $H$ - chiều cao (chiều dài rãnh ) tổ ong, m
-	\item $d_{td}$ - đường kính tương đương của tổ ong, m
-\end{itemize}
-
-Ta có:
-\begin{equation*}
-	\omega\rho = \dfrac{G_{KK}}{F\times V}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $G_{KK}$ - lưu lượng không khí qua tháp, $G_{KK}$ = 100.1 kg/s
-	\item $V_{0}$ - thể tích tự do của bề mặt xối tưới, $V_{0}$ = 0.91 
-	\item $F$ - diện tích mặt cắt ngang của tháp, $m^2$.
-\end{itemize}
-
-\begin{equation*}
-	F = \dfrac{G_{W}}{g_{W}}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $g_{W}$: mật độ xối tưới, đối với tháp làm lạnh bằng quạt gió mật độ xối tưới có thể đạt đến (4$\div$5) kg/m2.s
-	
-	$F = \dfrac{G_{W}}{g_{W}} = $
-	
-	$\Longrightarrow \omega\rho = \dfrac{G_{KK}}{F\times V} = $
-	
-	$g_{L} = \dfrac{\omega\rho}{F_{v}} = $
-	
-	$\dfrac{H}{d_{td}} = $ 
-\end{itemize}
-
--- Vậy hệ số bốc hơi của bề mặt xối tưới:
-\begin{equation*}
-	\sigma = 0.284\times(x)^{0.57}\times y^{0.29}\times\left(\dfrac{z}{j}\right)^{-0.515}
-\end{equation*}
-
--- Diện tích bề mặt xối tưới tổ ong của tháp:
-\begin{equation*}
-	F_{x} = \dfrac{Q}{\sigma\times \Delta i} = \dfrac{G_{KK}\times\Delta i}{\sigma\times \Delta i_{L}} = 
-\end{equation*}
-
--- Thể tích chứa bề mặt xối tưới:
-\begin{equation*}
-	V = \dfrac{F_{x}}{F_{v}} = 
-\end{equation*}
-
--- Chiều cao bề mặt xối tưới:
-\begin{equation*}
-	H = \dfrac{V_{x}}{F} = 
-\end{equation*}
-
--- Đường kính trong của tháp:
-\begin{equation*}
-	D_{r} = \sqrt{\dfrac{4\times F}{\pi}} = 
-\end{equation*}
-
--- Chọn đường kính trong là: $D_{tr}$ = 
-
--- Diện tích tiết diện bề mặt xối tưới không cho không khí đi qua:
-\begin{equation*}
-	f = F\times V_{0} = 
-\end{equation*}
-
-\subsection{TÍNH KHÍ ĐỘNG CHO THÁP GIẢI NHIỆT}
-Để chọn quạt cho tháp ta cần phải tính toán khí động cho tháp, nghĩa là ta tính trở lực của không khí qua tháp để từ đó chọn quạt phù hợp.
-
-Vận tốc chuyển động của không khí ở các tiết diện khác nhau của tháp đều có quan hệ với nhau theo phương trình liên tục:
-\begin{equation*}
-	\dfrac{G_{KK}}{\rho} = f_{1}\times\omega_{1} = f_{2}\times\omega_{2} = f_{3}\times\omega_{3} = f_{4}\times\omega_{4} = 
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $f_{1}$: diện tích tiết diện tại cửa vào.
-	
-	Chọn sơ bộ chiều cao cửa gió vào tháp: $h_{1}$ = 0.5 m.
-	
-	$\Rightarrow f_{1} = \pi\times D_{tr}\times h_{1} = $
-	\item $f_{2}$: diện tích thân tháp, $f_{2} = F = $
-	\item $f_{3}$: diện tích ngay tại lớp tổ ong, $f_{3} = f = $
-	\item $f_{4}$: diện tích ngay tại cửa ra của tháp.
-	
-	Chọn sơ bộ đường kính trong cửa ra của tháp:
-	
-	$D_{4} = 0.6\times D_{tr} = $
-	
-	$\Rightarrow f_{4} = \dfrac{\pi\times D_{4}^2}{4} = $
-	
-	\item $\rho$: khối lượng riêng của không khí, $\rho$ = 1.1391 kg/$m^3$ ứng với nhiệt độ không khí trung bình: $t_{tb} = 0.5\times(t_{1} + t_{2}) = $
-\end{itemize}
-
--- Từ các tiết diện trên ta xác vận tốc của dòng không khí tại các tiết diện khác nhau được xác định như sau:
-\begin{equation*}
-\begin{split}
-	\omega_{1} &= \dfrac{G_{K}}{\rho\times f_{1}} = \\
-	\omega_{2} &= \dfrac{G_{K}}{\rho\times f_{2}} = \\
-	\omega_{3} &= \dfrac{G_{K}}{\rho\times f_{3}} = \\
-	\omega_{4} &= \dfrac{G_{K}}{\rho\times f_{4}} = 
-\end{split}
-\end{equation*}
-
--- Tổng trở lực của dòng không khí qua tháp:
-\begin{equation*}
-	\Delta P_{\Sigma} = \Delta P_{V} + \Delta P_{n} + \Delta P_{x} + \Delta P_{p} + \Delta P_{e} + \Delta P_{K} + \Delta P_{ra}
-\end{equation*}
-
--- Trở lực tại cửa vào:
-\begin{equation*}
-	\Delta P = 0.55\times \rho\times\dfrac{\omega_{1}^2}{2} = 
-\end{equation*}
-
--- Trở lực tại chỗ ngoặc của dòng không khí:
-\begin{equation*}
-	\Delta P = 0.55\times \rho\times\dfrac{\omega_{2}^2}{2} = 
-\end{equation*}
-
--- Trở lực của bề mặt xối tưới, với $\omega\rho$ = 4.95 kg/m$^2$.s $>$ 4.5 kg/m$^2$.s
-\begin{equation*}
-	\begin{split}
-		\Delta P_{x} &= 5.85\times(\omega\rho)^{2.1}\times g_{L}^{0.66}\times\left(\dfrac{H}{d_{td}}\right)^{0.47}\\
-		\Rightarrow \Delta P_{x} &= 
-	\end{split}
-\end{equation*}
-
--- Trở lực tại tiết diện có vòi phun nước: $\Delta P_{p} = \xi_{p}\times\rho\times\dfrac{\omega_{2}^2}{2}$
-
-Với:
-\begin{itemize}
-	\item $\xi_{p}$: hệ số trở lực cục bộ tại tiết diện có vòi phun nước xác định theo hình 8-19 [2, 339], ta xác định được $\xi_{p}$ = 0.74.
-\end{itemize}
-\begin{equation*}
-	\Delta P_{p} = \xi_{p}\times\rho\times\dfrac{\omega_{2}^2}{2} = 
-\end{equation*}
-
--- Trở lực tại cửa chớp giữ nước: $\Delta P_{c} = \xi_{c}\times\rho\times\dfrac{\omega_{2}^2}{2}$
-
-Với:
-\begin{itemize}
-	\item $\xi_{c}$: hệ số trở lực cục bộ tại tiết diện có vòi phun nước xác định theo hình 8-19 [2, 343], ta xác định được $\xi_{c}$ = 0.75.
-\end{itemize}
-\begin{equation*}
-	\Delta P_{c} = \xi_{c}\times\rho\times\dfrac{\omega_{2}^2}{2} = 
-\end{equation*}
-
--- Trở lực trong đoạn tháp hình côn, với hệ số trở lực hình côn:
-\begin{equation*}
-	\begin{split}
-		\xi_{k} &= 0.5\times\left(1-\dfrac{f_{4}}{f_{2}}\right)\\
-		&= \\
-		\Rightarrow \Delta P_{k} &= \xi_{k}\times\rho\times\dfrac{\omega_{2}^2}{2}
-	\end{split}
-\end{equation*}
-
--- Trở lực tại cửa ra của tháp:
-\begin{equation*}
-	\Delta P_{a} = \rho\times\dfrac{\omega_{4}^{2}}{2} = 
-\end{equation*}
-
-Vậy:
-\begin{equation*}
-	\begin{split}
-		\Delta P_{\Sigma} &= \Delta P_{V} + \Delta P_{n} + \Delta P_{x} + \Delta P_{p} + \Delta P_{e} + \Delta P_{K} + \Delta P_{ra}\\
-		&=
-	\end{split}
-\end{equation*}
-
--- Công suất quạt gió (công suất động cơ điện kéo quạt):
-\begin{equation*}
-	N = \dfrac{1.2\times G_{KK}\times\Delta P_{\Sigma}\times 10^{-3}}{\rho\times\eta}
-\end{equation*}
-
-Trong đó:
-\begin{itemize}
-	\item $G_{KK}$: lượng không khí thổi qua tháp, kg/s
-	\item $\Delta P_{\Sigma}$: tổng trở lực khí động của tháp, Pa
-	\item $\rho$: khối lượng riêng của không khí, kg/m$^3$
-	\item $\eta$: hiệu suất của quạt gió. Chọn $\eta$ = 0.65
-\end{itemize}
-\begin{equation*}
-	N = \dfrac{1.2\times G_{KK}\times\Delta P_{\Sigma}\times 10^{-3}}{\rho\times\eta}
-\end{equation*}
-
-\subsection{CHỌN THÁP GIẢI NHIỆT}
--- Thông số thiết kế của tháp:
-\begin{itemize}
-	\item $V$ = 
-	\item $t_{W1}$ = ; $t_{W2}$ = 
-	\item T{\scriptsize ngoài} = ; RH = \%
-\end{itemize}
-
--- Chọn tháp giải nhiệt \_\_\_\_\_\_
-=======
-
 \section{NGUYÊN LÝ HOẠT ĐỘNG CỦA THÁP GIẢI NHIỆT}
 
 Nguyên lý hoạt động và quá trình truyền nhiệt xảy ra trong tháp giải nhiệt như sau: Nước nóng sau khi giải nhiệt cho tác nhân lạnh và ra khỏi bình ngưng sẽ được bơm lên tháp rồi sẽ phun qua các lỗ nhỏ giúp quá trình tiếp xúc giữa nước và khog6 khí giải nhiệt được tốt hơn. Các giọt nước này rơi trên các tấm chắn ( giàn tổ ong ) và dưới tác dụng của quạt gió sẽ tạo thành các hạt nhỏ hơn rồi chảy thành từng lớp mỏng trên bề mặt tấm chắn từ trên xuống dưới. Mặt khác không kí từ bên ngoài tháp ( là không khí ẩm chưa bão hòa $\varphi$ < 100\% ) nhờ quạt được hút vào từ phía dưới và ra khỏi tháp ở phía trên. Khi không khí tiếp xúc với nước sẽ thực hiện quá trình trao đổi nhiệt và trao đổi chất. Nước sẽ tỏa nhiệt cho không khí, giảm nhiệt độ và quay về bình chứa ở dưới. Sau đó được bơm về bình ngưng. Qúa trình truyền nhiệt giữa nước và không khí được thực hiền bằng hai phương thức : \\
@@ -423,15 +54,9 @@ Trong đó :
   \end{split}	
 \end{equation*}
 
-\newpage
->>>>>>> 00efaa603391f1ea0298b70e3c82f7b57ed6939a
-
 Ta chọn: $g_{x}$ = 5\%
 
-<<<<<<< HEAD
-=======
 Lượng nước do gió mang đi : $G_{x}$ = 0.05 $\times$ $G_{w}$
->>>>>>> 00efaa603391f1ea0298b70e3c82f7b57ed6939a
 
 Lượng nước đi vào hệ thống làm mát: $G_{w2}$ = 1.05 $\times$ $G_{w}$
 
@@ -455,9 +80,11 @@ $G_{kk}$ = $\dfrac{Q}{\Delta_{i}}$ (TL 2, CT 8.12 trang 333).
 
 Trong đó:
 
-+ Q : Năng suất tháp giải nhiệt, Q = $Q'_{k}$ = 539.44(kW).
+\begin{itemize}[label = +]
+	\item Q : Năng suất tháp giải nhiệt, Q = $Q'_{k}$ = 539.44(kW).
 
-+ $\Delta_{i}$ : Độ chênh lệch của không khí trong tháp, $\Delta_{i}$ = $i_{1} - i_{2}$.  
+	\item  $\Delta_{i}$ : Độ chênh lệch của không khí trong tháp, $\Delta_{i}$ = $i_{1} - i_{2}$.  
+\end{itemize}
 
 Để thuận lợi cho việc tính toán ta chọn:
 \begin{equation*}
@@ -490,7 +117,6 @@ Các thông số trạng thái không khí :
 	\item $I''_{w}$ = 147.19(kJ/kg).
 \end{itemize}
 
-\newpage
 + Khi ra khỏi tháp:
 
 	$i_{2}$ = $i_{1}$ + $\Delta_{i}$ = 108.7 + 20.87 = 129.57(kJ/kg).
@@ -565,10 +191,10 @@ Trong đó:
 	\item F : Diện tích mặt cắt ngang của tháp, ($m^2$).
 \end{itemize}
 
-\newpage
-Ta có : F = $\dfrac{G_{w}}{g_{w}}$.(TL2, trang 312, CT 8.5).
+Ta có: F = $\dfrac{G_{w}}{g_{w}}$.(TL2, trang 312, CT 8.5).
 
 Trong đó:
+
 $g_{w}$ : Mật độ xối tưới, đối với tháp làm lạnh bằng quạt gió mật độ xối tưới có thể đạt đến ( 4- 5 )($kg/m^2.s$).
 
 \begin{equation*}
@@ -578,7 +204,7 @@ $g_{w}$ : Mật độ xối tưới, đối với tháp làm lạnh bằng quạ
 		             & = \dfrac{25.85}{5.47 \times 0.91} = 5.19(kg/m^2.s).\\
 		g_{L}& = \dfrac{\omega_{\rho}}{F_{v}}\\
 		     & = \dfrac{5.19}{640}=0.008113(kg/m.s) \\ 
-		\dfrac{H}{d_{td}} = \dfrac{0.25}{0.00535}= 46.73             
+		\dfrac{H}{d_{td}} &= \dfrac{0.25}{0.00535}= 46.73             
 	\end{split}
 \end{equation*}
 
@@ -614,7 +240,6 @@ Diện tích tiết diện bề mặt xối tưới không cho không khí đi q
 	f = F \times V_{0} = 5.47 \times 0.91 = 4.98(m^2)
 \end{equation*}
 
-\newpage
 \section{TÍNH KHÍ ĐỘNG CHO THÁP GIẢI NHIỆT}
 Để chọn quạt cho tháp ta cần phải tính toán khí động cho tháp nghĩa là ta tính trở lực của không khí qua tháp để từ đó chọn quạt phù hợp.
 
@@ -645,9 +270,8 @@ $\rho$ : Khối lượng riêng của không khí, $\rho$ = 1.1391(Kg/$m^3$) ứ
 	t_{tb} = 0.5 \times (t_{1} + t_{2}) = 0.5 \times (40 + 35) = 37.5^{\circ}C
 \end{equation}
 
-\newpage
+Từ các tiết diện trên ta xác định vận tốc của dòng không khí tại các tiết diện khác nhau được xác định như sau:
 
-Từ các tiết diện trên ta xác định vận tốc của dòng không khí tại các tiết diện khác nhau  được xác định như sau:
 \begin{equation*}
 	\begin{split}
 		\omega_{1}& = \dfrac{G_{k}}{\rho \times f_{1}}\\ 
@@ -663,8 +287,9 @@ Từ các tiết diện trên ta xác định vận tốc của dòng không kh�
 
 Tổng trở lực của dòng không khí qua tháp:
 \begin{equation*}
-	\Delta P_{\sum} = \Delta P_{v} +\Delta P_{n} + \Delta P_{x} + \Delta P_{p} +\Delta P_{e} + \Delta P_{k} + \Delta P_{ra} (TL2, trang 337, CT 8.24)
+	\Delta P_{\sum} = \Delta P_{v} +\Delta P_{n} + \Delta P_{x} + \Delta P_{p} +\Delta P_{e} + \Delta P_{k} + \Delta P_{ra}
 \end{equation*}
+%(TL2, trang 337, CT 8.24)
 
 Trở lực tại cửa vào
 \begin{equation*}
@@ -678,7 +303,10 @@ Trở lực tại chỗ ngoặc của dòng không khí
 
 Trở lực của bề mặt xối tưới, với $\omega$\ $\rho$ = 5.19(Kg/$m^2$.s) > 4.5(Kg/$m^2$.s)
 \begin{equation*}
-	\Delta P_{x} = 5.85 \times (\omega \rho)^{2.1}  \times g_{L} \times  (\dfrac{H}{d_{dt}})^{0.66} = 5.85 \times (5.19)^{2.1} \times 0.008113 \times (46.73)^{0.66} = 47.23(Pa)
+	\begin{split}
+		\Delta P_{x} &= 5.85 \times (\omega \rho)^{2.1}  \times g_{L} \times  (\dfrac{H}{d_{dt}})^{0.66}\\
+		\Delta P_{x} &= 5.85 \times (5.19)^{2.1} \times 0.008113 \times (46.73)^{0.66} = 47.23(Pa)
+	\end{split}
 \end{equation*}
 
 Trở lực tại tiết diện có vòi phun nước, ta có : $\xi_{p}$ = 0.65
@@ -692,8 +320,6 @@ Trở lực tại cửa chóp giữ nước, ta có $\xi_{c}$ = 0.7
 	\Delta P_{c} = \xi_{c} \times \rho \times  
 	\dfrac{\omega_{2}^2}{2} = 0.7 \times 1.1391 \times \dfrac{3.95^2}{2} = 6.22(Pa)
 \end{equation*}
-
-\newpage
 
 Trở lực trong đoạn tháp hình côn, với hệ số trở lực hình côn:
 \begin{equation*}
@@ -725,7 +351,6 @@ Công suất quạt gió ( công suất động cơ điện kéo quạt):
 \end{itemize}
 
 $\Rightarrow$ N = $\dfrac{1.2 \times 25.85 \times (144.06)10^{-3}}{1.1391 \times 0.65}$ = 6.035(KW)
-
 \section{CHỌN THÁP GIẢI NHIỆT}
 \begin{itemize}
 	\item V = 25.85(l/s) = 1550.85(l/phút)
@@ -734,10 +359,8 @@ $\Rightarrow$ N = $\dfrac{1.2 \times 25.85 \times (144.06)10^{-3}}{1.1391 \times
 	\item $T_{ngoài}$ = 36$^{\circ}$C; RH = 74\%
 \end{itemize}
 
-\newpage
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.1\textwidth]{chonthapgiainhiet}
+	\includegraphics[width=\textwidth]{chonthapgiainhiet}
 	\caption{\textbf{CHỌN THÁP GIẢI NHIỆT}}
-	\label{chonthapgiainhiet}
 \end{figure}
