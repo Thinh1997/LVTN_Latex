@@ -183,9 +183,9 @@ Ta có hệ phương trình:
 \end{equation*}
 \begin{equation*}
 	\begin{split}
-	21328.45\times\theta^2 &= 2868.36\times(9.19 - \theta)\\
-	\Rightarrow \theta &= 1.0465^{\circ}C\\
-				q_{tr} &=23358.11(W/m^2)
+		21328.45\times\theta^2 &= 2868.36\times(9.19 - \theta)\\
+		\Rightarrow \theta &= 1.0465^{\circ}C\\
+		q_{tr} &=23358.11(W/m^2)
 	\end{split}
 \end{equation*}
 
@@ -201,7 +201,7 @@ Tổng chiều dài ống của bình bốc hơi:
 
 Chọn số đường nước z = 3.
 
-Do đó, tổng số ống trong bình bay hơi là: $n = n_{1}\times z = 64.07 \times 3=192.21(ống)$
+Do đó, tổng số ống trong bình bay hơi là: $n = n_{1}\times z = 64.07 \times 3=192.21$(ống)
 
 Chọn cách bố trí ống trong bình bay hơi theo hình lục giác đều. Ta chọn số ống bố trí theo đường chéo lớn nhất là: m = 17 ống
 
@@ -222,18 +222,14 @@ Chiều dài của một đoạn ống trong bình bay hơi:
 	D = m\times S = 17 \times 0.027=0.459(m)
 \end{equation*}
 
-Tỉ số: $k = \dfrac{L}{D} = \dfrac{2.12}{0.459}$= 4.6$
-
+Tỉ số: $k = \dfrac{L}{D} = \dfrac{2.12}{0.459}= 4.6$
 Ta thấy tỉ số $k$ là chấp nhận được do nằm trong khoảng (3,5$\div$10).
-
 \section{TÍNH TOÁN THUỶ ĐỘNG CHO BÌNH BAY HƠI}
 Ngoài việc tính toán truyền nhiệt trong bình bay hơi, ta còn tính trở lực của nước lạnh khi qua bình bay hơi. Theo công thức 9.25 trang 358 TL[2]:
-
 Trở lực về phía nước qua bình bay hơi:
 \begin{equation*}
 	\Delta P = \left(\lambda\times\dfrac{L}{d_{tr}} +\xi_{v} + 1 + \dfrac{\xi_{v} + 1}{z}\right)\times \dfrac{\omega^2\times\rho}{2}\times z
 \end{equation*}
-
 Trong đó:
 \begin{itemize}
 	\item $\xi_{v}$ - hệ số trở lực cục bộ khi nước vào ống: $\xi_{v}$ = 0.5
@@ -244,7 +240,6 @@ Trong đó:
 	\item $\rho$ - khối lượng riêng của nước lạnh: $\rho$ = 999.71 $kg/m^3$
 	\item $\lambda$ - hệ số ma sát	
 \end{itemize}
-
 Do nước trong ống ở trạng thái chảy rối, nên đối với các ống đồng hệ số ma sát được tính như sau:
 \begin{equation*}
 	\begin{split}
@@ -252,7 +247,6 @@ Do nước trong ống ở trạng thái chảy rối, nên đối với các �
 		&=  \dfrac{0.3164}{24151^{0.25}}=0.0254
 	\end{split}
 \end{equation*}
-
 Vậy trở lực của nước qua bình bay hơi:
 \begin{equation*}
 	\begin{split}
@@ -260,16 +254,12 @@ Vậy trở lực của nước qua bình bay hơi:
 		&=  (0.0254 \times \dfrac{2.12}{0.016}+0.5+1+ \dfrac{0.5+1}{3} \times \dfrac{2^2 \times 999.71}{2} \times 3) = 32152.40(Pa)
 	\end{split}
 \end{equation*}
-
 \subsection{TÍNH TOÁN BỀN CHO THÂN BÌNH}
 Thiết bị bốc hơi trong hệ thống điều hoà không khí là thiết bị chịu áp lực phía hạ áp. Do đó, ta phải tính toán bền cho thiết bị để đảm bảo an toàn cho thiết bị khi vận hành…
-
 Do kết cấu của bình bốc hơi dạng hình trụ, vì thế chịu được áp lực đều. Bề dày của thân hình trụ S được chọn phải thỏa mãn điều kiện sau:
-
 \begin{equation*}
 	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C
 \end{equation*}
-
 Trong đó:
 \begin{itemize}
 	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn: $P_{R}$ = 16 bar = 1.6 MPa.
@@ -281,23 +271,20 @@ Trong đó:
 \begin{equation*}
 	C = C_{1} + C_{2} + C_{3}
 \end{equation*}
-\begin{itemize}[label={$\star$}]
+\begin{itemize}
 	\item $C_{1}$ - phần bề dày bổ sung để bù cho sự ăn mòn khi tiếp xúc với các	chất độc hại $C_{1}$ = 0,001 m
 	\item $C_{2}$ - chiều dày bổ sung đề bù dung sai âm bề dày $C_{4}$ = 0,001 m
 	\item $C_{3}$ - phần bề dày bổ sung do bề dày thân bình bị mỏng đi trong quá trình gia công kéo, dập , uốn… $C_{3}$ = 0,001m
 \end{itemize}
-
 Vậy:
 \begin{equation*}
 	S \geq \dfrac{P_{R}\times D_{tr}}{2\times [\sigma]\times\varphi_{d} - P_{R}} + C = \dfrac{1.6 \times 0.459}{2 \times 138.8 \times 0.8 - 1.6}+0.003 = 0.006(m)
 \end{equation*}
-
 Ta chọn: $S$ = 0.007(m)
-
 Bình bay hơi có kích thước như sau:
 \begin{itemize}[label={$\diamond$}]
 	\item $D_{tr}$ = 0.459(m)
-	\item $D_{ng} = D_{tr} + 2\times S = 0.459 + 2 \times 0.006 = 0.473(m) $
+	\item $D_{ng} = D_{tr} + 2\times S = 0.459 + 2 \times 0.006 = 0.473(m)$
 \end{itemize}
 
 \subsection{TÍNH TOÁN BỀ DÀY MẶT SÀNG}
@@ -308,11 +295,6 @@ Bề dày mặt sàng $S_{m}$ phải đảm bảo có thể núc được ống 
 
 Trong đó:
 \begin{itemize}
-	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn $P_{R}$ =  bar =  MPa.
-	\item $P_{O}$ - áp suất tính toán bên trong ống $P_{O}$ =  bar =  MPa.
-	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là t = $^{\circ}$C có $[\sigma]$ = 	
-	\item $D_{E}$ - đường kính của vòng tròn có thể chứa được trong diện tích không có ống lớn nhất trên mặt sàng $D_{E}$ = 
-	\item $C$ - bề dày bổ sung $C$ = 
 	\item $P_{R}$ - áp suất tính toán của thiết bị, MPa. Theo bảng 10.1 trang 360 TL[2] ta chọn $P_{R}$ = 16 bar = 1.6  MPa.
 	\item $P_{O}$ - áp suất tính toán bên trong ống $P_{O}$ = 1.5 bar = 0.15 MPa.
 	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo thân bình, MPa. Theo bảng 10.2 trang 361 TL[2], chọn vật liệu chế tạo thân bình ngưng là thép cacbon chất lượng thường CCT38, với nhiệt độ tính toán của vách là t = 36$^{\circ}$C có $[\sigma]$ = 138.8(MPa)	
@@ -324,14 +306,6 @@ Vậy:
 \begin{equation*}
 	\begin{split}
 		S_{m} &\geq 0.5\times D_{E}\times \sqrt{\dfrac{|P_{O} - P_{R}|}{[\sigma]}} + C\\
-		&\geq 
-	\end{split}
-\end{equation*}
-
-Ta chọn chiều dày mặt sàng: $S_{m}$ = 
-
-\subsection{TÍNH SỨC BỀN CHO NẮP}
-Với thiết bị bay hơi dạng hình trụ, ta sử dụng nắp cong có thể tháo mở được để lắp ghép với bích ở 2 đầu thân hình trụ. Ta chọn loại đáy cong cho thiết bị là đáy cong hình tròn có bo mép (hình 10-4 c, trang 370 TL[2]).
 		&\geq 0.5 \times 0.115 \times \sqrt{\dfrac{|0.15-1.6|}{138.8}} + 0.003 = 0.0089(m)
 	\end{split}
 \end{equation*}
@@ -340,7 +314,6 @@ Ta chọn chiều dày mặt sàng: $S_{m}$ = 0.009(m)
 
 \subsection{TÍNH TOÁN BỀN CHO ĐÁY}
 Với thiết bị ngưng tụ dạng hình trụ, ta sử dụng đáy cong có thể tháo mở được để lắp ghép với bích ở 2 đầu thân hình trụ. Ta chọn loại đáy cong cho thiết bị là đáy cong hình tròn không bo mép (hình 10-4 c, trang 370 TL[2]).
->>>>>>> 00efaa603391f1ea0298b70e3c82f7b57ed6939a
 
 Bề dày loại nắp tròn được xác định như sau: (công thức trang 370 TL[2])
 \begin{equation*}
@@ -349,51 +322,20 @@ Bề dày loại nắp tròn được xác định như sau: (công thức trang
 
 Trong đó:
 \begin{itemize}
-<<<<<<< HEAD
-	\item $D_{tr}$ = 
-	\item $H_{tr} = 0.25\times D_{tr} = $ - chiều cao bên trong nắp.
-	\item $R$ bán kính của nắp cong, m.
-	
-	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = $ 
-	\item $ \varphi_{d} $ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
-	\item $P_{R}$ - áp suất tính toán của thiết bị: $P_{R}$ = 1.6 MPa
-	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo đáy $[\sigma]$ = 138.35 MPa 
-	\item $C$ - chiều dày bổ sung $C$ = 
-=======
 	\item $D_{tr}$ = 0.459(m)
-	\item $H_{tr} = 0.25\times D_{tr} = $ 0.25 \times 0.39$ = 0.11475(m)
+	\item $H_{tr} = 0.25\times D_{tr} = 0.25 \times 0.39 = 0.11475(m)$
 	\item $R$ bán kính của nắp cong, m.
 	
-	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = $ \dfrac{0.459^2}{4 \times 0.11475} $= 0.459(m) 
+	$R = \dfrac{D_{tr}^2}{4\times H_{tr}} = \dfrac{0.459^2}{4 \times 0.11475} = 0.459(m) $
 	\item $ \varphi_{d} $ - hệ số bền mối hàn dọc, $\varphi_{d}$ = 0.8
 	\item $P_{R}$ - áp suất tính toán của thiết bị: $P_{R}$ = 1.6 MPa
 	\item $[\sigma]$ - ứng suất cho phép của kim loại chế tạo đáy $[\sigma]$ = 138.8 MPa 
 	\item $C$ - chiều dày bổ sung $C$ = 0.03(m)
->>>>>>> 00efaa603391f1ea0298b70e3c82f7b57ed6939a
 \end{itemize}
 
 Vậy: 
 \begin{equation*}
-<<<<<<< HEAD
-	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C = 
-\end{equation*}
-
-Ta chọn chiều dày nắp: $S_{n}$ = 
-
-
-
-
-=======
 	S_{n} \geq \dfrac{P_{R}\times R}{2\times \phi_{d}\times[\sigma]} + C = \dfrac{1.6 \times 0.459}{2 \times 0.8 \times 138.8}+0.003 = 0.006(m)
 \end{equation*}
->>>>>>> 00efaa603391f1ea0298b70e3c82f7b57ed6939a
 
 Ta chọn chiều dày đáy: $S_{n}$ = 0.007(m)
-
-
-
-
-
-
-
-
